@@ -25,18 +25,18 @@ export default async function Home() {
           secondaryCta={homePage.secondaryCta}
         />
 
-        <MissionStatement
-          statement={homePage.missionStatement}
-          attribution={homePage.missionAttribution}
-          image={homePage.missionImage}
-          imageAlt={homePage.missionImageAlt}
-        />
-
         <TrailMap
           title={homePage.mapTitle}
           copy={homePage.mapCopy}
           highlights={homePage.trailHighlights}
           downloads={downloads}
+        />
+
+        <MissionStatement
+          statement={homePage.missionStatement}
+          attribution={homePage.missionAttribution}
+          image={homePage.missionImage}
+          imageAlt={homePage.missionImageAlt}
         />
 
         <ItineraryFeature

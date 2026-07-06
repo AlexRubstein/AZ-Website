@@ -173,6 +173,24 @@ export function LeafletRouteMap({ highlights = [], activeHighlightId, onHighligh
   }, [highlights, onHighlightSelect, ready]);
 
   useEffect(() => {
+    if (!ready || !mapRef.current || !containerRef.current) return;
+
+    const map = mapRef.current;
+    const container = containerRef.current;
+    const invalidateMapSize = () => map.invalidateSize({ animate: false });
+
+    invalidateMapSize();
+    const resizeObserver = new ResizeObserver(invalidateMapSize);
+    resizeObserver.observe(container);
+    window.addEventListener("resize", invalidateMapSize);
+
+    return () => {
+      resizeObserver.disconnect();
+      window.removeEventListener("resize", invalidateMapSize);
+    };
+  }, [ready]);
+
+  useEffect(() => {
     if (!ready || !mapRef.current || !activeHighlightId) return;
     const activeMarker = markerRefs.current.get(activeHighlightId);
     if (!activeMarker) return;
@@ -184,6 +202,6 @@ export function LeafletRouteMap({ highlights = [], activeHighlightId, onHighligh
   }, [activeHighlightId, ready]);
 
   return (
-    <div ref={containerRef} className="absolute inset-0 z-0 h-full min-h-[520px] w-full lg:min-h-[660px]" />
+    <div ref={containerRef} className="absolute inset-0 z-0 h-full min-h-[430px] w-full sm:min-h-[520px] xl:min-h-[660px]" />
   );
 }

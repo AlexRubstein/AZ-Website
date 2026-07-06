@@ -82,13 +82,12 @@ body {
 }
 
 .az-scroll-hero {
-  min-height: 100svh;
   overflow: hidden;
   position: relative;
 }
 
 .az-scroll-hero-stage {
-  height: 100svh;
+  height: clamp(640px, 78svh, 820px);
   overflow: hidden;
   position: relative;
 }
@@ -120,17 +119,17 @@ body {
 
 .az-scroll-hero-gradient {
   background:
-    linear-gradient(0deg, var(--hero-handoff-color) 0%, rgba(7, 21, 15, 0.9) 5%, rgba(7, 21, 15, 0.5) 12%, rgba(7, 21, 15, 0.08) 22%, rgba(7, 21, 15, 0) 30%),
+    linear-gradient(0deg, rgba(7, 21, 15, 0.76) 0%, rgba(7, 21, 15, 0.42) 9%, rgba(7, 21, 15, 0.08) 23%, rgba(7, 21, 15, 0) 34%),
     radial-gradient(circle at 76% 42%, transparent 0%, rgba(7, 21, 15, 0.01) 42%, rgba(7, 21, 15, 0.24) 100%),
     linear-gradient(90deg, rgba(7, 21, 15, 0.62) 0%, rgba(7, 21, 15, 0.2) 34%, rgba(7, 21, 15, 0.02) 70%);
   z-index: 2;
 }
 
 .az-scroll-hero-content {
-  height: 100svh;
+  height: clamp(640px, 78svh, 820px);
   margin-inline: auto;
   max-width: 1440px;
-  padding: clamp(7rem, 13vh, 9rem) clamp(1.25rem, 4vw, 4rem) clamp(2.5rem, 7vh, 5.5rem);
+  padding: clamp(6.5rem, 10vh, 8rem) clamp(1.25rem, 4vw, 4rem) clamp(2rem, 6vh, 4.5rem);
   position: relative;
   z-index: 3;
 }
@@ -339,7 +338,8 @@ textarea {
 
   .az-scroll-hero-stage {
     height: auto;
-    min-height: 100svh;
+    max-height: none;
+    min-height: 82svh;
     position: relative;
   }
 
@@ -348,7 +348,8 @@ textarea {
     flex-direction: column;
     gap: 4rem;
     height: auto;
-    min-height: 100svh;
+    max-height: none;
+    min-height: 82svh;
     padding-bottom: 4rem;
     padding-top: 8rem;
   }
@@ -394,6 +395,7 @@ textarea {
 @media (max-width: 640px) {
   .az-scroll-hero-content {
     padding-inline: 1.25rem;
+    min-height: 84svh;
   }
 
   .az-scroll-hero-main .az-hero-title {
@@ -402,6 +404,7 @@ textarea {
 
   .az-hero-copy .az-hero-title {
     font-size: clamp(2.5rem, 11vw, 4.2rem);
+    max-width: 7.5ch;
   }
 
   .az-photo-sequence article {
@@ -434,7 +437,8 @@ textarea {
 
   .az-scroll-hero-stage {
     height: auto;
-    min-height: 100svh;
+    max-height: none;
+    min-height: 82svh;
     position: relative;
   }
 
