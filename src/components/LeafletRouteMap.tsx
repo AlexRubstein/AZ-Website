@@ -9,6 +9,8 @@ import { routePreviewBounds, routePreviewPins, routePreviewSegments } from "@/li
 export type LeafletRouteMapProps = {
   highlights?: HomeTrailHighlight[];
   activeHighlightId?: string;
+  activeFlyTo?: boolean;
+  openActivePopup?: boolean;
   onHighlightSelect?: (id: string) => void;
 };
 
@@ -109,7 +111,13 @@ function updateHighlightMarkerStyles(markerRefs: Map<string, Leaflet.CircleMarke
   activeMarker?.bringToFront();
 }
 
-export function LeafletRouteMap({ highlights = [], activeHighlightId, onHighlightSelect }: LeafletRouteMapProps) {
+export function LeafletRouteMap({
+  highlights = [],
+  activeHighlightId,
+  activeFlyTo = true,
+  openActivePopup = true,
+  onHighlightSelect,
+}: LeafletRouteMapProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<Leaflet.Map | null>(null);
   const overlayRef = useRef<Leaflet.LayerGroup | null>(null);
@@ -196,10 +204,14 @@ export function LeafletRouteMap({ highlights = [], activeHighlightId, onHighligh
     if (!activeMarker) return;
 
     updateHighlightMarkerStyles(markerRefs.current, activeHighlightId);
-    const latLng = activeMarker.getLatLng();
-    mapRef.current.flyTo(latLng, Math.max(mapRef.current.getZoom(), 9), { duration: 0.6 });
-    activeMarker.openPopup();
-  }, [activeHighlightId, ready]);
+    if (activeFlyTo) {
+      const latLng = activeMarker.getLatLng();
+      mapRef.current.flyTo(latLng, Math.max(mapRef.current.getZoom(), 9), { duration: 0.6 });
+    }
+    if (openActivePopup) {
+      activeMarker.openPopup();
+    }
+  }, [activeFlyTo, activeHighlightId, openActivePopup, ready]);
 
   return (
     <div ref={containerRef} className="absolute inset-0 z-0 h-full min-h-[430px] w-full sm:min-h-[520px] xl:min-h-[660px]" />

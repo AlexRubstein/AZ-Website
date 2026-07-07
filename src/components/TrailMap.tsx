@@ -6,6 +6,8 @@ import { useCallback, useMemo, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Download } from "lucide-react";
 
+import { ProtectedDownloadLink } from "@/components/auth/ProtectedDownloadLink";
+import { resolveDownloadHref } from "@/lib/download-links";
 import type { HomeDownload, HomeMapLayer, HomeTrailHighlight } from "@/lib/home";
 import type { LeafletRouteMapProps } from "@/components/LeafletRouteMap";
 
@@ -83,14 +85,14 @@ export function TrailMap({
           {quietDownloads.length ? (
             <div id="downloads" className="absolute bottom-3 left-3 z-[420] flex max-w-[calc(100%-1.5rem)] flex-wrap gap-2">
               {quietDownloads.map((download) => (
-                <a
+                <ProtectedDownloadLink
                   key={`${download.label}-${download.href || download.value || ""}`}
-                  href={download.href || "/resources"}
+                  href={resolveDownloadHref(download.href)}
                   className="inline-flex min-h-10 items-center gap-2 rounded-full border border-[#d8ded4] bg-[#fffdf7]/94 px-3.5 text-xs font-black uppercase tracking-[0.1em] text-[#173d2b] shadow-[0_10px_28px_rgba(19,34,26,0.16)] backdrop-blur transition hover:border-[#b74f32] hover:text-[#b74f32] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b74f32]"
                 >
                   <Download size={14} aria-hidden="true" />
                   {download.value || download.label}
-                </a>
+                </ProtectedDownloadLink>
               ))}
             </div>
           ) : null}

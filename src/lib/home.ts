@@ -148,7 +148,7 @@ export const fallbackHomePage: HomePageData = {
   heroImage: "/azat/photos/735761389_1318522053829180_4711200860303823554_n.jpg",
   heroImageAlt: "Aerial view of a dirt trail winding through Arizona high-country juniper landscape",
   primaryCta: { label: "View Map", href: "#trail-map" },
-  secondaryCta: { label: "Download GPX", href: "/azat/downloads/arizona-alpine-trail.gpx", variant: "secondary" },
+  secondaryCta: { label: "Download GPX", href: "/downloads/arizona-alpine-trail-gpx", variant: "secondary" },
   missionStatement:
     "To develop, maintain, document, and promote an OHV trail system through Eastern Arizona while advancing rider safety, environmental respect, and public awareness.",
   missionAttribution: "Jerry Smith, President",
@@ -243,9 +243,9 @@ export const fallbackHomePage: HomePageData = {
     },
   ],
   downloads: [
-    { label: "Complete Trail GPX", value: "GPX", description: "V5 / Mar 21, 2026", href: "/azat/downloads/arizona-alpine-trail.gpx" },
-    { label: "Segment Overlay KML", value: "KML", description: "V5 / Mar 21, 2026", href: "/azat/downloads/azat-segments-v5.kml" },
-    { label: "GIS Shapefile", value: "SHP", description: "Planning archive", href: "/azat/downloads/azat-shapefile.zip" },
+    { label: "Complete Trail GPX", value: "GPX", description: "V5 / Mar 21, 2026", href: "/downloads/arizona-alpine-trail-gpx" },
+    { label: "Segment Overlay KML", value: "KML", description: "V5 / Mar 21, 2026", href: "/downloads/azat-segments-v5-kml" },
+    { label: "GIS Shapefile", value: "SHP", description: "Planning archive", href: "/downloads/azat-shapefile" },
     { label: "Town Services Guide", value: "Guide", description: "Coming soon", href: "/resources" },
   ],
   itineraryTitle: "Rusty's Route 1000",
@@ -307,7 +307,7 @@ export const fallbackHomePage: HomePageData = {
         "GPX, KML, and planning files are treated like essential gear: visible, clear, and ready before the ride leaves service.",
       image: "/azat/ride/ride-prepare.jpg",
       imageAlt: "Arizona alpine route landscape for route file preparation",
-      cta: { label: "Download GPX", href: "/azat/downloads/arizona-alpine-trail.gpx", variant: "text" },
+      cta: { label: "Download GPX", href: "/downloads/arizona-alpine-trail-gpx", variant: "text" },
     },
     {
       type: "towns",

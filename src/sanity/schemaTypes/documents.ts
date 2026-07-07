@@ -201,6 +201,63 @@ export const route = defineType({
   ],
 });
 
+export const rustysRoutePage = defineType({
+  name: "rustysRoutePage",
+  title: "Rusty's Route Page",
+  type: "document",
+  fields: [
+    defineField({ name: "title", type: "string", initialValue: "Rusty's Route 1000" }),
+    defineField({ name: "heroKicker", title: "Hero Kicker", type: "string" }),
+    defineField({ name: "heroTitle", title: "Hero Title", type: "string", validation: (Rule) => Rule.required() }),
+    defineField({ name: "heroCopy", title: "Hero Copy", type: "text", rows: 2 }),
+    defineField({ name: "heroImage", title: "Hero Scenic Image", type: "externalImage" }),
+    defineField({
+      name: "facts",
+      title: "Hero Facts",
+      type: "array",
+      of: [{ type: "labeledItem" }],
+      validation: (Rule) => Rule.max(4),
+    }),
+    defineField({ name: "downloadCta", title: "Download CTA", type: "cta" }),
+    defineField({ name: "overviewKicker", title: "Map Section Kicker", type: "string" }),
+    defineField({ name: "overviewTitle", title: "Map Section Title", type: "string" }),
+    defineField({ name: "overviewCopy", title: "Map Section Copy", type: "text", rows: 2 }),
+    defineField({
+      name: "mapHighlights",
+      title: "Map Town Highlights",
+      description: "Town and lodging/fuel markers shown on the route overview map.",
+      type: "array",
+      of: [{ type: "trailHighlight" }],
+    }),
+    defineField({ name: "planningKicker", title: "Know Before You Go Kicker", type: "string" }),
+    defineField({
+      name: "planningNotes",
+      title: "Know Before You Go Notes",
+      type: "array",
+      of: [{ type: "rustysRoutePlanningNote" }],
+    }),
+    defineField({ name: "itineraryKicker", title: "Itinerary Kicker", type: "string" }),
+    defineField({ name: "itineraryTitle", title: "Itinerary Title", type: "string" }),
+    defineField({ name: "lodgingNote", title: "Lodging Note", type: "text", rows: 2 }),
+    defineField({
+      name: "itineraryDays",
+      title: "Itinerary Days",
+      type: "array",
+      of: [{ type: "rustysRouteDay" }],
+    }),
+    defineField({ name: "finalCtaKicker", title: "Final CTA Kicker", type: "string" }),
+    defineField({ name: "finalCtaTitle", title: "Final CTA Title", type: "string" }),
+    defineField({ name: "finalCtaImage", title: "Final CTA Background Image", type: "externalImage" }),
+    defineField({ name: "seo", type: "seo" }),
+  ],
+  preview: {
+    select: {
+      title: "title",
+      subtitle: "heroTitle",
+    },
+  },
+});
+
 export const faq = defineType({
   name: "faq",
   title: "FAQ",

@@ -44,9 +44,9 @@ export const trailFilters = [
 ];
 
 export const downloads = [
-  { label: "Full Trail GPX", type: "GPX", version: "v1 draft" },
-  { label: "Route Overlay KML", type: "KML", version: "v1 draft" },
-  { label: "GIS Shapefile", type: "SHP", version: "planning" },
+  { label: "Complete Trail GPX", type: "GPX", version: "V5 / Mar 21, 2026", href: "/downloads/arizona-alpine-trail-gpx" },
+  { label: "Segment Overlay KML", type: "KML", version: "V5 / Mar 21, 2026", href: "/downloads/azat-segments-v5-kml" },
+  { label: "GIS Shapefile", type: "SHP", version: "Planning archive", href: "/downloads/azat-shapefile" },
 ];
 
 export const towns = [

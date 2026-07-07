@@ -19,6 +19,25 @@ const client = createClient({
 
 const image = (externalUrl, alt) => ({ _type: "externalImage", externalUrl, alt });
 const slug = (current) => ({ _type: "slug", current });
+const labeledItem = (label, value, description, href) => ({ _type: "labeledItem", label, value, description, href });
+const planningNote = (label, text) => ({ _type: "rustysRoutePlanningNote", label, text });
+const rustysDay = (day, route, via, miles, fuel, lodging) => ({
+  _type: "rustysRouteDay",
+  day,
+  route,
+  via,
+  miles,
+  fuel,
+  lodging,
+});
+const mapCoordinates = (lat, lng) => ({ _type: "mapCoordinates", lat, lng });
+const trailHighlight = (title, category, icon, lat, lng) => ({
+  _type: "trailHighlight",
+  title,
+  category,
+  icon,
+  coordinates: mapCoordinates(lat, lng),
+});
 
 const documents = [
   {
@@ -119,6 +138,65 @@ const documents = [
     footerCtaTitle: "Plan the Ride. Protect the Route.",
     footerCtaCopy:
       "A Sanity-backed platform gives AZAT room to grow from launch content into maps, donations, products, memberships, and future rider services.",
+  },
+  {
+    _id: "rustysRoutePage",
+    _type: "rustysRoutePage",
+    title: "Rusty's Route 1000",
+    heroKicker: "Rusty's Route 1000",
+    heroTitle: "Eleven days around the high country.",
+    heroCopy: "A hotel-based Arizona Alpine Trail itinerary beginning and ending in Alpine.",
+    heroImage: image("/azat/photos/735761389_1318522053829180_4711200860303823554_n.jpg", "Arizona Alpine Trail high country scenery"),
+    facts: [
+      labeledItem("11 days", "Hotel itinerary"),
+      labeledItem("~1,000 mi", "With town connectors"),
+      labeledItem("Start anywhere", "Clockwise or counterclockwise"),
+    ],
+    downloadCta: { _type: "cta", label: "Download GPX", href: "/downloads/arizona-alpine-trail-gpx", variant: "primary" },
+    overviewKicker: "Route overview",
+    overviewTitle: "The loop at a glance.",
+    overviewCopy: "Town markers show the overnight rhythm; the line shows the AZAT backbone.",
+    mapHighlights: [
+      trailHighlight("Alpine", "Town", "map-pin", 33.8481, -109.1436),
+      trailHighlight("Greer", "Lodging", "lodging", 34.0115, -109.4587),
+      trailHighlight("Show Low", "Fuel", "fuel", 34.2499, -110.0438),
+      trailHighlight("Heber-Overgaard", "Town", "map-pin", 34.4141, -110.5687),
+      trailHighlight("Pine", "Lodging", "lodging", 34.407, -111.4926),
+      trailHighlight("Punkin Center", "Lodging", "lodging", 33.8684, -111.3001),
+      trailHighlight("Young", "Lodging", "lodging", 34.1017, -110.9637),
+      trailHighlight("Hannagan Meadow", "Lodging", "lodging", 33.6426, -109.3223),
+    ],
+    planningKicker: "Know before you go",
+    planningNotes: [
+      planningNote("Flexible route", "Start in Alpine, Show Low, Payson, Heber-Overgaard, or another town along the trail."),
+      planningNote("Best hubs", "Alpine, Show Low, Payson, and Heber-Overgaard have the strongest mix of fuel, food, lodging, and supplies."),
+      planningNote("Limited lodging", "Young, Heber, Punkin Center, and Hannagan Meadow have limited motel options. Book early."),
+      planningNote("Mileage note", "The core AZAT is about 700 miles. Rusty's Route adds town connectors, fuel stops, sightseeing, and side roads."),
+    ],
+    itineraryKicker: "Itinerary",
+    itineraryTitle: "Day by day.",
+    lodgingNote: "Book lodging early. Young, Heber, Punkin Center, and Hannagan Meadow are limited.",
+    itineraryDays: [
+      rustysDay("01", "Alpine to Greer", "FR 1122", "~100", "Eagar", "Lazy Trout Lodge"),
+      rustysDay("02", "Greer to Show Low", undefined, "~85", "Show Low", "Days Inn"),
+      rustysDay("03", "Show Low to Heber-Overgaard", "FR 504", "~100", "Show Low, Heber", "Sawmill Inn"),
+      rustysDay("04", "Heber-Overgaard to Pine", undefined, "~110", "Pine", "The Strawberry Inn"),
+      rustysDay("05", "Pine to Punkin Center", undefined, "~80", "Tonto Basin", "Punkin Center Lodge"),
+      rustysDay("06", "Punkin Center to Young", "FR 288", "~90", "Young", "Pleasant Valley Inn"),
+      rustysDay("07", "Young to Heber-Overgaard", "Black Canyon Rd", "~90", "Heber", "Sawmill Inn"),
+      rustysDay("08", "Heber-Overgaard to Show Low", undefined, "~90", "Show Low", "Days Inn"),
+      rustysDay("09", "Show Low to Greer", "FR 1122", "~85", "Big Lake or Eagar", "Lazy Trout Lodge"),
+      rustysDay("10", "Greer to Hannagan Meadow", "FR 576", "~85", "Big Lake", "Hannagan Lodge"),
+      rustysDay("11", "Hannagan Meadow to Alpine", undefined, "~85", "Alpine", "Trip ends"),
+    ],
+    finalCtaKicker: "Ready to ride",
+    finalCtaTitle: "Take the route file with you.",
+    finalCtaImage: image("/azat/photos/733890453_1316837243997661_6044422898535499635_n.jpg", ""),
+    seo: {
+      _type: "seo",
+      title: "Rusty's Route 1000",
+      description: "An 11-day hotel-based ride around the Arizona Alpine Trail.",
+    },
   },
   {
     _id: "route-rustys-route-1000",

@@ -1,10 +1,5 @@
-import { PageShell } from "@/components/PageShell";
+import { redirect } from "next/navigation";
 
 export default function LoginPage() {
-  return (
-    <PageShell
-      title="Log in"
-      description="Placeholder route for a future member/download access system. Sanity remains the content backend; auth can be added when needed."
-    />
-  );
+  redirect("/sign-in");
 }

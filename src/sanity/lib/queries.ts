@@ -97,6 +97,44 @@ export const homePageQuery = groq`*[_type == "homePage"][0]{
   seo
 }`;
 
+export const rustysRoutePageQuery = groq`*[_type == "rustysRoutePage"][0]{
+  title,
+  heroKicker,
+  heroTitle,
+  heroCopy,
+  "heroImage": coalesce(heroImage.externalUrl, heroImage.image.asset->url),
+  "heroImageAlt": heroImage.alt,
+  facts,
+  downloadCta,
+  overviewKicker,
+  overviewTitle,
+  overviewCopy,
+  mapHighlights[]{
+    _key,
+    title,
+    category,
+    note,
+    icon,
+    coordinates,
+    facts,
+    "image": coalesce(image.externalUrl, image.image.asset->url),
+    "imageAlt": image.alt,
+    town->{title, slug},
+    route->{title, slug}
+  },
+  planningKicker,
+  planningNotes,
+  itineraryKicker,
+  itineraryTitle,
+  lodgingNote,
+  itineraryDays,
+  finalCtaKicker,
+  finalCtaTitle,
+  "finalCtaImage": coalesce(finalCtaImage.externalUrl, finalCtaImage.image.asset->url),
+  "finalCtaImageAlt": finalCtaImage.alt,
+  seo
+}`;
+
 export const newsPostQuery = groq`*[_type == "newsPost" && slug.current == $slug][0]{
   title,
   slug,
