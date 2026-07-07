@@ -41,6 +41,47 @@ function validatePassword(password: string) {
   return null;
 }
 
+function normalizeSiteOrigin(value: string | null | undefined) {
+  const rawValue = value?.trim();
+
+  if (!rawValue) {
+    return null;
+  }
+
+  const withProtocol =
+    rawValue.startsWith("http://") || rawValue.startsWith("https://")
+      ? rawValue
+      : rawValue.startsWith("localhost") || rawValue.startsWith("127.0.0.1")
+        ? `http://${rawValue}`
+        : `https://${rawValue}`;
+
+  try {
+    return new URL(withProtocol).origin;
+  } catch {
+    return null;
+  }
+}
+
+async function getSiteOrigin() {
+  const requestHeaders = await headers();
+  const forwardedHost = requestHeaders.get("x-forwarded-host");
+  const forwardedProto = requestHeaders.get("x-forwarded-proto") ?? "https";
+  const forwardedOrigin = forwardedHost
+    ? `${forwardedProto}://${forwardedHost}`
+    : null;
+
+  return (
+    normalizeSiteOrigin(process.env.NEXT_PUBLIC_SITE_URL) ??
+    normalizeSiteOrigin(process.env.SITE_URL) ??
+    normalizeSiteOrigin(process.env.VERCEL_PROJECT_PRODUCTION_URL) ??
+    normalizeSiteOrigin(process.env.NEXT_PUBLIC_VERCEL_URL) ??
+    normalizeSiteOrigin(process.env.VERCEL_URL) ??
+    normalizeSiteOrigin(forwardedOrigin) ??
+    normalizeSiteOrigin(requestHeaders.get("origin")) ??
+    "http://localhost:3000"
+  );
+}
+
 export async function signUpAction(
   _previousState: AuthFormState = idleState,
   formData: FormData,
@@ -76,7 +117,7 @@ export async function signUpAction(
     };
   }
 
-  const origin = (await headers()).get("origin") ?? "http://localhost:3000";
+  const origin = await getSiteOrigin();
   const confirmationUrl = new URL("/auth/callback", origin);
   confirmationUrl.searchParams.set("next", next);
   const { error } = await supabase.auth.signUp({
