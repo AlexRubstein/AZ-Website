@@ -37,7 +37,7 @@ export function Header() {
       >
         Skip to main content
       </a>
-      <div className="mx-auto flex min-h-15 max-w-[1320px] items-center justify-between gap-6 px-5 sm:px-8">
+      <div className="mx-auto flex min-h-15 max-w-[1320px] items-center justify-between gap-3 px-5 sm:gap-6 sm:px-8">
         <Link href="/" className="group flex items-center gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white" aria-label="Arizona Alpine Trail home">
           <span className={`grid size-11 place-items-center rounded-full p-1 transition duration-300 ${
             useSolidHeader ? "bg-white/88 shadow-[0_8px_22px_rgba(0,0,0,0.16)]" : "bg-white/70 shadow-none"
@@ -58,6 +58,7 @@ export function Header() {
         </Link>
         <div className="flex items-center gap-3">
           <AuthHeaderControls />
+          <AuthHeaderControls compact />
         </div>
       </div>
     </header>

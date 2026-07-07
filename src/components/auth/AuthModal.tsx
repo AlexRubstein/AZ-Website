@@ -143,7 +143,7 @@ export function AuthModalProvider() {
     <AnimatePresence>
       {open ? (
         <motion.div
-          className="fixed inset-0 z-[90] grid place-items-center bg-[#07150f]/62 px-4 py-6 backdrop-blur-sm"
+          className="fixed inset-0 z-[90] grid items-start justify-items-center overflow-y-auto overscroll-contain bg-[#07150f]/62 px-4 pb-[calc(1.5rem+env(safe-area-inset-bottom))] pt-6 backdrop-blur-sm sm:place-items-center"
           role="dialog"
           aria-modal="true"
           aria-label={modalLabel}
@@ -168,7 +168,7 @@ export function AuthModalProvider() {
               type="button"
               aria-label="Close"
               onClick={closeModal}
-              className="absolute -right-2 -top-2 z-10 grid size-10 place-items-center rounded-full border border-[#d8ded4] bg-[#fffdf7] text-[#13221a] shadow-[0_10px_26px_rgba(19,34,26,0.16)] transition hover:border-[#b74f32] hover:text-[#b74f32] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="absolute -right-2 -top-2 z-10 grid size-11 place-items-center rounded-full border border-[#d8ded4] bg-[#fffdf7] text-[#13221a] shadow-[0_10px_26px_rgba(19,34,26,0.16)] transition hover:border-[#b74f32] hover:text-[#b74f32] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               <X size={18} aria-hidden="true" />
             </button>

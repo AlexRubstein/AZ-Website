@@ -181,7 +181,7 @@ export function AuthForm({
             <button
               type="button"
               onClick={() => onModeChange(isSignUp ? "sign-in" : "sign-up")}
-              className="justify-self-start text-sm font-bold text-[#235840] underline decoration-[#b87939]/40 underline-offset-4 transition hover:text-[#b74f32] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b74f32]"
+              className="inline-flex min-h-11 items-center justify-self-start text-sm font-bold text-[#235840] underline decoration-[#b87939]/40 underline-offset-4 transition hover:text-[#b74f32] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b74f32]"
             >
               {isSignUp
                 ? "Already registered? Log in"
@@ -190,7 +190,7 @@ export function AuthForm({
           ) : (
             <Link
               href={`${isSignUp ? "/sign-in" : "/sign-up"}?next=${encodeURIComponent(nextPath)}`}
-              className="text-sm font-bold text-[#235840] underline decoration-[#b87939]/40 underline-offset-4 transition hover:text-[#b74f32]"
+              className="inline-flex min-h-11 items-center text-sm font-bold text-[#235840] underline decoration-[#b87939]/40 underline-offset-4 transition hover:text-[#b74f32] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b74f32]"
             >
               {isSignUp
                 ? "Already registered? Log in"
