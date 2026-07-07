@@ -1,6 +1,7 @@
 "use server";
 
 import { redirect } from "next/navigation";
+import { createSupabaseAdminClient } from "@/supabase/admin";
 import { createSupabaseServerClient } from "@/supabase/server";
 
 export type AuthFormState = {
@@ -67,6 +68,7 @@ export async function signUpAction(
   }
 
   const supabase = await createSupabaseServerClient();
+  const adminClient = createSupabaseAdminClient();
 
   if (!supabase) {
     return {
@@ -75,29 +77,44 @@ export async function signUpAction(
     };
   }
 
-  const { data, error } = await supabase.auth.signUp({
-    email,
-    password,
-    options: {
-      data: {
-        first_name: firstName,
-        last_name: lastName,
-        full_name: `${firstName} ${lastName}`,
-        zip_code: zipCode,
-      },
-    },
-  });
-
-  if (error) {
-    return { status: "error", message: error.message };
-  }
-
-  if (!data.session) {
+  if (!adminClient) {
     return {
       status: "error",
-      message:
-        "Email confirmation is still enabled in Supabase. Turn off Confirm email, then register again.",
+      message: "Supabase service role key is not configured yet.",
     };
+  }
+
+  const profileData = {
+    first_name: firstName,
+    last_name: lastName,
+    full_name: `${firstName} ${lastName}`,
+    zip_code: zipCode,
+  };
+  const { error: createUserError } = await adminClient.auth.admin.createUser({
+    email,
+    password,
+    email_confirm: true,
+    user_metadata: profileData,
+  });
+
+  if (createUserError) {
+    if (/already|registered|exists/i.test(createUserError.message)) {
+      return {
+        status: "error",
+        message: "An account already exists for this email. Log in instead.",
+      };
+    }
+
+    return { status: "error", message: createUserError.message };
+  }
+
+  const { error: signInError } = await supabase.auth.signInWithPassword({
+    email,
+    password,
+  });
+
+  if (signInError) {
+    return { status: "error", message: signInError.message };
   }
 
   redirect(next);

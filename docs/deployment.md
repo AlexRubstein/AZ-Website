@@ -7,13 +7,22 @@ Deploy the Next.js app on Vercel and set the environment variables from `.env.ex
 ## Supabase Auth
 
 This site uses immediate email/password registration without Supabase email
-verification. In Supabase Dashboard, go to Authentication > Providers > Email:
+verification. The server action creates confirmed users with the Supabase Admin
+API, then signs them in with email/password so SSR auth cookies are set.
 
-- Keep Email enabled.
-- Turn off Confirm email.
+Set these variables in Vercel:
 
-When Confirm email is off, successful registration creates a session immediately
-and redirects the new user to the requested page.
+```bash
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+SUPABASE_SERVICE_ROLE_KEY=
+```
+
+`SUPABASE_SERVICE_ROLE_KEY` must stay server-only. Do not expose it with a
+`NEXT_PUBLIC_` prefix.
+
+In Supabase Dashboard, go to Authentication > Providers > Email and keep Email
+enabled. The Confirm email toggle does not control this registration flow.
 
 ## Sanity
 
