@@ -1,6 +1,5 @@
 "use server";
 
-import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { createSupabaseServerClient } from "@/supabase/server";
 
@@ -41,47 +40,6 @@ function validatePassword(password: string) {
   return null;
 }
 
-function normalizeSiteOrigin(value: string | null | undefined) {
-  const rawValue = value?.trim();
-
-  if (!rawValue) {
-    return null;
-  }
-
-  const withProtocol =
-    rawValue.startsWith("http://") || rawValue.startsWith("https://")
-      ? rawValue
-      : rawValue.startsWith("localhost") || rawValue.startsWith("127.0.0.1")
-        ? `http://${rawValue}`
-        : `https://${rawValue}`;
-
-  try {
-    return new URL(withProtocol).origin;
-  } catch {
-    return null;
-  }
-}
-
-async function getSiteOrigin() {
-  const requestHeaders = await headers();
-  const forwardedHost = requestHeaders.get("x-forwarded-host");
-  const forwardedProto = requestHeaders.get("x-forwarded-proto") ?? "https";
-  const forwardedOrigin = forwardedHost
-    ? `${forwardedProto}://${forwardedHost}`
-    : null;
-
-  return (
-    normalizeSiteOrigin(process.env.NEXT_PUBLIC_SITE_URL) ??
-    normalizeSiteOrigin(process.env.SITE_URL) ??
-    normalizeSiteOrigin(process.env.VERCEL_PROJECT_PRODUCTION_URL) ??
-    normalizeSiteOrigin(process.env.NEXT_PUBLIC_VERCEL_URL) ??
-    normalizeSiteOrigin(process.env.VERCEL_URL) ??
-    normalizeSiteOrigin(forwardedOrigin) ??
-    normalizeSiteOrigin(requestHeaders.get("origin")) ??
-    "http://localhost:3000"
-  );
-}
-
 export async function signUpAction(
   _previousState: AuthFormState = idleState,
   formData: FormData,
@@ -117,14 +75,10 @@ export async function signUpAction(
     };
   }
 
-  const origin = await getSiteOrigin();
-  const confirmationUrl = new URL("/auth/callback", origin);
-  confirmationUrl.searchParams.set("next", next);
-  const { error } = await supabase.auth.signUp({
+  const { data, error } = await supabase.auth.signUp({
     email,
     password,
     options: {
-      emailRedirectTo: confirmationUrl.toString(),
       data: {
         first_name: firstName,
         last_name: lastName,
@@ -138,10 +92,15 @@ export async function signUpAction(
     return { status: "error", message: error.message };
   }
 
-  return {
-    status: "success",
-    message: "Check your email to confirm your account, then log in.",
-  };
+  if (!data.session) {
+    return {
+      status: "error",
+      message:
+        "Email confirmation is still enabled in Supabase. Turn off Confirm email, then register again.",
+    };
+  }
+
+  redirect(next);
 }
 
 export async function signInAction(

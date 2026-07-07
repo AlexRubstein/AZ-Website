@@ -4,26 +4,16 @@
 
 Deploy the Next.js app on Vercel and set the environment variables from `.env.example`.
 
-Set `NEXT_PUBLIC_SITE_URL` to the canonical production origin, for example:
+## Supabase Auth
 
-```bash
-NEXT_PUBLIC_SITE_URL=https://azalpinetrail.org
-```
+This site uses immediate email/password registration without Supabase email
+verification. In Supabase Dashboard, go to Authentication > Providers > Email:
 
-This value is used for Supabase email confirmation callbacks. Without it,
-confirmation emails can fall back to `localhost` or a preview deployment URL.
+- Keep Email enabled.
+- Turn off Confirm email.
 
-## Supabase Auth URLs
-
-In Supabase Dashboard, go to Authentication > URL Configuration:
-
-- Set Site URL to the production site origin, for example `https://azalpinetrail.org`.
-- Add local and Vercel preview redirect URLs as needed:
-  - `http://localhost:3000/**`
-  - `https://*.vercel.app/**`
-  - `https://azalpinetrail.org/**`
-- If the confirmation email template has a custom link, use `{{ .RedirectTo }}`
-  instead of `{{ .SiteURL }}` so the app-provided callback URL is honored.
+When Confirm email is off, successful registration creates a session immediately
+and redirects the new user to the requested page.
 
 ## Sanity
 
