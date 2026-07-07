@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
+import { Analytics } from "@vercel/analytics/next";
 import { AuthModalProvider } from "@/components/auth/AuthModal";
 import "./globals.css";
 
@@ -33,6 +34,7 @@ export default function RootLayout({
         <Suspense fallback={null}>
           <AuthModalProvider />
         </Suspense>
+        <Analytics />
       </body>
     </html>
   );
