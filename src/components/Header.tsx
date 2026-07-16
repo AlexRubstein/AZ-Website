@@ -4,12 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { Mountain } from "lucide-react";
 import { AuthHeaderControls } from "@/components/auth/AuthHeaderControls";
 
 export function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const useSolidHeader = pathname !== "/" || scrolled;
+  const on3DPage = pathname?.startsWith("/trail/3d");
 
   useEffect(() => {
     const updateHeaderState = () => {
@@ -57,6 +59,18 @@ export function Header() {
           </span>
         </Link>
         <div className="flex items-center gap-3">
+          <Link
+            href="/trail/3d"
+            aria-current={on3DPage ? "page" : undefined}
+            className={`hidden items-center gap-1.5 rounded-full border px-4 py-2 font-mono text-[11px] font-black uppercase tracking-[0.12em] transition duration-200 sm:inline-flex focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${
+              on3DPage
+                ? "border-[#f1b65a] bg-[#13221a] text-[#f1b65a] shadow-[0_6px_18px_rgba(241,182,90,0.22)]"
+                : "border-[#f1b65a]/70 bg-gradient-to-b from-[#f6c877] to-[#e5a94f] text-[#13221a] shadow-[0_6px_18px_rgba(241,182,90,0.45)] hover:-translate-y-0.5 hover:from-[#f8d38c] hover:to-[#eab558] hover:shadow-[0_10px_26px_rgba(241,182,90,0.6)]"
+            }`}
+          >
+            <Mountain size={14} aria-hidden="true" />
+            3D Map
+          </Link>
           <AuthHeaderControls />
           <AuthHeaderControls compact />
         </div>

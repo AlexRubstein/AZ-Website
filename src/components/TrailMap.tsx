@@ -2,9 +2,10 @@
 
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import Link from "next/link";
 import { useCallback, useMemo, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ChevronLeft, ChevronRight, Download } from "lucide-react";
+import { ChevronLeft, ChevronRight, Download, Mountain } from "lucide-react";
 
 import { ProtectedDownloadLink } from "@/components/auth/ProtectedDownloadLink";
 import { resolveDownloadHref } from "@/lib/download-links";
@@ -80,6 +81,18 @@ export function TrailMap({
               activeHighlightId={selectedId || undefined}
               onHighlightSelect={handleHighlightSelect}
             />
+          </div>
+
+          <div className="absolute right-3 top-3 z-[420]">
+            <motion.div whileHover={prefersReducedMotion ? undefined : { y: -2 }} whileTap={prefersReducedMotion ? undefined : { scale: 0.96 }}>
+              <Link
+                href="/trail/3d"
+                className="inline-flex min-h-10 items-center gap-2 rounded-full border border-[#e5b96f] bg-[#173d2b] px-4 text-xs font-black uppercase tracking-[0.1em] text-white shadow-[0_10px_28px_rgba(19,34,26,0.28)] backdrop-blur transition hover:bg-[#e5b96f] hover:text-[#13221a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e5b96f]"
+              >
+                <Mountain size={14} aria-hidden="true" />
+                View in 3D
+              </Link>
+            </motion.div>
           </div>
 
           {quietDownloads.length ? (

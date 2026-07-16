@@ -147,7 +147,7 @@ export const fallbackHomePage: HomePageData = {
   heroCopy: "View the route. Download the GPX.",
   heroImage: "/azat/photos/735761389_1318522053829180_4711200860303823554_n.jpg",
   heroImageAlt: "Aerial view of a dirt trail winding through Arizona high-country juniper landscape",
-  primaryCta: { label: "View Map", href: "#trail-map" },
+  primaryCta: { label: "View 3D Map", href: "/trail/3d" },
   secondaryCta: { label: "Download GPX", href: "/downloads/arizona-alpine-trail-gpx", variant: "secondary" },
   missionStatement:
     "To develop, maintain, document, and promote an OHV trail system through Eastern Arizona while advancing rider safety, environmental respect, and public awareness.",

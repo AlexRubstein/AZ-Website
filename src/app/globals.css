@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "leaflet/dist/leaflet.css";
+@import "mapbox-gl/dist/mapbox-gl.css";
 
 :root {
   --background: #f7f8f4;
@@ -265,6 +266,134 @@ body {
 .az-map-experience .leaflet-popup-content-wrapper,
 .az-map-experience .leaflet-popup-tip {
   border-radius: 2px;
+}
+
+.az-terrain-marker {
+  align-items: flex-end;
+  background: transparent;
+  border: 0;
+  color: #fffdf7;
+  cursor: pointer;
+  display: flex;
+  filter: drop-shadow(0 4px 7px rgba(0, 0, 0, 0.72));
+  gap: 0.35rem;
+  padding: 0;
+}
+
+.az-terrain-marker-dot {
+  background: #76f0b0;
+  border: 2px solid #fffdf7;
+  border-radius: 999px;
+  box-shadow: 0 0 0 4px rgba(118, 240, 176, 0.18);
+  display: block;
+  height: 0.78rem;
+  margin-bottom: 0.1rem;
+  width: 0.78rem;
+}
+
+.az-terrain-marker-label {
+  display: grid;
+  gap: 0.08rem;
+  line-height: 1;
+  text-align: left;
+  text-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.82),
+    0 2px 8px rgba(0, 0, 0, 0.74);
+}
+
+.az-terrain-marker-label strong {
+  color: #fffdf7;
+  font-size: 0.78rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.az-terrain-marker-label small {
+  color: #76f0b0;
+  font-size: 0.58rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.az-terrain-control,
+.az-terrain-icon-control {
+  align-items: center;
+  background: rgba(7, 21, 15, 0.76);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.24);
+  color: #fffdf7;
+  display: inline-flex;
+  font-size: 0.72rem;
+  font-weight: 900;
+  gap: 0.45rem;
+  justify-content: center;
+  letter-spacing: 0.08em;
+  min-height: 2.5rem;
+  padding: 0 0.92rem;
+  text-transform: uppercase;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.az-terrain-icon-control {
+  padding: 0;
+  width: 2.5rem;
+}
+
+.az-terrain-control:hover,
+.az-terrain-icon-control:hover {
+  background: rgba(118, 240, 176, 0.16);
+  border-color: rgba(118, 240, 176, 0.58);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.az-terrain-control:focus-visible,
+.az-terrain-icon-control:focus-visible {
+  outline: 2px solid #f1b65a;
+  outline-offset: 2px;
+}
+
+.az-terrain-popup {
+  color: #13221a;
+  display: grid;
+  gap: 0.22rem;
+  line-height: 1.25;
+  padding: 0.15rem 0;
+}
+
+.az-terrain-popup strong {
+  color: #07150f;
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.az-terrain-popup span {
+  color: #235840;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.az-terrain-popup small {
+  color: #5f6c63;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.mapboxgl-ctrl-bottom-left,
+.mapboxgl-ctrl-bottom-right {
+  z-index: 5;
+}
+
+.mapboxgl-ctrl-logo,
+.mapboxgl-ctrl-attrib {
+  opacity: 0.78;
 }
 
 .az-photo-sequence article {
