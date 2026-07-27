@@ -460,6 +460,25 @@ textarea {
   }
 }
 
+/* Flame flicker: bar color stays put, only the icon flickers like a flame. */
+.fire-alert-icon-flicker {
+  animation: fire-alert-icon-flicker 1.8s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes fire-alert-icon-flicker {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+  30% {
+    transform: scale(1.08) rotate(-4deg);
+  }
+  60% {
+    transform: scale(1.03) rotate(3deg);
+  }
+}
+
 @media (max-width: 1023px) {
   .az-scroll-hero {
     min-height: auto;

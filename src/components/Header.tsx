@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Mountain } from "lucide-react";
 import { AuthHeaderControls } from "@/components/auth/AuthHeaderControls";
+import { FireAlertBanner } from "@/components/FireAlertBanner";
 
 export function Header() {
   const pathname = usePathname();
@@ -26,6 +27,7 @@ export function Header() {
   }, []);
 
   return (
+    <>
     <header
       className={`fixed inset-x-0 top-0 z-50 text-white transition duration-300 ${
         useSolidHeader
@@ -71,10 +73,14 @@ export function Header() {
             <Mountain size={14} aria-hidden="true" />
             3D Map
           </Link>
+          {/* TEMP-DEMO: badge hidden while previewing thin strip, revert after screenshot */}
           <AuthHeaderControls />
           <AuthHeaderControls compact />
         </div>
       </div>
     </header>
+    {/* TEMP-DEMO: concept preview (thin strip), revert after screenshot */}
+    <FireAlertBanner variant="thinStrip" />
+    </>
   );
 }
