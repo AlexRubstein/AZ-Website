@@ -43,20 +43,20 @@ export function AuthHeaderControls({
 
   if (compact) {
     return (
-      <div className="flex items-center gap-1.5 sm:hidden">
+      <div className="flex items-center gap-1 sm:hidden">
         {user ? (
           <>
             <Link
               href="/account"
               onClick={onNavigate}
-              className="inline-flex min-h-11 items-center rounded-full px-3 text-sm font-semibold text-white/82 transition hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="inline-flex min-h-11 items-center whitespace-nowrap rounded-full px-2 text-sm font-semibold text-white/82 transition hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Account
             </Link>
             <form action={signOutAction}>
               <button
                 type="submit"
-                className="inline-flex min-h-11 items-center rounded-full border border-white/16 bg-white/10 px-3 text-sm font-black text-white transition hover:border-white/28 hover:bg-white hover:text-[#13221a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                className="inline-flex min-h-11 items-center whitespace-nowrap rounded-full border border-white/16 bg-white/10 px-2 text-sm font-black text-white transition hover:border-white/28 hover:bg-white hover:text-[#13221a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 Log out
               </button>
@@ -67,14 +67,14 @@ export function AuthHeaderControls({
             <button
               type="button"
               onClick={() => openAuth("sign-in")}
-              className="inline-flex min-h-11 items-center rounded-full px-3 text-sm font-semibold text-white/82 transition hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="inline-flex min-h-11 items-center whitespace-nowrap rounded-full px-2 text-sm font-semibold text-white/82 transition hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Log in
             </button>
             <button
               type="button"
               onClick={() => openAuth("sign-up")}
-              className="inline-flex min-h-11 items-center rounded-full border border-white/16 bg-white/10 px-3 text-sm font-black text-white transition hover:border-white/28 hover:bg-white hover:text-[#13221a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="inline-flex min-h-11 items-center whitespace-nowrap rounded-full border border-white/16 bg-white/10 px-2 text-sm font-black text-white transition hover:border-white/28 hover:bg-white hover:text-[#13221a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Register
             </button>
