@@ -19,6 +19,25 @@ const client = createClient({
 
 const image = (externalUrl, alt) => ({ _type: "externalImage", externalUrl, alt });
 const slug = (current) => ({ _type: "slug", current });
+const labeledItem = (label, value, description, href) => ({ _type: "labeledItem", label, value, description, href });
+const planningNote = (label, text) => ({ _type: "rustysRoutePlanningNote", label, text });
+const rustysDay = (day, route, via, miles, fuel, lodging) => ({
+  _type: "rustysRouteDay",
+  day,
+  route,
+  via,
+  miles,
+  fuel,
+  lodging,
+});
+const mapCoordinates = (lat, lng) => ({ _type: "mapCoordinates", lat, lng });
+const trailHighlight = (title, category, icon, lat, lng) => ({
+  _type: "trailHighlight",
+  title,
+  category,
+  icon,
+  coordinates: mapCoordinates(lat, lng),
+});
 
 const documents = [
   {
@@ -121,6 +140,65 @@ const documents = [
       "A Sanity-backed platform gives AZAT room to grow from launch content into maps, donations, products, memberships, and future rider services.",
   },
   {
+    _id: "rustysRoutePage",
+    _type: "rustysRoutePage",
+    title: "Rusty's Route 1000",
+    heroKicker: "Rusty's Route 1000",
+    heroTitle: "Eleven days around the high country.",
+    heroCopy: "A hotel-based Arizona Alpine Trail itinerary beginning and ending in Alpine.",
+    heroImage: image("/azat/photos/735761389_1318522053829180_4711200860303823554_n.jpg", "Arizona Alpine Trail high country scenery"),
+    facts: [
+      labeledItem("11 days", "Hotel itinerary"),
+      labeledItem("~1,000 mi", "With town connectors"),
+      labeledItem("Start anywhere", "Clockwise or counterclockwise"),
+    ],
+    downloadCta: { _type: "cta", label: "Download GPX", href: "/downloads/arizona-alpine-trail-gpx", variant: "primary" },
+    overviewKicker: "Route overview",
+    overviewTitle: "The loop at a glance.",
+    overviewCopy: "Town markers show the overnight rhythm; the line shows the AZAT backbone.",
+    mapHighlights: [
+      trailHighlight("Alpine", "Town", "map-pin", 33.8481, -109.1436),
+      trailHighlight("Greer", "Lodging", "lodging", 34.0115, -109.4587),
+      trailHighlight("Show Low", "Fuel", "fuel", 34.2499, -110.0438),
+      trailHighlight("Heber-Overgaard", "Town", "map-pin", 34.4141, -110.5687),
+      trailHighlight("Pine", "Lodging", "lodging", 34.407, -111.4926),
+      trailHighlight("Punkin Center", "Lodging", "lodging", 33.8684, -111.3001),
+      trailHighlight("Young", "Lodging", "lodging", 34.1017, -110.9637),
+      trailHighlight("Hannagan Meadow", "Lodging", "lodging", 33.6426, -109.3223),
+    ],
+    planningKicker: "Know before you go",
+    planningNotes: [
+      planningNote("Flexible route", "Start in Alpine, Show Low, Payson, Heber-Overgaard, or another town along the trail."),
+      planningNote("Best hubs", "Alpine, Show Low, Payson, and Heber-Overgaard have the strongest mix of fuel, food, lodging, and supplies."),
+      planningNote("Limited lodging", "Young, Heber, Punkin Center, and Hannagan Meadow have limited motel options. Book early."),
+      planningNote("Mileage note", "The core AZAT is about 700 miles. Rusty's Route adds town connectors, fuel stops, sightseeing, and side roads."),
+    ],
+    itineraryKicker: "Itinerary",
+    itineraryTitle: "Day by day.",
+    lodgingNote: "Book lodging early. Young, Heber, Punkin Center, and Hannagan Meadow are limited.",
+    itineraryDays: [
+      rustysDay("01", "Alpine to Greer", "FR 1122", "~100", "Eagar", "Lazy Trout Lodge"),
+      rustysDay("02", "Greer to Show Low", undefined, "~85", "Show Low", "Days Inn"),
+      rustysDay("03", "Show Low to Heber-Overgaard", "FR 504", "~100", "Show Low, Heber", "Sawmill Inn"),
+      rustysDay("04", "Heber-Overgaard to Pine", undefined, "~110", "Pine", "The Strawberry Inn"),
+      rustysDay("05", "Pine to Punkin Center", undefined, "~80", "Tonto Basin", "Punkin Center Lodge"),
+      rustysDay("06", "Punkin Center to Young", "FR 288", "~90", "Young", "Pleasant Valley Inn"),
+      rustysDay("07", "Young to Heber-Overgaard", "Black Canyon Rd", "~90", "Heber", "Sawmill Inn"),
+      rustysDay("08", "Heber-Overgaard to Show Low", undefined, "~90", "Show Low", "Days Inn"),
+      rustysDay("09", "Show Low to Greer", "FR 1122", "~85", "Big Lake or Eagar", "Lazy Trout Lodge"),
+      rustysDay("10", "Greer to Hannagan Meadow", "FR 576", "~85", "Big Lake", "Hannagan Lodge"),
+      rustysDay("11", "Hannagan Meadow to Alpine", undefined, "~85", "Alpine", "Trip ends"),
+    ],
+    finalCtaKicker: "Ready to ride",
+    finalCtaTitle: "Take the route file with you.",
+    finalCtaImage: image("/azat/photos/733890453_1316837243997661_6044422898535499635_n.jpg", ""),
+    seo: {
+      _type: "seo",
+      title: "Rusty's Route 1000",
+      description: "An 11-day hotel-based ride around the Arizona Alpine Trail.",
+    },
+  },
+  {
     _id: "route-rustys-route-1000",
     _type: "route",
     title: "Rusty's Route 1000",
@@ -142,19 +220,75 @@ const documents = [
     description,
     services,
   })),
-  ...[
-    ["trail-segment-a-route", "A Route", "a-route", "A", "Primary loop planning route with town connectors and downloadable files."],
-    ["trail-segment-b-route", "B Route", "b-route", "B", "Alternate trail family for future official and seasonal segment detail."],
-  ].map(([id, title, current, segmentCode, description]) => ({
-    _id: id,
+  {
+    _id: "trail-segment-rye-creek",
     _type: "trailSegment",
-    title,
-    slug: slug(current),
-    segmentCode,
-    routeFamily: title,
-    status: "Preliminary",
-    description,
-  })),
+    title: "Rye Creek",
+    slug: slug("rye-creek"),
+    segmentCode: "01",
+    segmentNumber: 1,
+    status: "Open",
+    lengthMiles: 25.4,
+    minElevationFeet: 2761,
+    maxElevationFeet: 5007,
+    elevationGainFeet: 3357,
+    elevationLossFeet: 5239,
+    trailRating: "more-difficult-blue",
+    downloads: [{ _type: "reference", _ref: "download-rye-creek-gpx" }],
+    heroImage: image("/azat/segments/rye-creek/hero.jpg", "Prickly pear cactus overlooking the Rye Creek foothills and mountains"),
+    mapImage: image("/azat/segments/rye-creek/map.png", "AZAT Rye Creek route map with ranger district boundaries and land ownership legend"),
+    descriptionBody: [
+      {
+        _type: "block",
+        style: "normal",
+        children: [
+          {
+            _type: "span",
+            text: "The Rye Creek segment extends between Payson and Jakes Corner in Gila County from the junction of FR 406 (West Doll Baby Road) and FR 511 to the junction of FR 184 and SR 188. The alignment threads the Tonto National Forest, crossing the Rye Creek drainage and working past local landmarks, including Wonder Gulch, Willow Spring Canyon, Weymouth Flat, Sorghum Hill, Bishop Knoll, Haycox Mountain, Black Mountain, and Bee Canyon, with wide views of rolling foothills and piñon juniper/ponderosa country.",
+          },
+        ],
+      },
+      {
+        _type: "block",
+        style: "normal",
+        children: [
+          {
+            _type: "span",
+            text: "This segment consists primarily of a gravel and rocky dirt two-track, with embedded rock, small boulders and ledges, washboards, and a few steeper grades; it crosses SR 87. A high-clearance 4WD/OHV is recommended due to rock steps, erosion cuts, and potential washouts after storms.",
+          },
+        ],
+      },
+    ],
+    amenities: ["Food", "Fuel", "Lodging", "Repair"],
+    amenitiesNote:
+      "Full services (fuel, food, lodging, supplies, OHV repair) are available in Payson. Jakes Corner offers limited services (e.g., bar & grill, RV options), and Gisela provides limited lodging via vacation rentals with access to nearby hiking, camping, and Tonto Creek recreation.",
+    safetyNote:
+      "Lower-elevation desert conditions can bring extreme heat in summer and monsoon-driven flash flooding in washes. Dust, loose rock, and open range livestock are common. Use extra caution at the SR 87 crossing, and carry ample water, recovery gear, and reliable navigation.",
+    pointsOfInterest: [
+      "Gisela Ruins",
+      "Jim Jones Shooting Range",
+      "Hellsgate Wilderness Area",
+      "Tonto Creek",
+      "Jake's Corner Ruins",
+      "Roosevelt Lake",
+      "Mazatzal Peak (7,910 ft) views",
+    ],
+    gallery: [
+      image("/azat/segments/rye-creek/gallery-01-creek-drainage.jpg", "Aerial view of the Rye Creek drainage and cottonwoods"),
+      image("/azat/segments/rye-creek/gallery-02-mountain-clouds.jpg", "Dirt two-track switchback with distant mountain peak"),
+      image("/azat/segments/rye-creek/gallery-03-switchback-aerial.jpg", "Aerial view of a river crossing along the route"),
+      image("/azat/segments/rye-creek/gallery-04-dirt-road-clouds.jpg", "Dirt road winding through juniper under a cloudy sky"),
+      image("/azat/segments/rye-creek/gallery-05-winding-roads.jpg", "Aerial view of winding dirt roads through desert terrain"),
+      image("/azat/segments/rye-creek/gallery-06-ranger-truckbed.jpg", "UTV loaded with gear parked on the trail"),
+      image("/azat/segments/rye-creek/gallery-07-valley-view.jpg", "Overlook of the Rye Creek valley and surrounding mountains"),
+    ],
+    lastVerifiedAt: "2026-08-22",
+    seo: {
+      _type: "seo",
+      title: "Rye Creek — Arizona Alpine Trail Segment 01",
+      description: "25.4 miles between Payson and Jakes Corner. More Difficult/Blue rated, high-clearance 4WD/OHV recommended.",
+    },
+  },
   ...[
     ["download-full-trail-gpx", "Full Trail GPX", "full-trail-gpx", "GPX"],
     ["download-route-overlay-kml", "Route Overlay KML", "route-overlay-kml", "KML"],
@@ -168,6 +302,16 @@ const documents = [
     version: "v1 draft",
     notes: "Starter placeholder. Replace with official file upload before launch.",
   })),
+  {
+    _id: "download-rye-creek-gpx",
+    _type: "downloadFile",
+    title: "Rye Creek GPX",
+    slug: slug("rye-creek-gpx"),
+    fileType: "GPX",
+    version: "v1",
+    notes:
+      "Segment-specific extract, generated from the AZAT01-Rye Creek track. Pending upload to Supabase Storage — see docs/protected-downloads.md for the admin upload workflow.",
+  },
   ...[
     ["news-az-game-fish-outdoor-expo", "AZ Game & Fish Outdoor Expo", "az-game-fish-outdoor-expo", "AZAT shares the trail project with riders, families, and agency partners.", "2025-03-28T12:00:00Z"],
     ["news-azat-goals-and-objectives-workshop", "AZAT Goals and Objectives Workshop", "azat-goals-and-objectives-workshop", "Community input helps align the trail system with town and county goals.", "2024-01-12T12:00:00Z"],

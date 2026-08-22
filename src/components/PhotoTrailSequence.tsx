@@ -6,6 +6,7 @@ import { useRef } from "react";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import type { MotionValue } from "framer-motion";
 import { Download, MapPinned } from "lucide-react";
+import { ProtectedDownloadLink } from "@/components/auth/ProtectedDownloadLink";
 
 type PhotoMoment = {
   title: string;
@@ -96,10 +97,10 @@ export function PhotoTrailSequence() {
               <MapPinned size={17} aria-hidden="true" />
               View Map
             </Link>
-            <Link href="/azat/downloads/arizona-alpine-trail.gpx" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#e11f3f] px-5 text-sm font-black uppercase tracking-[0.1em] text-white transition hover:bg-white hover:text-[#13221a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+            <ProtectedDownloadLink href="/downloads/arizona-alpine-trail-gpx" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#e11f3f] px-5 text-sm font-black uppercase tracking-[0.1em] text-white transition hover:bg-white hover:text-[#13221a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
               <Download size={17} aria-hidden="true" />
               Download GPX
-            </Link>
+            </ProtectedDownloadLink>
           </div>
           <div className="mt-10 h-1 w-full max-w-sm overflow-hidden rounded-full bg-white/18" aria-hidden="true">
             <motion.div className="h-full origin-left rounded-full bg-[#f0c477]" style={{ scaleX: prefersReducedMotion ? 1 : progressScale }} />

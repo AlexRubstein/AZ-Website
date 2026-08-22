@@ -6,6 +6,8 @@ import { useRef } from "react";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { Download, MapPinned } from "lucide-react";
 
+import { ProtectedDownloadLink } from "@/components/auth/ProtectedDownloadLink";
+import { resolveDownloadHref } from "@/lib/download-links";
 import type { HomeCta } from "@/lib/home";
 
 type HeroStat = {
@@ -95,13 +97,13 @@ export function ScrollHero({
                   <MapPinned size={18} aria-hidden="true" />
                   {primaryCta?.label || "View Map"}
                 </Link>
-                <Link
-                  href={secondaryCta?.href || "/azat/downloads/arizona-alpine-trail.gpx"}
+                <ProtectedDownloadLink
+                  href={resolveDownloadHref(secondaryCta?.href, "/downloads/arizona-alpine-trail-gpx")}
                   className="inline-flex min-h-13 items-center justify-center gap-2 rounded-full bg-[#e11f3f] px-6 text-sm font-black uppercase tracking-[0.1em] text-white transition hover:bg-white hover:text-[#13221a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                 >
                   <Download size={18} aria-hidden="true" />
                   {secondaryCta?.label || "Download GPX"}
-                </Link>
+                </ProtectedDownloadLink>
               </div>
             </div>
           </div>

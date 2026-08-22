@@ -147,6 +147,54 @@ export const timelineStop = defineType({
   ],
 });
 
+export const rustysRoutePlanningNote = defineType({
+  name: "rustysRoutePlanningNote",
+  title: "Rusty's Route Planning Note",
+  type: "object",
+  fields: [
+    defineField({ name: "label", type: "string", validation: (Rule) => Rule.required() }),
+    defineField({
+      name: "text",
+      type: "text",
+      rows: 2,
+      description: "Keep this short and practical. It displays as large readable text.",
+      validation: (Rule) => Rule.required(),
+    }),
+  ],
+  preview: {
+    select: {
+      title: "label",
+      subtitle: "text",
+    },
+  },
+});
+
+export const rustysRouteDay = defineType({
+  name: "rustysRouteDay",
+  title: "Rusty's Route Day",
+  type: "object",
+  fields: [
+    defineField({ name: "day", title: "Day Number", type: "string", validation: (Rule) => Rule.required() }),
+    defineField({ name: "route", type: "string", validation: (Rule) => Rule.required() }),
+    defineField({ name: "via", title: "Via Road", type: "string" }),
+    defineField({ name: "miles", type: "string", validation: (Rule) => Rule.required() }),
+    defineField({ name: "fuel", type: "string", validation: (Rule) => Rule.required() }),
+    defineField({ name: "lodging", type: "string", validation: (Rule) => Rule.required() }),
+  ],
+  preview: {
+    select: {
+      title: "route",
+      subtitle: "day",
+    },
+    prepare({ title, subtitle }) {
+      return {
+        title,
+        subtitle: subtitle ? `Day ${subtitle}` : undefined,
+      };
+    },
+  },
+});
+
 export const iconCard = defineType({
   name: "iconCard",
   title: "Icon Card",

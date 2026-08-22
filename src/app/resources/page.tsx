@@ -1,11 +1,12 @@
 import { PageShell } from "@/components/PageShell";
+import { ProtectedDownloadLink } from "@/components/auth/ProtectedDownloadLink";
 import { downloads, resourceCards } from "@/lib/content";
 
 export default function ResourcesPage() {
   return (
     <PageShell
       title="Resources"
-      description="Downloadable trail files, safety guidance, stewardship resources, and partner links can all be managed from Sanity."
+      description="Downloadable trail files are protected through Supabase, alongside safety guidance, stewardship resources, and partner links."
     >
       <div className="grid gap-4 md:grid-cols-3">
         {downloads.map((item) => (
@@ -13,6 +14,12 @@ export default function ResourcesPage() {
             <p className="font-mono text-sm text-[#b74f32]">{item.type}</p>
             <h2 className="mt-8 text-2xl font-semibold">{item.label}</h2>
             <p className="mt-2 text-[#5f6c63]">{item.version}</p>
+            <ProtectedDownloadLink
+              href={item.href}
+              className="mt-6 inline-flex min-h-11 items-center rounded-full bg-[#13221a] px-4 text-xs font-black uppercase tracking-[0.12em] text-white transition hover:bg-[#b74f32] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b74f32]"
+            >
+              Download
+            </ProtectedDownloadLink>
           </article>
         ))}
       </div>

@@ -5,6 +5,7 @@ const footerLinks = [
   { label: "Map", href: "/#trail-map" },
   { label: "Downloads", href: "/#downloads" },
   { label: "Itineraries", href: "/#itineraries" },
+  { label: "FAQ", href: "/faq" },
 ];
 
 export function Footer() {

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, CalendarDays, Route } from "lucide-react";
+import { ArrowRight, CalendarDays, MapPin, Route } from "lucide-react";
 
 import type { HomeItineraryCard } from "@/lib/home";
 
@@ -15,147 +15,107 @@ type ItineraryFeatureProps = {
   cards?: HomeItineraryCard[];
 };
 
+const originalRustysImage = "/azat/photos/733890453_1316837243997661_6044422898535499635_n.jpg";
+const routeBannerImage = "/azat/ride/ride-overlook.jpg";
+
 function getCardId(card: HomeItineraryCard, index: number) {
   return card._key || `${card.title}-${index}`;
 }
 
 export function ItineraryFeature({
   title = "Rusty's Route 1000",
-  image = "/azat/photos/733890453_1316837243997661_6044422898535499635_n.jpg",
+  image = routeBannerImage,
   imageAlt = "Arizona Alpine Trail route terrain for Rusty's Route 1000 itinerary",
   href = "/rustys-route-1000",
   cards = [],
 }: ItineraryFeatureProps) {
   const prefersReducedMotion = useReducedMotion();
-  const featured = cards[0] || {
+  const fallbackCard = {
     title,
     href,
+    label: "Featured itinerary",
     image,
     imageAlt,
-    label: "Featured itinerary",
     miles: "1,000 mi",
     days: "11 days",
     status: "Available",
   };
-  const railCards = cards.length ? cards : [featured];
-  const showRail = railCards.length > 1;
-  const featuredHref = featured.href || href;
-  const featuredImage = featured.image || image;
-  const featuredImageAlt = featured.imageAlt || imageAlt;
+  const itineraryCards = cards.length ? cards : [fallbackCard];
 
   return (
-    <section id="itineraries" className="relative isolate overflow-hidden bg-[#07150f] text-white">
-      <Image
-        src="/azat/photos/735799434_1320342236980495_6791231310356729871_n.jpg"
-        alt=""
-        fill
-        sizes="100vw"
-        className="-z-20 object-cover opacity-62"
-      />
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(7,21,15,0.84),rgba(7,21,15,0.44)_46%,rgba(7,21,15,0.86))]" />
+    <section id="itineraries" className="relative overflow-hidden bg-[#fffdf7] px-5 py-12 text-[#13221a] sm:px-8 lg:py-14">
+      <div className="mx-auto max-w-[1320px]">
+        <div className="grid gap-4">
+          {itineraryCards.map((card, index) => {
+            const cardHref = card.href || href;
+            const rawImage = card.image || image;
+            const cardImage = rawImage === originalRustysImage ? routeBannerImage : rawImage;
+            const cardImageAlt = card.imageAlt || imageAlt;
+            const startLabel = card.label?.toLowerCase().includes("start") ? card.label : "Start in Alpine";
+            const facts = [
+              { icon: CalendarDays, value: card.days || "11 days" },
+              { icon: Route, value: card.miles || "1,000 mi" },
+              { icon: MapPin, value: startLabel },
+            ];
 
-      <div className="mx-auto max-w-[1480px] px-5 py-14 sm:px-8 lg:py-20">
-        <div className="grid gap-6 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.55fr)] lg:items-end">
-          <Link
-            href={featuredHref}
-            className="group relative block min-h-[380px] overflow-hidden rounded-[6px] bg-[#13221a] shadow-[0_34px_100px_rgba(0,0,0,0.34)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:min-h-[460px] lg:min-h-[560px]"
-            aria-label={`View ${featured.title}`}
-          >
-            <Image
-              src={featuredImage}
-              alt={featuredImageAlt}
-              fill
-              sizes="(min-width: 1024px) 62vw, 100vw"
-              className="object-cover transition duration-700 group-hover:scale-[1.025]"
-            />
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,21,15,0)_26%,rgba(7,21,15,0.7))]" />
-            <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-7">
-              <p className="az-kicker text-[#f0c477]">{featured.label || "Itinerary"}</p>
-              <h2 className="mt-3 max-w-3xl font-serif text-4xl font-semibold leading-[0.98] text-white sm:text-5xl lg:text-6xl">
-                {featured.title}
-              </h2>
-            </div>
-          </Link>
-
-          <div>
-            <p className="az-kicker text-[#f0c477]">Route Options</p>
-            <h3 className="mt-3 max-w-md font-serif text-3xl font-semibold leading-[1] text-white sm:text-4xl">
-              Start with the route that is ready.
-            </h3>
-            <div className="mt-5 grid grid-cols-2 gap-3">
-              {featured.miles ? (
-                <div className="rounded-[6px] bg-white/12 p-4 backdrop-blur">
-                  <Route className="text-[#f0c477]" size={20} aria-hidden="true" />
-                  <p className="mt-3 font-mono text-[10px] font-black uppercase tracking-[0.16em] text-white/58">Miles</p>
-                  <p className="mt-1 text-2xl font-semibold">{featured.miles}</p>
-                </div>
-              ) : null}
-              {featured.days ? (
-                <div className="rounded-[6px] bg-white/12 p-4 backdrop-blur">
-                  <CalendarDays className="text-[#f0c477]" size={20} aria-hidden="true" />
-                  <p className="mt-3 font-mono text-[10px] font-black uppercase tracking-[0.16em] text-white/58">Timing</p>
-                  <p className="mt-1 text-2xl font-semibold">{featured.days}</p>
-                </div>
-              ) : null}
-            </div>
-            <Link
-              href={featuredHref}
-              className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-full bg-white px-5 text-xs font-black uppercase tracking-[0.12em] text-[#13221a] transition hover:bg-[#f0c477] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-            >
-              View Itinerary
-              <ArrowRight size={15} aria-hidden="true" />
-            </Link>
-          </div>
-        </div>
-
-        {showRail ? (
-          <div className="mt-6 flex snap-x gap-4 overflow-x-auto pb-2">
-            {railCards.map((card, index) => {
-              const cardImage = card.image || image;
-              const cardHref = card.href || href;
-              const isAvailable = (card.status || "Available") === "Available";
-
-              return (
+            return (
+              <motion.article
+                key={getCardId(card, index)}
+                initial={prefersReducedMotion ? false : { opacity: 0, y: 14 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.34, ease: "easeOut", delay: prefersReducedMotion ? 0 : index * 0.04 }}
+                className="group relative isolate min-h-[250px] overflow-hidden rounded-[6px] bg-[#07150f] shadow-[0_28px_84px_rgba(19,34,26,0.24)] ring-1 ring-[#173d2b]/35 sm:min-h-[270px]"
+              >
                 <motion.div
-                  key={getCardId(card, index)}
-                  initial={prefersReducedMotion ? false : { opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-40px" }}
-                  transition={{ duration: 0.3, delay: prefersReducedMotion ? 0 : index * 0.04 }}
-                  className="min-w-[280px] snap-start sm:min-w-[360px]"
+                  className="absolute inset-0"
+                  whileHover={prefersReducedMotion ? undefined : { scale: 1.012 }}
+                  transition={{ duration: 0.55, ease: "easeOut" }}
                 >
-                  <Link
-                    href={cardHref}
-                    aria-label={`View ${card.title}`}
-                    className={`group block overflow-hidden rounded-[6px] bg-[#fffdf7] text-[#13221a] shadow-[0_18px_58px_rgba(0,0,0,0.28)] transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white ${
-                      isAvailable ? "hover:-translate-y-1" : "pointer-events-none opacity-72"
-                    }`}
-                  >
-                    <div className="relative aspect-[16/10] overflow-hidden">
-                      <Image
-                        src={cardImage}
-                        alt={card.imageAlt || card.title}
-                        fill
-                        sizes="360px"
-                        className="object-cover transition duration-500 group-hover:scale-[1.025]"
-                      />
-                    </div>
-                    <div className="p-4">
-                      <div className="flex items-center justify-between gap-3">
-                        <p className="font-mono text-[10px] font-black uppercase tracking-[0.16em] text-[#9b5d2e]">{card.status || "Available"}</p>
-                        <ArrowRight size={15} aria-hidden="true" />
-                      </div>
-                      <h4 className="mt-2 text-xl font-semibold">{card.title}</h4>
-                      <p className="mt-2 text-sm text-[#5f6c63]">
-                        {[card.miles, card.days].filter(Boolean).join(" / ") || card.label || "Route option"}
-                      </p>
-                    </div>
-                  </Link>
+                  <Image
+                    src={cardImage}
+                    alt={cardImageAlt}
+                    fill
+                    sizes="(min-width: 1024px) 1320px, 100vw"
+                    className="object-cover"
+                  />
                 </motion.div>
-              );
-            })}
-          </div>
-        ) : null}
+                <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,21,15,0.94),rgba(7,21,15,0.76)_38%,rgba(7,21,15,0.16)_78%),linear-gradient(180deg,rgba(7,21,15,0.08),rgba(7,21,15,0.5))]" />
+
+                <div className="relative z-10 grid min-h-[250px] gap-5 p-5 sm:min-h-[270px] sm:p-6 lg:grid-cols-[minmax(280px,0.7fr)_minmax(0,1fr)] lg:items-end lg:p-7">
+                  <div>
+                    <div className="mb-4 h-1.5 w-24 rounded-full bg-[#b74f32]" />
+                    <h2 className="max-w-xl font-serif text-4xl font-semibold leading-[0.92] text-white drop-shadow-[0_8px_22px_rgba(0,0,0,0.36)] sm:text-5xl lg:text-6xl">
+                      {card.title || title}
+                    </h2>
+                    <Link
+                      href={cardHref}
+                      className="mt-6 inline-flex min-h-12 items-center gap-2 rounded-full bg-[#fffdf7] px-6 text-xs font-black uppercase tracking-[0.12em] text-[#13221a] shadow-[0_16px_34px_rgba(0,0,0,0.22)] transition hover:bg-[#f0c477] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                    >
+                      View Itinerary
+                      <motion.span whileHover={prefersReducedMotion ? undefined : { x: 2 }} transition={{ duration: 0.18 }} className="inline-flex">
+                        <ArrowRight size={15} aria-hidden="true" />
+                      </motion.span>
+                    </Link>
+                  </div>
+
+                  <div className="grid gap-2 sm:grid-cols-3">
+                    {facts.map((fact) => {
+                      const Icon = fact.icon;
+
+                      return (
+                        <div key={fact.value} className="flex min-h-18 items-center gap-3 rounded-[4px] border border-white/16 bg-[#fffdf7]/94 p-3 text-[#13221a] shadow-[0_18px_38px_rgba(0,0,0,0.24)] backdrop-blur">
+                          <Icon className="shrink-0 text-[#9b5d2e]" size={24} aria-hidden="true" />
+                          <span className="text-2xl font-black leading-tight sm:text-3xl">{fact.value}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </motion.article>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

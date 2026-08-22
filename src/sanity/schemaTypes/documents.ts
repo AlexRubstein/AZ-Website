@@ -154,17 +154,94 @@ export const trailSegment = defineType({
     defineField({ name: "title", type: "string", validation: (Rule) => Rule.required() }),
     slug,
     defineField({ name: "segmentCode", type: "string", validation: (Rule) => Rule.required() }),
-    defineField({ name: "routeFamily", type: "string", options: { list: ["A Route", "B Route", "Connector", "Side Quest"] } }),
+    defineField({
+      name: "segmentNumber",
+      title: "Segment Number",
+      description: "The trail's own numbering (1-30; 19 and 22 are retired and never assigned). Drives ordering and prev/next.",
+      type: "number",
+      validation: (Rule) => Rule.required().min(1).max(30).integer(),
+    }),
     defineField({ name: "status", type: "string", options: { list: ["Proposed", "Preliminary", "Open", "Seasonal", "Closed"] } }),
-    defineField({ name: "mileage", type: "number" }),
-    defineField({ name: "difficulty", type: "string", options: { list: ["Easy", "Moderate", "Difficult", "Unknown"] } }),
+    defineField({ name: "lengthMiles", title: "Length (miles)", type: "number" }),
+    defineField({ name: "minElevationFeet", title: "Minimum Elevation (ft)", type: "number" }),
+    defineField({ name: "maxElevationFeet", title: "Maximum Elevation (ft)", type: "number" }),
+    defineField({ name: "elevationGainFeet", title: "Elevation Gain (ft)", type: "number" }),
+    defineField({ name: "elevationLossFeet", title: "Elevation Loss (ft)", type: "number" }),
+    defineField({
+      name: "trailRating",
+      title: "Trail Rating",
+      description: "AZAT's official difficulty rating for this segment.",
+      type: "string",
+      options: {
+        list: [
+          { title: "Easier / Green", value: "easier-green" },
+          { title: "More Difficult / Blue", value: "more-difficult-blue" },
+          { title: "Most Difficult / Black", value: "most-difficult-black" },
+        ],
+      },
+    }),
     defineField({ name: "startTown", type: "reference", to: [{ type: "town" }] }),
     defineField({ name: "endTown", type: "reference", to: [{ type: "town" }] }),
     defineField({ name: "waypoints", type: "array", of: [{ type: "reference", to: [{ type: "waypoint" }] }] }),
     defineField({ name: "downloads", type: "array", of: [{ type: "reference", to: [{ type: "downloadFile" }] }] }),
+    defineField({ name: "heroImage", title: "Hero Photo", type: "externalImage" }),
+    defineField({
+      name: "mapImage",
+      title: "Route Map Graphic",
+      description: "An official AZAT route-map graphic (topo + legend). When set, this replaces the interactive map on the segment page.",
+      type: "externalImage",
+    }),
+    defineField({
+      name: "descriptionBody",
+      title: "Description",
+      description: "The route narrative: junctions/roads, forest, landmarks, terrain, vehicle recommendation.",
+      type: "richText",
+    }),
+    defineField({
+      name: "amenities",
+      title: "Amenities",
+      description: "Categories confirmed available on or near this segment.",
+      type: "array",
+      of: [{ type: "string" }],
+      options: {
+        list: ["Food", "Fuel", "Lodging", "Medical", "Potable Water", "Restroom", "Parking/Staging", "Repair"],
+      },
+    }),
+    defineField({
+      name: "amenitiesNote",
+      title: "Amenities Note",
+      description: "The real, specific prose (e.g. which towns offer what) — always shown alongside the amenities legend.",
+      type: "text",
+      rows: 4,
+    }),
+    defineField({ name: "safetyNote", title: "Safety Note", type: "text", rows: 3 }),
+    defineField({
+      name: "pointsOfInterest",
+      title: "Points of Interest",
+      type: "array",
+      of: [{ type: "string" }],
+    }),
+    defineField({
+      name: "gallery",
+      title: "Photo Gallery",
+      type: "array",
+      of: [{ type: "externalImage" }],
+    }),
+    defineField({
+      name: "lastVerifiedAt",
+      title: "Last Verified",
+      description: "When AZAT last confirmed this segment's facts and route data.",
+      type: "date",
+    }),
     defineField({ name: "body", type: "richText" }),
     defineField({ name: "seo", type: "seo" }),
   ],
+  preview: {
+    select: {
+      title: "title",
+      subtitle: "status",
+    },
+  },
 });
 
 export const itineraryDay = defineType({
@@ -199,6 +276,63 @@ export const route = defineType({
     defineField({ name: "body", type: "richText" }),
     defineField({ name: "seo", type: "seo" }),
   ],
+});
+
+export const rustysRoutePage = defineType({
+  name: "rustysRoutePage",
+  title: "Rusty's Route Page",
+  type: "document",
+  fields: [
+    defineField({ name: "title", type: "string", initialValue: "Rusty's Route 1000" }),
+    defineField({ name: "heroKicker", title: "Hero Kicker", type: "string" }),
+    defineField({ name: "heroTitle", title: "Hero Title", type: "string", validation: (Rule) => Rule.required() }),
+    defineField({ name: "heroCopy", title: "Hero Copy", type: "text", rows: 2 }),
+    defineField({ name: "heroImage", title: "Hero Scenic Image", type: "externalImage" }),
+    defineField({
+      name: "facts",
+      title: "Hero Facts",
+      type: "array",
+      of: [{ type: "labeledItem" }],
+      validation: (Rule) => Rule.max(4),
+    }),
+    defineField({ name: "downloadCta", title: "Download CTA", type: "cta" }),
+    defineField({ name: "overviewKicker", title: "Map Section Kicker", type: "string" }),
+    defineField({ name: "overviewTitle", title: "Map Section Title", type: "string" }),
+    defineField({ name: "overviewCopy", title: "Map Section Copy", type: "text", rows: 2 }),
+    defineField({
+      name: "mapHighlights",
+      title: "Map Town Highlights",
+      description: "Town and lodging/fuel markers shown on the route overview map.",
+      type: "array",
+      of: [{ type: "trailHighlight" }],
+    }),
+    defineField({ name: "planningKicker", title: "Know Before You Go Kicker", type: "string" }),
+    defineField({
+      name: "planningNotes",
+      title: "Know Before You Go Notes",
+      type: "array",
+      of: [{ type: "rustysRoutePlanningNote" }],
+    }),
+    defineField({ name: "itineraryKicker", title: "Itinerary Kicker", type: "string" }),
+    defineField({ name: "itineraryTitle", title: "Itinerary Title", type: "string" }),
+    defineField({ name: "lodgingNote", title: "Lodging Note", type: "text", rows: 2 }),
+    defineField({
+      name: "itineraryDays",
+      title: "Itinerary Days",
+      type: "array",
+      of: [{ type: "rustysRouteDay" }],
+    }),
+    defineField({ name: "finalCtaKicker", title: "Final CTA Kicker", type: "string" }),
+    defineField({ name: "finalCtaTitle", title: "Final CTA Title", type: "string" }),
+    defineField({ name: "finalCtaImage", title: "Final CTA Background Image", type: "externalImage" }),
+    defineField({ name: "seo", type: "seo" }),
+  ],
+  preview: {
+    select: {
+      title: "title",
+      subtitle: "heroTitle",
+    },
+  },
 });
 
 export const faq = defineType({
