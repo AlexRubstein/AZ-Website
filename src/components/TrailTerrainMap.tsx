@@ -184,12 +184,23 @@ function TerrainFallback({ status }: { status: MapStatus }) {
   );
 }
 
-export function TrailTerrainMap() {
+export type TrailTerrainMapProps = {
+  embedded?: boolean;
+  activeSegmentId?: string;
+  onSegmentSelect?: (id: string) => void;
+};
+
+export function TrailTerrainMap({ embedded = false, activeSegmentId, onSegmentSelect }: TrailTerrainMapProps = {}) {
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
   const markersRef = useRef<mapboxgl.Marker[]>([]);
   const popupRef = useRef<mapboxgl.Popup | null>(null);
   const activeSegmentIdRef = useRef("");
+  const hasFlownToControlledSegmentRef = useRef(false);
+  const onSegmentSelectRef = useRef(onSegmentSelect);
+  onSegmentSelectRef.current = onSegmentSelect;
+  const activeSegmentIdPropRef = useRef(activeSegmentId);
+  activeSegmentIdPropRef.current = activeSegmentId;
   const token = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
   const [status, setStatus] = useState<MapStatus>(() => (token ? "loading" : "missing-token"));
 
@@ -371,8 +382,9 @@ export function TrailTerrainMap() {
         const nearest = findNearestRouteSegment(map, event.point);
         if (!nearest) {
           map.getCanvas().style.cursor = "";
-          activeSegmentIdRef.current = "";
-          map.setFilter(routeHighlightLayerId, emptySegmentFilter);
+          const controlledId = activeSegmentIdPropRef.current;
+          activeSegmentIdRef.current = controlledId ?? "";
+          map.setFilter(routeHighlightLayerId, controlledId ? ["==", ["get", "id"], controlledId] : emptySegmentFilter);
           return;
         }
 
@@ -387,6 +399,11 @@ export function TrailTerrainMap() {
 
         activeSegmentIdRef.current = nearest.id;
         map.setFilter(routeHighlightLayerId, ["==", ["get", "id"], nearest.id]);
+
+        if (onSegmentSelectRef.current) {
+          onSegmentSelectRef.current(nearest.id);
+          return;
+        }
 
         popupRef.current?.remove();
         popupRef.current = new mapboxgl.Popup({ closeButton: true, closeOnClick: true, maxWidth: "260px" })
@@ -422,12 +439,32 @@ export function TrailTerrainMap() {
           .addTo(map);
       });
 
-      map.fitBounds(fullBounds, {
-        padding: { top: 120, right: 80, bottom: 90, left: 80 },
-        duration: 0,
-        pitch: 68,
-        bearing: -28,
-      });
+      const initialSegmentId = activeSegmentIdPropRef.current;
+      const initialSummary = initialSegmentId
+        ? routeSegmentSummaries.find((summary) => summary.id === initialSegmentId)
+        : undefined;
+      const initialIndex = initialSummary ? routeSegmentSummaries.indexOf(initialSummary) : -1;
+      const initialLine = initialIndex >= 0 ? routePreviewSegments[initialIndex] : undefined;
+
+      if (initialSegmentId && initialLine) {
+        activeSegmentIdRef.current = initialSegmentId;
+        map.setFilter(routeHighlightLayerId, ["==", ["get", "id"], initialSegmentId]);
+        const bounds = initialLine.reduce(
+          (acc, [lat, lng]) => acc.extend([lng, lat]),
+          new mapboxgl.LngLatBounds(
+            [initialLine[0][1], initialLine[0][0]],
+            [initialLine[0][1], initialLine[0][0]],
+          ),
+        );
+        map.fitBounds(bounds, { padding: 90, duration: 0, pitch: 68, bearing: -28 });
+      } else {
+        map.fitBounds(fullBounds, {
+          padding: { top: 120, right: 80, bottom: 90, left: 80 },
+          duration: 0,
+          pitch: 68,
+          bearing: -28,
+        });
+      }
 
       window.requestAnimationFrame(() => map.resize());
       setStatus("ready");
@@ -445,30 +482,77 @@ export function TrailTerrainMap() {
     };
   }, [flyToPin, token]);
 
+  useEffect(() => {
+    const map = mapRef.current;
+    if (status !== "ready" || !map) return;
+
+    // The mount effect already set the initial highlight/camera for the segment active at
+    // load time; this effect only reacts to later changes (e.g. the rider clicking a
+    // different row in the hub's list), flying to whichever segment is now selected.
+    if (!hasFlownToControlledSegmentRef.current) {
+      hasFlownToControlledSegmentRef.current = true;
+      return;
+    }
+
+    activeSegmentIdRef.current = activeSegmentId ?? "";
+
+    if (!activeSegmentId) {
+      map.setFilter(routeHighlightLayerId, emptySegmentFilter);
+      return;
+    }
+
+    const index = routeSegmentSummaries.findIndex((summary) => summary.id === activeSegmentId);
+    const line = index >= 0 ? routePreviewSegments[index] : undefined;
+    if (!line) return;
+
+    map.setFilter(routeHighlightLayerId, ["==", ["get", "id"], activeSegmentId]);
+    const bounds = line.reduce(
+      (acc, [lat, lng]) => acc.extend([lng, lat]),
+      new mapboxgl.LngLatBounds([line[0][1], line[0][0]], [line[0][1], line[0][0]]),
+    );
+    map.fitBounds(bounds, { padding: 90, duration: 900, pitch: 68, bearing: -28, essential: true });
+  }, [activeSegmentId, status]);
+
   return (
-    <section className="relative h-[100svh] min-h-[680px] overflow-hidden bg-[#08130d] text-white">
+    <section
+      className={
+        embedded
+          ? "absolute inset-0 overflow-hidden bg-[#08130d] text-white"
+          : "relative h-[100svh] min-h-[680px] overflow-hidden bg-[#08130d] text-white"
+      }
+    >
       <div className="absolute inset-0 h-full w-full">
         <div ref={mapContainerRef} className="h-full w-full" aria-label="Arizona Alpine Trail 3D terrain map" />
       </div>
 
       {status === "missing-token" || status === "error" ? <TerrainFallback status={status} /> : null}
 
-      <div className="pointer-events-none absolute inset-x-0 top-0 z-[2] h-28 bg-gradient-to-b from-[#07150f]/48 via-[#07150f]/8 to-transparent" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-28 bg-gradient-to-t from-[#07150f]/44 via-[#07150f]/10 to-transparent" />
+      {embedded ? null : (
+        <>
+          <div className="pointer-events-none absolute inset-x-0 top-0 z-[2] h-28 bg-gradient-to-b from-[#07150f]/48 via-[#07150f]/8 to-transparent" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-28 bg-gradient-to-t from-[#07150f]/44 via-[#07150f]/10 to-transparent" />
+        </>
+      )}
 
-      <div className="pointer-events-none relative z-[3] flex h-full flex-col justify-between px-4 pb-5 pt-24 sm:px-6 lg:px-8">
+      <div
+        className={`pointer-events-none relative z-[3] flex h-full flex-col justify-between px-4 pb-4 sm:px-6 ${
+          embedded ? "pt-4" : "pt-24 lg:px-8"
+        }`}
+      >
         <div className="flex items-start justify-start">
-          <div className="pointer-events-auto rounded-[6px] border border-white/12 bg-[#07150f]/48 p-3 shadow-[0_18px_50px_rgba(0,0,0,0.24)] backdrop-blur-md sm:p-4">
-            <h1 className="text-2xl font-semibold leading-none text-white drop-shadow-[0_8px_30px_rgba(0,0,0,0.44)] sm:text-4xl">
-              AZAT 3D
-            </h1>
-            <p className="mt-2 font-mono text-[9px] font-black uppercase tracking-[0.16em] text-[#76f0b0] sm:text-[10px]">
-              GPX terrain preview
-            </p>
-          </div>
+          {embedded ? null : (
+            <div className="pointer-events-auto rounded-[6px] border border-white/12 bg-[#07150f]/48 p-3 shadow-[0_18px_50px_rgba(0,0,0,0.24)] backdrop-blur-md sm:p-4">
+              <h1 className="text-2xl font-semibold leading-none text-white drop-shadow-[0_8px_30px_rgba(0,0,0,0.44)] sm:text-4xl">
+                AZAT 3D
+              </h1>
+              <p className="mt-2 font-mono text-[9px] font-black uppercase tracking-[0.16em] text-[#76f0b0] sm:text-[10px]">
+                GPX terrain preview
+              </p>
+            </div>
+          )}
         </div>
 
-        <div className="mb-12 flex items-end justify-start sm:mb-0">
+        <div className={`flex items-end justify-start ${embedded ? "" : "mb-12 sm:mb-0"}`}>
           <div className="pointer-events-auto flex gap-2">
             <button type="button" onClick={fitRoute} className="az-terrain-control">
               <Route size={16} aria-hidden="true" />

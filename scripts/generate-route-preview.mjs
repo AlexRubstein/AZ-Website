@@ -214,6 +214,18 @@ const sampledSegmentsRaw = routeSegmentsFull.map((segment) => sampleSegment(segm
 const sampledRaw = sampledSegmentsRaw.flat();
 const sampled = sampledRaw.map(project);
 
+// Higher-resolution per-segment lines for single-segment detail maps, where the
+// whole-trail overview's ~12-19 points per segment looks visibly faceted when zoomed in.
+// Scaled to segment length (~12 points/mile) rather than a flat count, capped so a long
+// segment doesn't balloon the bundle.
+const routeSegmentDetailPoints = Object.fromEntries(
+  routeSegmentSummaries.map((summary, index) => {
+    const targetDetailPoints = Math.min(400, Math.max(80, Math.round(summary.distanceMiles * 12)));
+    const detailPoints = sampleSegment(routeSegmentsFull[index].points, targetDetailPoints);
+    return [summary.id, detailPoints.map((point) => [round(point.lat, 6), round(point.lng, 6)])];
+  }),
+);
+
 const townCoordinates = [
   { label: "Alpine", type: "Trailhead", lat: 33.8481, lng: -109.1437 },
   { label: "Greer", type: "Lodging", lat: 34.0106, lng: -109.4584 },
@@ -246,6 +258,8 @@ export type RoutePoint = { x: number; y: number };
 export type RouteCoordinate = [number, number];
 
 export type RouteSegment = RouteCoordinate[];
+
+export type RouteSegmentDetail = Record<string, RouteCoordinate[]>;
 
 export type RoutePin = {
   label: string;
@@ -300,6 +314,8 @@ export const routePreviewPoints: RoutePoint[] = ${JSON.stringify(sampled)};
 export const routePreviewCoordinates: RouteCoordinate[] = ${JSON.stringify(sampledRaw.map((point) => [round(point.lat, 6), round(point.lng, 6)]))};
 
 export const routePreviewSegments: RouteSegment[] = ${JSON.stringify(sampledSegmentsRaw.map((segment) => segment.map((point) => [round(point.lat, 6), round(point.lng, 6)])))};
+
+export const routeSegmentDetailPoints: RouteSegmentDetail = ${JSON.stringify(routeSegmentDetailPoints)};
 
 export const routePreviewPins: RoutePin[] = ${JSON.stringify(townCoordinates, null, 2)};
 `;

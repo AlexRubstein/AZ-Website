@@ -157,14 +157,39 @@ export const townQuery = groq`*[_type == "town" && slug.current == $slug][0]{
 export const trailSegmentQuery = groq`*[_type == "trailSegment" && slug.current == $slug][0]{
   title,
   slug,
-  routeFamily,
   segmentCode,
+  segmentNumber,
   status,
-  mileage,
-  difficulty,
+  lengthMiles,
+  minElevationFeet,
+  maxElevationFeet,
+  elevationGainFeet,
+  elevationLossFeet,
+  trailRating,
   startTown->,
   endTown->,
   downloads[]->,
   waypoints[]->,
-  body
+  "heroImage": coalesce(heroImage.externalUrl, heroImage.image.asset->url),
+  "heroImageAlt": heroImage.alt,
+  "mapImage": coalesce(mapImage.externalUrl, mapImage.image.asset->url),
+  "mapImageAlt": mapImage.alt,
+  descriptionBody,
+  amenities,
+  amenitiesNote,
+  safetyNote,
+  pointsOfInterest,
+  gallery[]{
+    "url": coalesce(externalUrl, image.asset->url),
+    alt
+  },
+  lastVerifiedAt,
+  body,
+  seo
+}`;
+
+export const trailSegmentListQuery = groq`*[_type == "trailSegment"]{
+  slug,
+  segmentNumber,
+  trailRating
 }`;

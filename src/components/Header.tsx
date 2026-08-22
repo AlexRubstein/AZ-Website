@@ -41,7 +41,7 @@ export function Header() {
       >
         Skip to main content
       </a>
-      <div className="mx-auto flex min-h-15 max-w-[1320px] items-center justify-between gap-2 px-5 sm:gap-6 sm:px-8">
+      <div className="mx-auto flex min-h-15 max-w-[1320px] items-center justify-between gap-2 px-3 sm:gap-6 sm:px-8">
         <Link href="/" className="group flex items-center gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white" aria-label="Arizona Alpine Trail home">
           <span className={`grid size-11 place-items-center rounded-full p-1 transition duration-300 ${
             useSolidHeader ? "bg-white/88 shadow-[0_8px_22px_rgba(0,0,0,0.16)]" : "bg-white/70 shadow-none"
@@ -62,9 +62,16 @@ export function Header() {
         </Link>
         <div className="flex items-center gap-1 sm:gap-3">
           <Link
+            href="/trail"
+            aria-current={pathname === "/trail" || (pathname?.startsWith("/trail/") && !on3DPage) ? "page" : undefined}
+            className="inline-flex min-h-11 items-center whitespace-nowrap rounded-full px-1 text-sm font-semibold text-white/78 transition hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:px-3"
+          >
+            Trail
+          </Link>
+          <Link
             href="/faq"
             aria-current={pathname === "/faq" ? "page" : undefined}
-            className="inline-flex min-h-11 items-center whitespace-nowrap rounded-full px-2 text-sm font-semibold text-white/78 transition hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:px-3"
+            className="inline-flex min-h-11 items-center whitespace-nowrap rounded-full px-1 text-sm font-semibold text-white/78 transition hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:px-3"
           >
             FAQ
           </Link>
