@@ -1,0 +1,41 @@
+{
+  "status": "Open",
+  "lengthMiles": 21.3,
+  "minElevationFeet": 8437,
+  "maxElevationFeet": 9485,
+  "elevationGainFeet": 2827,
+  "elevationLossFeet": 1865,
+  "trailRating": "more-difficult-blue",
+  "descriptionBody": [
+    "The South Fork segment extends between the junction of FR 58 (Milligan Valley Road) and FR 285 (Water Canyon Road) near Eagar and the junction of FR 273, FR 409, and FR 8037 on the Big Lake–Greer plateau in the Apache-Sitgreaves National Forests. The alignment crosses high meadows and mixed conifer forest of the Springerville Volcanic Field, skirting the South Fork Little Colorado River country and trending toward the Big Lake/Greer lakes region. Notable points of interest along or near the corridor include Saffel Canyon OHV Trailhead, a 50\" only trail just off Water Canyon Road, scenic meadow overlooks along FR 409, and easy access to the Big Lake recreation complex via the 273 corridor.",
+    "This segment consists primarily of unpaved forest roads and OHV connectors with surfaces ranging from graded dirt to rocky two-track, with seasonal ruts and washboards, especially after monsoon storms or spring melt. High-clearance 4WD/OHV is recommended."
+  ],
+  "amenities": ["Food", "Fuel", "Lodging", "Medical", "Repair"],
+  "amenitiesNote": "Concentrated in Eagar/Springerville (fuel, food, lodging, medical, and OHV services) at the eastern access via Water Canyon Road. Near the western end, the Big Lake Recreation Area offers multiple campgrounds, boat ramps, and seasonal concessions, while Greer provides cabins, dining, and lodging a short drive north of the FR 273 corridor. Dispersed camping is common on and around FR 409 where permitted.",
+  "pointsOfInterest": [
+    "Saffel Canyon OHV Trailhead",
+    "Scenic meadow overlooks along FR 409",
+    "Big Lake Recreation Area (via FR 273)"
+  ],
+  "lastVerifiedAt": "2026-08-22",
+  "heroAlt": "Dirt two-track running through a tall aspen grove beneath towering storm clouds on the South Fork segment",
+  "mapAlt": "AZAT South Fork route map with ranger district boundaries and land ownership legend",
+  "galleryAlt": {
+    "01-cattle-guard-gate-fr409.jpg": "Cattle guard and gate marking the FR 409 junction, with aspens beyond",
+    "02-aspen-tunnel-gravel-road.jpg": "Gravel road curving through a dense aspen tunnel under a blue sky",
+    "03-aspen-canopy-over-road.jpg": "Aspen branches arching over a gravel forest road with pines beyond",
+    "04-aspen-grove-road-junction.jpg": "Dirt road bending through a bright aspen grove",
+    "05-aspen-pine-forest-road.jpg": "Two-track winding through mixed aspen and ponderosa pine forest",
+    "06-aspen-lined-dirt-two-track.jpg": "Dirt two-track flanked by tall aspens under a partly cloudy sky",
+    "07-fallen-log-forest-deadfall.jpg": "A broken, sun-bleached log beside the trail in a pine and aspen forest",
+    "08-tall-pines-meadow-storm-sky.jpg": "Tall ponderosa pines beside a dirt road in an open meadow under towering storm clouds",
+    "09-lone-pine-rocky-grassland.jpg": "A solitary pine tree growing from a rocky outcrop against dramatic clouds",
+    "10-meadow-trail-storm-clouds.jpg": "Narrow dirt trail crossing an open grassy meadow beneath a huge cloudbank",
+    "11-cattle-grazing-meadow.jpg": "Cattle grazing along a fence line in a golden meadow under storm clouds",
+    "12-dune-meadow-view-through-trees.jpg": "View through pines and aspens across an open meadow toward distant volcanic hills"
+  },
+  "seo": {
+    "title": "South Fork — Arizona Alpine Trail Segment 18",
+    "description": "21.3 miles across the Big Lake–Greer plateau near Springerville. More Difficult/Blue rated, high-clearance 4WD/OHV recommended."
+  }
+}

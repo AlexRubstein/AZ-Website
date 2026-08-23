@@ -1,0 +1,30 @@
+{
+  "status": "Open",
+  "lengthMiles": 22.5,
+  "minElevationFeet": 7912,
+  "maxElevationFeet": 9463,
+  "elevationGainFeet": 2873,
+  "elevationLossFeet": 2789,
+  "trailRating": "more-difficult-blue",
+  "descriptionBody": [
+    "The Johns Canyon segment extends between a point (N 33.77244, W 109.30562) in Johns Canyon and the town of Alpine in the high country of the Apache-Sitgreaves National Forests at the junction of FR 275 and FR 851. The alignment threads mixed-conifer forest and open meadows on the White Mountains plateau, with broad vistas toward Escudilla Mountain and surrounding volcanic highlands.",
+    "This segment consists entirely of unpaved forest roads and OHV connectors with hard-packed dirt, embedded rock, seasonal ruts, and occasional washboards. Grades vary, and conditions can change quickly after summer storms or spring melt; high-clearance 4WD/OHV is recommended."
+  ],
+  "amenities": ["Food", "Fuel", "Lodging", "Medical", "Repair"],
+  "amenitiesNote": "Amenities are concentrated in Alpine at the eastern terminus (fuel, food, lodging, and very limited medical and OHV services). Nearby camping options include Luna Lake Campground just east of town and Alpine Divide Campground to the north along US 180.",
+  "safetyNote": "This is a high-elevation corridor with rapidly changing weather — expect afternoon monsoon storms in summer and snow/ice in winter. Cell coverage is limited; carry maps/GPS, emergency supplies, and be self-sufficient.",
+  "lastVerifiedAt": "2026-08-22",
+  "heroAlt": "Overlook from a canyon rim above the Alpine valley on the Johns Canyon segment",
+  "mapAlt": "AZAT Johns Canyon route map with ranger district boundaries and land ownership legend",
+  "galleryAlt": {
+    "01-meadow-clouds.jpg": "Grassy wetland meadow beneath a partly cloudy sky",
+    "02-foggy-burned-hillside.jpg": "Fog drifting over a hillside of fire-scarred trees",
+    "03-sunflower-field.jpg": "A wild sunflower in a meadow of blooming sunflowers",
+    "04-mule-deer-doe-fawn.jpg": "A mule deer doe and fawn walking through golden aspen understory",
+    "05-bull-elk-sparring.jpg": "Two bull elk sparring in a grassy meadow"
+  },
+  "seo": {
+    "title": "Johns Canyon — Arizona Alpine Trail Segment 15",
+    "description": "22.5 miles from Johns Canyon to Alpine. More Difficult/Blue rated, high-clearance 4WD/OHV recommended."
+  }
+}

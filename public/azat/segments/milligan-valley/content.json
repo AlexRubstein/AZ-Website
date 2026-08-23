@@ -1,0 +1,40 @@
+{
+  "status": "Open",
+  "lengthMiles": 20.9,
+  "minElevationFeet": 7439,
+  "maxElevationFeet": 8895,
+  "elevationGainFeet": 2173,
+  "elevationLossFeet": 2454,
+  "trailRating": "more-difficult-blue",
+  "descriptionBody": [
+    "The Milligan Valley segment extends between the junction of FR 851 and FR 275 on the east slopes of Escudilla Mountain and the junction of FR 85 and FR 285 (Water Canyon Road) near Eagar/Springerville in the Apache-Sitgreaves National Forest. The alignment crosses open prairies and mixed-conifer forest along the Milligan Valley and Mamie Creek drainages, with grand views of Escudilla Peak and the high meadows that lead north toward Water Canyon. Points of interest include a historic cabin site along Milligan Valley and the nearby Sipe Wildlife Area.",
+    "This segment consists primarily of unpaved forest roads ranging from graded dirt to rocky two-track with ruts and periodic washboards; high-clearance 4WD/OHV is recommended. The trail is closed from Hwy 180/191 west to Water Canyon Road seasonally (typically January 1 – May 31). A detour is required during the closure period that requires drivers/riders to travel through Eagar."
+  ],
+  "amenitiesNote": "Amenities are available in Alpine to the south along US 191 and in Eagar/Springerville to the northwest via Water Canyon Road; camping options include dispersed sites on adjacent forest roads and developed campgrounds in the Big Lake area reached from FR 285.",
+  "safetyNote": "Expect rapid weather shifts at high elevation—summer monsoons can create mud and washouts, while late-spring snow and ice may linger along Water Canyon Road. Cell coverage is limited; carry maps/GPS and be self-sufficient.",
+  "pointsOfInterest": [
+    "Historic cabin site along Milligan Valley",
+    "Sipe Wildlife Area"
+  ],
+  "lastVerifiedAt": "2026-08-22",
+  "heroAlt": "Gravel two-track winding through ponderosa pine forest under a partly cloudy sky on the Milligan Valley segment",
+  "mapAlt": "AZAT Milligan Valley route map with ranger district boundaries and land ownership legend",
+  "galleryAlt": {
+    "01-grand-view-camp-entrance.jpg": "Rustic log-and-iron entrance archway for Grand View Camp along the route",
+    "02-trail-crossing-sign.jpg": "National Forest Trail Crossing Ahead sign beside the gravel road under a stormy sky",
+    "03-oak-canopy-over-road.jpg": "Gambel oak and ponderosa pine branches arching over the dirt two-track",
+    "04-pine-forest-two-track.jpg": "Gravel road curving through tall ponderosa pine forest",
+    "05-forest-road-blazed-trees.jpg": "Two-track winding past pines marked with orange trail blazes",
+    "06-descending-through-burn-area.jpg": "Dirt road descending through hills showing old wildfire regrowth",
+    "07-burned-hillside-storm-sky.jpg": "Rocky burned hillside beneath dramatic storm clouds",
+    "08-stock-pond-valley.jpg": "Stock pond in a high meadow surrounded by pines and rolling hills",
+    "09-storm-clouds-over-grassland.jpg": "Layered storm clouds over open grassland and distant hills",
+    "10-cow-elk-pair.jpg": "Two cow elk watching from a juniper-covered hillside",
+    "11-elk-close-up.jpg": "A cow elk standing alert amid dry grass and scattered brush",
+    "12-escudilla-mountain-view.jpg": "Escudilla Mountain under a heavy storm sky, with a rock campfire ring in the foreground"
+  },
+  "seo": {
+    "title": "Milligan Valley — Arizona Alpine Trail Segment 17",
+    "description": "20.9 miles across the east slopes of Escudilla Mountain near Eagar/Springerville. More Difficult/Blue rated, high-clearance 4WD/OHV recommended."
+  }
+}

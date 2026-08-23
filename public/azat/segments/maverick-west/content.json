@@ -1,0 +1,41 @@
+{
+  "status": "Open",
+  "lengthMiles": 20.6,
+  "minElevationFeet": 5973,
+  "maxElevationFeet": 6422,
+  "elevationGainFeet": 1236,
+  "elevationLossFeet": 1358,
+  "trailRating": "more-difficult-blue",
+  "descriptionBody": [
+    "The Maverick West segment extends between the junction of FR 655 and FR 221A near the Clay Springs Trailhead and the junction of FR 9887J and FR 9887E in the Apache-Sitgreaves National Forests' Black Mesa/Lakeside country. The alignment works west and northwest across cinder benches and mixed piñon-juniper and ponderosa forest on the western reach of the Maverick/Timber Mesa OHV area, with broad views over the White Mountains plateau.",
+    "This segment consists primarily of unpaved forest roads and designated OHV connectors ranging from maintained cinder/dirt to rocky two-track, with intermittent ruts and washboards that worsen after summer storms. Expect occasional short, steeper pitches and embedded rock; high-clearance 4WD/OHV is recommended, especially in wet conditions or after snowmelt."
+  ],
+  "amenities": ["Parking/Staging"],
+  "amenitiesNote": "No amenities are available along this segment. Staging is available at the Clay Springs Trailhead. Dispersed camping is available on adjacent forest roads where permitted.",
+  "safetyNote": "High-country weather shifts quickly. Summer monsoons can create slick cinder/mud and localized washouts; winter brings snow and ice. Cell coverage is inconsistent. Carry maps/GPS, extra water, and recovery gear, and check current Apache-Sitgreaves notices before travel.",
+  "pointsOfInterest": [
+    "Maverick Motorized Trail network connectors",
+    "Logging-era forest roads through meadows and cinder hills"
+  ],
+  "lastVerifiedAt": "2026-08-22",
+  "heroAlt": "Rocky red two-track curving through juniper woodland with a wide plateau view on the Maverick West segment",
+  "mapAlt": "AZAT Maverick West route map with ranger district boundaries and land ownership legend",
+  "galleryAlt": {
+    "01-storm-sunset-road.jpg": "A dramatic storm cell with sunset colors over the dirt road ahead",
+    "02-sunset-rays-juniper.jpg": "Sunset light rays breaking through clouds over a juniper treeline",
+    "03-aerial-grassland-two-track.jpg": "Aerial view of a dirt two-track winding through open grassland and juniper hills",
+    "04-aerial-juniper-flats-storm.jpg": "Aerial view of a dirt two-track through juniper-piñon flats beneath storm clouds",
+    "05-aerial-juniper-flats-plateau.jpg": "Aerial view of a dirt road through juniper flats toward a distant plateau",
+    "06-rocky-juniper-tunnel.jpg": "A rocky two-track tunneling through dense juniper trees",
+    "07-juniper-corridor-two-track.jpg": "A dirt two-track corridor lined with juniper and grass",
+    "08-eroded-junction-moon.jpg": "A rocky, eroded two-track junction near a large juniper, with the moon visible above",
+    "09-cattle-crossing.jpg": "A small herd of cattle crossing the dirt two-track",
+    "10-tire-water-tank.jpg": "A livestock water tank made from a repurposed tractor tire",
+    "11-gate-crossing-sunset.jpg": "A barbed wire gate crossing at sunset, with a 'please close the gate' sign",
+    "12-fence-opening-trail.jpg": "A barbed wire fence opening onto a dirt trail through juniper woodland"
+  },
+  "seo": {
+    "title": "Maverick West — Arizona Alpine Trail Segment 24",
+    "description": "20.6 miles near Clay Springs, part of the Maverick/Timber Mesa OHV area. More Difficult/Blue rated, high-clearance 4WD/OHV recommended."
+  }
+}

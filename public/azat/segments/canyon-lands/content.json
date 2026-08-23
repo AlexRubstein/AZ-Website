@@ -1,0 +1,39 @@
+{
+  "status": "Open",
+  "lengthMiles": 46.0,
+  "minElevationFeet": 6132,
+  "maxElevationFeet": 7868,
+  "elevationGainFeet": 3999,
+  "elevationLossFeet": 2580,
+  "trailRating": "more-difficult-blue",
+  "descriptionBody": [
+    "The Canyon Lands segment extends between the junction of FR 504 and FR 169 near Chevelon Crossing and the intersection of FR 115 and FR 300 (Rim Road) on the Mogollon Rim. The alignment traverses piñon-juniper and ponderosa country atop the Rim, skirting side canyons that feed Chevelon Creek and East Leonard Canyon, with long views from Rim overlooks. Notable points of interest include Chevelon Crossing Campground and the Long Draw North OHV trailhead at the creek, plus a spur to Chevelon Canyon Lake via FR 169 and classic vistas along the Rim Road corridor.",
+    "This segment consists primarily of unpaved forest roads: FR 504 and FR 169 vary from graded dirt to rocky two-track near canyon rims, while FR 300 is generally well-graded when dry. Expect embedded rock, washboards, and short steep pitches; high-clearance is advisable, especially for the Chevelon Lake spur, though the main Rim Road is typically easier in good conditions."
+  ],
+  "amenitiesNote": "Not available on-route. Nearest full services are in Heber Overgaard via SR 260 to the east and in Payson to the west. Camping options include Chevelon Crossing Campground at the creek and multiple developed campgrounds in the Rim Lakes Recreation Area (e.g., Woods Canyon Lake) reachable from FR 300.",
+  "pointsOfInterest": [
+    "Chevelon Crossing Campground",
+    "Long Draw North OHV Trailhead",
+    "Chevelon Canyon Lake (spur access via FR 169)",
+    "Rim Road (FR 300) scenic overlooks",
+    "Woods Canyon Lake and the Rim Lakes Recreation Area (via FR 300)"
+  ],
+  "lastVerifiedAt": "2026-08-22",
+  "heroAlt": "Aerial view of Chevelon Canyon Lake winding through forested shoreline",
+  "mapAlt": "AZAT Canyon Lands route map with ranger district boundaries and land ownership legend",
+  "galleryAlt": {
+    "01-rocky-forest-road-canyon.jpg": "Gravel road cutting past a rocky outcrop through dense conifer forest",
+    "02-ponderosa-pine-grove.jpg": "A dense grove of tall ponderosa pines bordering a grassy meadow",
+    "03-sunny-ponderosa-meadow.jpg": "Ponderosa pine forest opening onto a sunlit grassy meadow",
+    "04-aerial-canyon-rim-overlook.jpg": "Aerial view of a deep rocky canyon cutting through the Rim plateau",
+    "05-two-track-through-juniper-dusk.jpg": "Rocky two-track flanked by juniper trees at dusk",
+    "06-aerial-straight-road-cattle-guard.jpg": "Aerial view of a straight dirt road crossing a cattle guard at sunset with storms in the distance",
+    "07-ohv-overlooking-mountains.jpg": "Side-by-side OHV parked at a forest overlook with layered mountain ridges beyond",
+    "08-elk-trio-in-juniper.jpg": "Three elk pausing among juniper trees and dry grass",
+    "09-wind-turbines-at-sunset.jpg": "Wind turbines silhouetted against a glowing orange sunset sky"
+  },
+  "seo": {
+    "title": "Canyon Lands — Arizona Alpine Trail Segment 27",
+    "description": "46.0 miles on the Mogollon Rim between Chevelon Crossing and the Rim Road (FR 300). More Difficult/Blue rated, with a spur to Chevelon Canyon Lake."
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "status": "Open",
+  "lengthMiles": 25.4,
+  "minElevationFeet": 2761,
+  "maxElevationFeet": 5007,
+  "elevationGainFeet": 3357,
+  "elevationLossFeet": 5239,
+  "trailRating": "more-difficult-blue",
+  "descriptionBody": [
+    "The Rye Creek segment extends between Payson and Jakes Corner in Gila County from the junction of FR 406 (West Doll Baby Road) and FR 511 to the junction of FR 184 and SR 188. The alignment threads the Tonto National Forest, crossing the Rye Creek drainage and working past local landmarks, including Wonder Gulch, Willow Spring Canyon, Weymouth Flat, Sorghum Hill, Bishop Knoll, Haycox Mountain, Black Mountain, and Bee Canyon, with wide views of rolling foothills and piñon juniper/ponderosa country.",
+    "This segment consists primarily of a gravel and rocky dirt two-track, with embedded rock, small boulders and ledges, washboards, and a few steeper grades; it crosses SR 87. A high-clearance 4WD/OHV is recommended due to rock steps, erosion cuts, and potential washouts after storms."
+  ],
+  "amenities": ["Food", "Fuel", "Lodging", "Repair"],
+  "amenitiesNote": "Full services (fuel, food, lodging, supplies, OHV repair) are available in Payson. Jakes Corner offers limited services (e.g., bar & grill, RV options), and Gisela provides limited lodging via vacation rentals with access to nearby hiking, camping, and Tonto Creek recreation.",
+  "safetyNote": "Lower-elevation desert conditions can bring extreme heat in summer and monsoon-driven flash flooding in washes. Dust, loose rock, and open range livestock are common. Use extra caution at the SR 87 crossing, and carry ample water, recovery gear, and reliable navigation.",
+  "pointsOfInterest": [
+    "Gisela Ruins",
+    "Jim Jones Shooting Range",
+    "Hellsgate Wilderness Area",
+    "Tonto Creek",
+    "Jake's Corner Ruins",
+    "Roosevelt Lake",
+    "Mazatzal Peak (7,910 ft) views"
+  ],
+  "lastVerifiedAt": "2026-08-22",
+  "heroAlt": "Prickly pear cactus overlooking the Rye Creek foothills and mountains",
+  "mapAlt": "AZAT Rye Creek route map with ranger district boundaries and land ownership legend",
+  "galleryAlt": {
+    "01-creek-drainage.jpg": "Aerial view of the Rye Creek drainage and cottonwoods",
+    "02-mountain-clouds.jpg": "Dirt two-track switchback with distant mountain peak",
+    "03-switchback-aerial.jpg": "Aerial view of a river crossing along the route",
+    "04-dirt-road-clouds.jpg": "Dirt road winding through juniper under a cloudy sky",
+    "05-winding-roads.jpg": "Aerial view of winding dirt roads through desert terrain",
+    "06-ranger-truckbed.jpg": "UTV loaded with gear parked on the trail",
+    "07-valley-view.jpg": "Overlook of the Rye Creek valley and surrounding mountains"
+  },
+  "seo": {
+    "title": "Rye Creek — Arizona Alpine Trail Segment 01",
+    "description": "25.4 miles between Payson and Jakes Corner. More Difficult/Blue rated, high-clearance 4WD/OHV recommended."
+  }
+}

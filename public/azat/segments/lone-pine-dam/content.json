@@ -1,0 +1,39 @@
+{
+  "status": "Open",
+  "lengthMiles": 35.5,
+  "minElevationFeet": 5914,
+  "maxElevationFeet": 6547,
+  "elevationGainFeet": 2759,
+  "elevationLossFeet": 2941,
+  "trailRating": "more-difficult-blue",
+  "descriptionBody": [
+    "The Lone Pine Dam segment extends between the junction of SR 60 and FR 9427X near the Maverick Motorized Trail System near Show Low and the junction of FR 655 and FR 221A (Clay Springs Trailhead). The alignment works west across cinder flats and ponderosa country on the Timber Mesa/Porter Mountain uplands, skirts the Lone Pine Dam area on Show Low Creek, and continues toward Clay Springs with broad views over the White Mountains plateau. Notable points of interest include staging and connectors within the Maverick system (Sky-Hi, Timber Mesa, Panorama, Burton, Clay Springs trailheads), the Lone Pine Dam OHV area, and nearby lake corridors around Show Low.",
+    "This segment consists primarily of unpaved forest roads and designated OHV connectors ranging from maintained cinder/dirt to rocky two-track, with intermittent ruts and washboards that worsen after storms. Expect occasional short, steeper pitches and embedded rock; high-clearance 4WD/OHV is recommended, particularly in wet conditions or after snowmelt. This segment contains a culvert under Hwy 60 that can fill with water, making the trail segment unusable — when this occurs, a detour is required (see the Arizona Alpine Trail website for details)."
+  ],
+  "amenities": ["Food", "Fuel", "Lodging", "Medical", "Repair"],
+  "amenitiesNote": "Show Low offers fuel, food, lodging, medical, and OHV services. Dispersed camping is common on adjacent forest roads where permitted; established recreation facilities are available nearby at Fool Hollow Lake and throughout the Maverick trailheads (no water/restrooms at most trailheads).",
+  "safetyNote": "High-country weather shifts quickly. Summer monsoons create slick cinder/mud and localized washouts; winter brings snow and ice. Cell coverage is inconsistent. Carry maps/GPS, extra water, and recovery gear, and check current Apache-Sitgreaves notices and local conditions before travel.",
+  "pointsOfInterest": [
+    "Maverick trailhead staging (Sky-Hi, Timber Mesa, Panorama, Burton, Clay Springs)",
+    "Lone Pine Dam OHV area",
+    "Show Low lake corridors"
+  ],
+  "lastVerifiedAt": "2026-08-22",
+  "heroAlt": "Dirt two-track crossing open grassland toward distant juniper hills on the Lone Pine Dam segment",
+  "mapAlt": "AZAT Lone Pine Dam route map with ranger district boundaries and land ownership legend",
+  "galleryAlt": {
+    "01-atv-maverick-trail-marker.jpg": "An ATV stopped at a Maverick Motorized Trail marker post along power lines",
+    "02-rocky-trail-powerlines.jpg": "A rocky two-track climbing beneath power lines",
+    "03-juniper-tunnel-dirt-trail.jpg": "Dirt trail tunneling through dense juniper woodland",
+    "04-aerial-juniper-forest-road.jpg": "Aerial view of the dirt road winding through juniper forest",
+    "05-aerial-road-junction-junipers.jpg": "Aerial view of a road junction in the junipers",
+    "06-aerial-trailhead-kiosk-clearing.jpg": "Aerial view of a trailhead clearing with an information kiosk and trail junction",
+    "07-eroded-rutted-trail-fence.jpg": "An eroded, rutted section of trail along a fence line",
+    "08-deep-eroded-trail-gully.jpg": "A deep erosion gully cut into the trail surface",
+    "09-ponderosa-pines-storm-clouds.jpg": "Ponderosa pines beneath building storm clouds"
+  },
+  "seo": {
+    "title": "Lone Pine Dam — Arizona Alpine Trail Segment 23",
+    "description": "35.5 miles near Show Low, part of the Maverick Motorized Trail System. More Difficult/Blue rated, high-clearance 4WD/OHV recommended."
+  }
+}

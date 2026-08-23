@@ -1,0 +1,38 @@
+{
+  "status": "Open",
+  "lengthMiles": 14.7,
+  "minElevationFeet": 5333,
+  "maxElevationFeet": 7442,
+  "elevationGainFeet": 543,
+  "elevationLossFeet": 2542,
+  "trailRating": "easier-green",
+  "descriptionBody": [
+    "The Rim segment extends between the western terminus of FR 300 (Rim Road) at SR 87 and the Power Line crossing at the junction of SR 87 and Power Line Connector Road near General Springs Cabin on the Mogollon Rim. The alignment traces the lip of the Rim through ponderosa forest with frequent overlooks toward the Mazatzal Mountains and Tonto Basin. Notable points of interest include the Battle of Big Dry Wash historical marker and nearby General Springs Cabin (reached via the powerline spur), as well as the Arizona Trail crossing along FR 300.",
+    "This segment consists primarily of pavement with graded dirt/cinder along nearby FR 300, with intermittent washboards, embedded rock, and short, steeper pitches near viewpoints."
+  ],
+  "amenities": ["Food", "Fuel", "Lodging"],
+  "amenitiesNote": "Off-route; the nearest are in Strawberry and Pine along SR 87, with broader options in Payson to the south. Dispersed camping is available on signed forest roads where permitted; facilities at the historic sites are minimal.",
+  "safetyNote": "Rim-top weather changes fast. Summer monsoons bring slick cinder/mud and localized washouts; winter often brings snow/ice and seasonal gates/closures. Cell service is inconsistent. Check current Coconino road status for FR 300 before travel and carry maps/GPS and essentials.",
+  "pointsOfInterest": [
+    "Battle of Big Dry Wash historical marker",
+    "General Springs Cabin",
+    "Arizona Trail crossing (FR 300)"
+  ],
+  "lastVerifiedAt": "2026-08-22",
+  "heroAlt": "Highway winding through ponderosa pines along the Mogollon Rim on The Rim segment",
+  "mapAlt": "AZAT The Rim route map with ranger district boundaries and land ownership legend",
+  "galleryAlt": {
+    "01-forest-mountain-view-storm-clouds.jpg": "Forested mountain view with building storm clouds along the Rim",
+    "02-highway-mileage-sign.jpg": "Highway sign showing mileage to Strawberry, Payson, Winslow, and Flagstaff",
+    "03-highway-through-pines-storm.jpg": "Highway through ponderosa pines beneath a storm front",
+    "04-old-county-inn-sign-pine.jpg": "The Old County Inn sign in Pine",
+    "05-windmill-coffee-shop-strawberry.jpg": "Windmill Coffee Shop sign in Strawberry",
+    "06-strawberry-inn-welcome-sign.jpg": "Strawberry Inn welcome sign",
+    "07-lodge-at-5600-sign-pine.jpg": "Lodge at 5,600' sign in Pine",
+    "08-chevron-gas-station-pine.jpg": "An ATV fueling up at a Chevron station in Pine"
+  },
+  "seo": {
+    "title": "The Rim — Arizona Alpine Trail Segment 29",
+    "description": "14.7 miles along the Mogollon Rim near General Springs Cabin. Easier/Green rated, mostly pavement with graded dirt/cinder."
+  }
+}

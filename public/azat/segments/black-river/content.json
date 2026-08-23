@@ -1,0 +1,40 @@
+{
+  "status": "Open",
+  "lengthMiles": 25.5,
+  "minElevationFeet": 6828,
+  "maxElevationFeet": 9775,
+  "elevationGainFeet": 1424,
+  "elevationLossFeet": 3986,
+  "trailRating": "more-difficult-blue",
+  "descriptionBody": [
+    "The Black River segment extends between the Big Lake Recreation Area near the junction of SR 273 and FR 8037 and FR 25 and the Black River Bridge (Buffalo Crossing) along the east/west forks of the Black River in the Apache-Sitgreaves National Forests. The alignment descends from Big Lake's high country meadows and mixed conifer forest into a cool riparian canyon, with access to fishing spots, river overlooks, and connections to the Black River trail network (e.g., Thompson Trail #629).",
+    "This segment follows unpaved forest roads (including the Black River Road corridor) with generally graded dirt punctuated by rocky stretches, ruts, washboards, and a few steeper pitches; conditions can change quickly after storms. High clearance 4WD/OHV is recommended, especially during wet periods or snowmelt."
+  ],
+  "amenities": ["Food", "Fuel", "Lodging"],
+  "amenitiesNote": "Amenities are concentrated at Big Lake (multiple campgrounds, boat access, seasonal concessions), with full services available in Eagar/Springerville to the northeast and Alpine to the southeast. Near the bridge, Buffalo Crossing Campground provides first come, first served campsites close to the River; additional water and services are available at nearby Big Lake campgrounds (e.g., Apache Trout, Rainbow).",
+  "safetyNote": "Expect rapidly changing high-elevation weather. Summer monsoons can create slick mud and washouts; winter brings snow and ice. Portions of the Black River corridor were affected by the 2011 Wallow Fire; watch for downed trees and debris. Cell coverage is limited; carry maps/GPS and be self-sufficient.",
+  "pointsOfInterest": [
+    "Fishing spots along the Black River",
+    "River overlooks",
+    "Black River trail network connections (e.g., Thompson Trail #629)"
+  ],
+  "lastVerifiedAt": "2026-08-22",
+  "heroAlt": "Aerial view of the Black River canyon with the river winding through forested cliffs under a stormy sky",
+  "mapAlt": "AZAT Black River route map with ranger district boundaries and land ownership legend",
+  "galleryAlt": {
+    "01-big-lake-sunset-meadow.jpg": "Sunset panorama of a forested peninsula reflected in Big Lake",
+    "02-clouds-over-lake-island.jpg": "Streaked clouds over a tree-covered point on a Big Lake inlet",
+    "03-aerial-snow-dusted-big-lake.jpg": "Aerial view of Big Lake dusted with snow under a stormy sky",
+    "04-fall-color-lake-island-sunset.jpg": "Sunset panorama of golden aspen and conifers reflected in still water",
+    "05-storm-light-rays-over-meadow.jpg": "Sunset light rays breaking through storm clouds over a lakeside meadow",
+    "06-meadow-creek-blue-sky.jpg": "A meandering creek through a green meadow under a wide blue sky",
+    "07-aspen-lined-dirt-road.jpg": "Dirt road tunneling through golden aspen with sunlight breaking through",
+    "08-golden-aspen-canopy.jpg": "Upward view through a canopy of golden aspen leaves",
+    "09-aerial-black-river-canyon.jpg": "Aerial view of the forested Black River canyon and creek bottom",
+    "10-aerial-black-river-bend.jpg": "Aerial view of the Black River bending through a rocky, forested canyon"
+  },
+  "seo": {
+    "title": "Black River — Arizona Alpine Trail Segment 12",
+    "description": "25.5 miles from Big Lake to the Black River Bridge at Buffalo Crossing. More Difficult/Blue rated, high-clearance 4WD/OHV recommended."
+  }
+}

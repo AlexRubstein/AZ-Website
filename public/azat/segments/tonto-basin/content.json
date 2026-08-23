@@ -1,0 +1,43 @@
+{
+  "status": "Open",
+  "lengthMiles": 10.7,
+  "minElevationFeet": 2351,
+  "maxElevationFeet": 2868,
+  "elevationGainFeet": 1201,
+  "elevationLossFeet": 1658,
+  "trailRating": "easier-green",
+  "descriptionBody": [
+    "The Tonto Basin segment extends between Jakes Corner and Tonto Basin along SR 188 in Gila County from the junction of FR 184 and SR 188 to the junction of SR 188 and FR 71. The alignment follows the Tonto Creek corridor through wide desert basin and riparian flats, with open views east toward the Sierra Ancha and west toward the Mazatzal Mountains and Mount Ord.",
+    "This segment consists entirely of paved highway. Expect highway speeds, limited shoulders in places, and light-to-moderate local traffic, plus blowing dust after dry, windy periods."
+  ],
+  "amenities": ["Food", "Fuel", "Lodging"],
+  "amenitiesNote": "Services are available at both ends. Jakes Corner offers food and limited services. Tonto Basin provides fuel, groceries, dining, lodging/RV parks, and quick access south to Roosevelt Lake for boating, fishing, and camping.",
+  "safetyNote": "This lower-elevation corridor can experience extreme summer heat and monsoon-related flooding in adjacent washes. Watch for wildlife and open-range livestock, use caution at driveways and side-road junctions, and carry ample water and reliable navigation.",
+  "pointsOfInterest": [
+    "Firewood 167 Loop Jeep Trail",
+    "Roosevelt Lake",
+    "Mazatzal Mountains and Four Peaks Wilderness access",
+    "Upper and Lower Cliff Dwellings",
+    "Tonto National Monument"
+  ],
+  "lastVerifiedAt": "2026-08-22",
+  "heroAlt": "Dirt two-track winding through saguaro-covered hills on the Tonto Basin segment",
+  "mapAlt": "AZAT Tonto Basin route map with ranger district boundaries and land ownership legend",
+  "galleryAlt": {
+    "01-sr188-into-the-basin.jpg": "SR 188 winding down into the Tonto Basin valley",
+    "02-tonto-creek-floodplain.jpg": "Aerial view of the Tonto Creek floodplain, farmland, and surrounding mountains",
+    "03-irrigated-pasture.jpg": "Aerial view of irrigated pasture and farmland along Tonto Creek",
+    "04-canyon-river-crossing.jpg": "Aerial view of Tonto Creek canyon where it meets the road crossing",
+    "05-canyon-rim-saguaro.jpg": "Aerial view of a rocky canyon rim above Tonto Creek, lined with saguaro",
+    "06-jakes-corner-bar.jpg": "Jakes Corner Bar, a landmark at the segment's north end",
+    "07-sally-maes-coffee-cones.jpg": "Sally Mae's Coffee & Cones and Los Arturos in Punkin Center",
+    "08-punkin-center-lodge.jpg": "Punkin Center Lodge sign",
+    "09-punkin-center-bar.jpg": "Punkin Center Bar and restaurant",
+    "10-jakes-corner-bar-interior.jpg": "Inside Jakes Corner Bar, decorated with dollar bills and a mounted deer head",
+    "11-rider-parked-at-jakes-corner.jpg": "A rider's Harley-Davidson parked outside Jakes Corner Bar"
+  },
+  "seo": {
+    "title": "Tonto Basin — Arizona Alpine Trail Segment 02",
+    "description": "10.7 miles from Jakes Corner to Tonto Basin. Easier/Green rated, following Tonto Creek along SR 188."
+  }
+}

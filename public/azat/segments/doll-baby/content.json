@@ -1,0 +1,42 @@
+{
+  "status": "Open",
+  "lengthMiles": 22.9,
+  "minElevationFeet": 3376,
+  "maxElevationFeet": 5680,
+  "elevationGainFeet": 2804,
+  "elevationLossFeet": 3587,
+  "trailRating": "more-difficult-blue",
+  "descriptionBody": [
+    "The Doll Baby segment extends between the Power Line corridor south of the Rim (junction of SR 87 and the Power Line Connector Road) and West Doll Baby Ranch Road (junction of FR 406 and FR 511) west of Payson. The alignment descends off Rim-top forest into the East Verde country, finishing on FR 406 toward the Doll Baby area, a gateway to the Mazatzal Wilderness and the Arizona Trail.",
+    "This segment combines utility-corridor two-track (rocky, with short steep pitches) and FR 406, which is mostly paved with the final miles turning to graded dirt beyond the ranch area; expect embedded rock, ruts, and washboards after storms. High-clearance 4WD/OHV is recommended for the power-line approach; FR 406 is typically passable when dry."
+  ],
+  "safetyNote": "The East Verde River may flood, requiring a detour — see the Arizona Alpine Trail website for detour details.",
+  "pointsOfInterest": [
+    "Doll Baby Trailhead (Arizona Trail Passage 24 – Red Hills access)",
+    "Spanish Ruins",
+    "East Verde River corridor views"
+  ],
+  "lastVerifiedAt": "2026-08-22",
+  "heroAlt": "Aerial view of a dirt road switchbacking down through canyon walls toward the green East Verde River corridor",
+  "mapAlt": "AZAT Doll Baby route map with ranger district boundaries and land ownership legend",
+  "galleryAlt": {
+    "01-sunset-camper-road.jpg": "Sunset over the dirt road with an overland camper truck parked alongside",
+    "02-sunset-over-hills.jpg": "Sunset light over forested hills beneath storm clouds",
+    "03-pines-toward-burned-mountains.jpg": "Dirt two-track through pines toward fire-scarred mountains",
+    "04-ponderosa-pine-road.jpg": "Dirt road through tall ponderosa pine forest",
+    "05-gnarled-oak-tree.jpg": "A gnarled oak tree beside the dirt trail",
+    "06-blooming-agave.jpg": "A blooming agave stalk with mountains in the background",
+    "07-rocky-boulder-descent.jpg": "A rocky trail descent through large boulders",
+    "08-rocky-wash-crossing.jpg": "A rocky wash and streambed crossing through the forest",
+    "09-monsoon-canyon-view.jpg": "Dramatic canyon and mountain views beneath monsoon clouds",
+    "10-east-verde-riparian-corridor.jpg": "Canyon cliffs above the green riparian corridor of the East Verde River",
+    "11-doll-baby-ranch-house.jpg": "Overlook of a historic red-roofed ranch house in the canyon below",
+    "12-utv-on-rocky-trail.jpg": "A UTV driving toward the camera on a rocky trail",
+    "13-ranch-fence-water-tank.jpg": "A juniper tree, fence line, and water tank at a ranch site",
+    "14-fence-posts-corral.jpg": "Weathered wooden fence posts around a dirt corral"
+  },
+  "seo": {
+    "title": "Doll Baby — Arizona Alpine Trail Segment 30",
+    "description": "22.9 miles from the Rim to the Doll Baby area west of Payson, gateway to the Mazatzal Wilderness. More Difficult/Blue rated, high-clearance 4WD/OHV recommended."
+  }
+}

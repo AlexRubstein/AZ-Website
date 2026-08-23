@@ -1,0 +1,35 @@
+{
+  "status": "Open",
+  "lengthMiles": 22.4,
+  "minElevationFeet": 6194,
+  "maxElevationFeet": 6604,
+  "elevationGainFeet": 2071,
+  "elevationLossFeet": 1825,
+  "trailRating": "more-difficult-blue",
+  "descriptionBody": [
+    "The Many Draws segment extends between the junctions of FR 9887J and FR 9887E and FR 88A and FR 95 across the Black Mesa country northwest of Clay Springs and Pinedale. The alignment rolls over cinder benches and low ridgelines, dipping in and out of multiple ephemeral drainages—the \"many draws\"—through piñon-juniper and ponderosa stands with open views toward the Mogollon Rim uplands.",
+    "This segment consists primarily of unpaved forest roads and OHV connectors with surfaces ranging from maintained cinder/dirt to rocky two-track, plus seasonal ruts and washboards after storms. Short steeper pitches and embedded rock occur in places; high-clearance 4WD/OHV is recommended, especially when wet."
+  ],
+  "amenities": ["Food", "Fuel", "Lodging", "Repair"],
+  "amenitiesNote": "Amenities (food, fuel, lodging, and OHV services) are available in Heber Overgaard to the west. Staging and dispersed camping are available on adjacent Apache Sitgreaves NFs roads where permitted.",
+  "safetyNote": "Expect quick weather shifts at elevation—summer monsoon cells can make cinder/mud slick and create localized washouts in the draws; winter brings snow/ice and occasional closures. Cell coverage is spotty; carry maps/GPS and travel self-sufficient. Check current Apache Sitgreaves notices before departure.",
+  "lastVerifiedAt": "2026-08-22",
+  "heroAlt": "Dirt forest road winding through ponderosa pine on the Many Draws segment",
+  "mapAlt": "AZAT Many Draws route map with ranger district boundaries and land ownership legend",
+  "galleryAlt": {
+    "01-desert-poppies-trailside.jpg": "White prickly poppies blooming beside the dirt two-track",
+    "02-two-track-through-grassland.jpg": "Winding dirt two-track through open grassland with a distant lookout tower",
+    "03-ponderosa-pine-singletrack.jpg": "Dirt trail threading through a ponderosa pine stand with a fallen log",
+    "04-hillside-two-track-climb.jpg": "Faint two-track climbing a grassy hillside dotted with ponderosa pine",
+    "05-two-track-toward-tower.jpg": "Dirt two-track descending toward a distant fire lookout tower",
+    "06-fire-hazard-warning-sign.jpg": "Warning sign for flooding, falling rock, and debris flows in a burn-scarred area along the trail",
+    "07-juniper-corridor-trail.jpg": "Dirt two-track cutting through a dense juniper corridor",
+    "08-aerial-winding-road-juniper.jpg": "Aerial view of a winding dirt road through juniper and open cinder flats",
+    "09-aerial-forest-road.jpg": "Aerial view of a dirt road curving through open ponderosa pine forest",
+    "10-ranch-gate-fenceline.jpg": "Green ranch gate and fence line crossing the trail"
+  },
+  "seo": {
+    "title": "Many Draws — Arizona Alpine Trail Segment 25",
+    "description": "22.4 miles across the Black Mesa country northwest of Clay Springs and Pinedale. More Difficult/Blue rated, high-clearance 4WD/OHV recommended."
+  }
+}

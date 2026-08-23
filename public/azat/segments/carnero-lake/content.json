@@ -1,0 +1,39 @@
+{
+  "status": "Open",
+  "lengthMiles": 18.5,
+  "minElevationFeet": 7775,
+  "maxElevationFeet": 9371,
+  "elevationGainFeet": 1131,
+  "elevationLossFeet": 2728,
+  "trailRating": "more-difficult-blue",
+  "descriptionBody": [
+    "The Carnero Lake segment extends between the junction of FR 117 and FR 117A and the intersection of FR 61 and FR 2 near Carnero Lake and Greens Peak in the Apache-Sitgreaves National Forests. The alignment follows high-elevation cinder and forest roads through ponderosa and aspen groves on the Springerville Volcanic Field, with broad views toward Greens Peak and easy spur access to Carnero Lake. Notable points of interest include the Carnero Lake shoreline area (via FR 117/FR 117A) and Greens Peak.",
+    "This segment consists primarily of maintained cinder/dirt on FR 117 and graded forest roads (FR 61/FR 2), with occasional rocky and rough stretches, ruts, and seasonal washboards after storms. In dry weather these roads are generally easy; side spurs may require more clearance. High-clearance 4WD/OHV is recommended if conditions are wet or after snowmelt."
+  ],
+  "amenitiesNote": "There are no amenities along this segment. Dispersed camping is common on adjoining forest roads, with additional primitive sites around Carnero Lake accessed from FR 117A.",
+  "safetyNote": "Expect high-elevation weather swings (~9,000 ft): summer monsoons can create slick cinder/mud and localized washouts; winter brings snow/ice and seasonal closures—Carnero Lake access roads are typically closed mid November through mid April. Cell service is limited; carry maps/GPS and travel self-sufficient.",
+  "pointsOfInterest": [
+    "Carnero Lake shoreline area (via FR 117/FR 117A)",
+    "Greens Peak"
+  ],
+  "lastVerifiedAt": "2026-08-22",
+  "heroAlt": "Double rainbow arching over a burned forest of standing snags along the Carnero Lake segment",
+  "mapAlt": "AZAT Carnero Lake route map with ranger district boundaries and land ownership legend",
+  "galleryAlt": {
+    "01-fr117-greens-peak-sawmill-sign.jpg": "Forest road sign at FR 117 pointing toward Greens Peak and the Old Whiting Sawmill site",
+    "02-ponderosa-pine-trail.jpg": "Dirt two-track winding between large ponderosa pine trunks",
+    "03-foggy-aspen-forest-trail.jpg": "Dirt trail through a misty forest of aspen and pine",
+    "04-aspen-grove-trunks.jpg": "Dense stand of white aspen trunks with green pines behind",
+    "05-trail-puddles-reflections.jpg": "Rain puddles on the forest road reflecting overhead pine branches",
+    "06-old-whiting-sawmill-ruins-storm.jpg": "Stone and timber ruins of the Old Whiting Sawmill beneath storm clouds",
+    "07-old-whiting-sawmill-ruins-sunset.jpg": "Old Whiting Sawmill ruins lit by golden evening light among the pines",
+    "08-corral-fence-sunset.jpg": "Weathered wooden corral and loading chute silhouetted against a sunset sky",
+    "09-pronghorn-pair-meadow.jpg": "Two pronghorn antelope standing alert in a golden-lit meadow",
+    "10-pronghorn-close-up.jpg": "A pronghorn antelope pausing beside a juniper shrub near a tree stump",
+    "11-squirrel-on-pine-tree.jpg": "A tassel-eared squirrel perched on a bare branch beside a ponderosa pine trunk"
+  },
+  "seo": {
+    "title": "Carnero Lake — Arizona Alpine Trail Segment 20",
+    "description": "18.5 miles near Carnero Lake and Greens Peak in the Apache-Sitgreaves National Forests. More Difficult/Blue rated, high-clearance 4WD/OHV recommended."
+  }
+}

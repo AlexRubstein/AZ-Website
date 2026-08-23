@@ -1,0 +1,34 @@
+{
+  "status": "Open",
+  "lengthMiles": 36.1,
+  "minElevationFeet": 6864,
+  "maxElevationFeet": 9566,
+  "elevationGainFeet": 4173,
+  "elevationLossFeet": 1654,
+  "trailRating": "more-difficult-blue",
+  "descriptionBody": [
+    "The Greens Peak segment extends from the Sky Hi Trailhead near the junction of FR 22 and FR 9724X eastward toward the Sheep Corral area, passing near Greens Peak — the volcanic knoll rising above the meadows of eastern Arizona — near the junction of FR 117 and FR 117A. It links forest roads and trail sections across alpine meadows, aspen, ponderosa pine, and mixed conifer woodlands, offering elevated views of the Springerville Volcanic Field, nearby peaks (including Mount Baldy and Sunrise Peak), and distant mountain ridges.",
+    "The terrain is mostly unpaved forest roads and motorized connectors with mixed surface conditions: dirt and gravel, occasional washboard or rocky sections, some gentle grades and steeper climbs near the peak. High-clearance vehicles (4WD/OHV) are recommended, especially in wet or snowy periods."
+  ],
+  "amenities": ["Food", "Lodging"],
+  "amenitiesNote": "Nearby towns providing services include Greer, which is closest and offers lodging and food; Pinetop-Lakeside/Show Low offer accommodations and supply options. Dispersed camping is possible along many of the forest roads adjoining this segment; developed campsites exist near Greens Peak and along FR 61/FR 117 areas.",
+  "safetyNote": "Expect rapidly changing weather. Summer afternoon thunderstorms may cause slick roads and reduced visibility; winter snow, ice, and snowdrifts can block road access, especially near the Greens Peak summit area. Do not travel on the White Mountain Apache Tribe reservation.",
+  "lastVerifiedAt": "2026-08-22",
+  "heroAlt": "Aerial view of the dirt road switchbacking along a ridge near Greens Peak, with radio towers on the summit",
+  "mapAlt": "AZAT Greens Peak route map with ranger district boundaries and land ownership legend",
+  "galleryAlt": {
+    "01-summit-ridge-sunset.jpg": "Aerial sunset view of a grassy summit ridge with snow patches above golden aspen forest",
+    "02-misty-meadow-road.jpg": "Aerial view of a dirt road through a misty meadow lined with aspen",
+    "03-aspen-grove.jpg": "Close-up of white aspen trunks in a grassy grove",
+    "04-forested-ridges-haze.jpg": "Forested hills fading into hazy blue mountain ridges",
+    "05-sunset-clouds-ridgeline.jpg": "Pink sunset clouds over forested ridgelines",
+    "06-log-fence-cabin.jpg": "A weathered log fence with a red cabin visible in the meadow beyond",
+    "07-historic-red-cabin.jpg": "A historic red log cabin with a rusted metal roof in the pines",
+    "08-utv-convoy-dust.jpg": "A convoy of UTVs kicking up dust on a grassy trail",
+    "09-parked-utvs-meadow.jpg": "A line of parked UTVs in a golden meadow below a forested hill"
+  },
+  "seo": {
+    "title": "Greens Peak — Arizona Alpine Trail Segment 10",
+    "description": "36.1 miles from Sky Hi Trailhead past Greens Peak. More Difficult/Blue rated, high-clearance 4WD/OHV recommended."
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "status": "Open",
+  "lengthMiles": 22.1,
+  "minElevationFeet": 6142,
+  "maxElevationFeet": 6749,
+  "elevationGainFeet": 1654,
+  "elevationLossFeet": 1735,
+  "trailRating": "more-difficult-blue",
+  "descriptionBody": [
+    "The Chevelon Crossing segment extends between the junction of FR 88A and FR 95 and the intersection of FR 504 and FR 169 on the Mogollon Rim in the Apache Sitgreaves National Forests. The alignment traverses piñon-juniper and ponderosa country on the high plateau, dipping through side canyons that feed Chevelon Creek and finishing at the approach to Chevelon Crossing, with broad views into Chevelon Canyon. Notable points of interest include Chevelon Crossing Campground at the creek, the Long Draw North OHV trailhead located at the campground, and spur access to Chevelon Canyon Lake via FR 169.",
+    "This segment consists primarily of unpaved forest roads ranging from maintained cinder/dirt to rocky two-track, with embedded rock, ruts, washboards, and short steep pitches near the canyon rims; conditions change quickly after summer storms or snowmelt. High-clearance 4WD/OHV is recommended. The area is noticeably scarred by the lightning-caused Wyrick Fire that burned over 7,500 acres."
+  ],
+  "amenitiesNote": "Not available along the corridor; the nearest full services are in Heber–Overgaard along SR 260. On-route camping is available at Chevelon Crossing Campground (vault toilets in warm season; no fee; remote setting).",
+  "safetyNote": "Expect rapid weather shifts at elevation—monsoon storms can create slick cinder/mud and localized washouts, while winter brings snow/ice and shaded freeze. Cell coverage is spotty; carry maps/GPS and travel self-sufficient. Check Apache–Sitgreaves notices before departure and verify current access to FR 504/FR 169 and the Chevelon Crossing area.",
+  "pointsOfInterest": [
+    "Chevelon Crossing Campground",
+    "Long Draw North OHV Trailhead",
+    "Chevelon Canyon Lake (spur access via FR 169)"
+  ],
+  "lastVerifiedAt": "2026-08-22",
+  "heroAlt": "Gravel road with a hairpin curve sign winding along canyon cliffs on the Chevelon Crossing segment",
+  "mapAlt": "AZAT Chevelon Crossing route map with ranger district boundaries and land ownership legend",
+  "galleryAlt": {
+    "01-two-track-toward-juniper-hill.jpg": "Dirt two-track leading toward a juniper-covered hill under storm clouds",
+    "02-flooded-two-track-puddles.jpg": "Rutted two-track filled with rainwater after a storm",
+    "03-flooded-stream-ponderosa-forest.jpg": "Storm runoff flooding a wash through a ponderosa pine stand",
+    "04-aerial-chevelon-canyon-gorge.jpg": "Aerial view of the deep, rocky gorge of Chevelon Canyon",
+    "05-aerial-canyon-rim-overlook.jpg": "Aerial view over the canyon rim at sunset with the plateau stretching to the horizon",
+    "06-burn-scarred-hills.jpg": "Rolling hills scarred by the Wyrick Fire with standing dead trees",
+    "07-burnt-tree-silhouettes.jpg": "Silhouettes of fire-killed trees against a stormy sky",
+    "08-aerial-dirt-road-burn-area.jpg": "Aerial view of a winding dirt road crossing burned, open terrain",
+    "09-campfire-ring-campground.jpg": "Stone fire ring at Chevelon Crossing Campground with canyon cliffs in the background",
+    "10-elk-herd-grassland.jpg": "A herd of elk grazing in an open grassy clearing"
+  },
+  "seo": {
+    "title": "Chevelon Crossing — Arizona Alpine Trail Segment 26",
+    "description": "22.1 miles on the Mogollon Rim between FR 88A/FR 95 and FR 504/FR 169, finishing near Chevelon Crossing. More Difficult/Blue rated, high-clearance 4WD/OHV recommended."
+  }
+}

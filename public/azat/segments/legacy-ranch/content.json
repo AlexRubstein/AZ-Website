@@ -1,0 +1,35 @@
+{
+  "status": "Open",
+  "lengthMiles": 24.5,
+  "minElevationFeet": 6796,
+  "maxElevationFeet": 7667,
+  "elevationGainFeet": 1769,
+  "elevationLossFeet": 2525,
+  "trailRating": "more-difficult-blue",
+  "descriptionBody": [
+    "The Legacy Ranch segment extends between the junction of SR 260 and FR 9316 near Forest Lakes to the junction of FR 166 and FR 124 near Overgaard in Navajo County. The alignment climbs steadily from the SR 260 corridor with the route passing through ponderosa pine and oak woodlands before transitioning into mixed conifer and aspen at higher elevations. The roadway consists primarily of gravel and rocky two-track with moderate grades and occasional ledges and tight tree lines, offering expansive views across the Mogollon Rim with potential sighting of wild horses possible. The segment is named for Legacy Ranch, a historic property and working ranch in the area that reflects the region's frontier heritage and ongoing ties to ranching traditions."
+  ],
+  "amenities": ["Food", "Fuel", "Lodging"],
+  "amenitiesNote": "Limited along the segment itself, but services including food, fuel, and lodging are available in nearby rim communities along SR 260. Dispersed camping opportunities are found throughout the surrounding Apache-Sitgreaves National Forests, with shaded clearings and meadows suitable for staging or overnight stays.",
+  "safetyNote": "Weather conditions can change quickly at higher elevations. Snow, ice, and summer monsoon storms may create slippery or washed-out sections. Riders should carry navigation tools, extra fuel and water, and be prepared for limited cell coverage in remote areas.",
+  "lastVerifiedAt": "2026-08-22",
+  "heroAlt": "Golden-lit dirt two-track winding through a tunnel of ponderosa pines on the Legacy Ranch segment",
+  "mapAlt": "AZAT Legacy Ranch route map with ranger district boundaries and land ownership legend",
+  "galleryAlt": {
+    "01-aerial-road-intersection.jpg": "Aerial view of a dirt road intersection cutting through pine forest",
+    "02-ponderosa-pine-forest.jpg": "Ponderosa pine forest interior with faint dirt roads crossing a clearing",
+    "03-pine-tunnel-trail.jpg": "Rocky dirt trail passing beneath a canopy of tall ponderosa pines",
+    "04-pine-canopy-sky.jpg": "Tall ponderosa pines opening to a partly cloudy sky",
+    "05-twin-pines-vista.jpg": "Two weathered pines framing a wide sky over rolling forest",
+    "06-legacy-ranch-estate-aerial.jpg": "Aerial view of the Legacy Ranch estate with lodge, barn, and green pastures surrounded by forest",
+    "07-wild-horses.jpg": "A small band of wild horses and foals grazing among boulders",
+    "08-aerial-valley-dusk.jpg": "Aerial dusk view of a forested valley and distant rim communities",
+    "09-sunset-mountain-panorama.jpg": "Panoramic sunset view over layered forested ridgelines",
+    "10-aerial-sunset-clouds.jpg": "Aerial view of colorful sunset clouds over the Mogollon Rim",
+    "11-dead-tree-silhouette.jpg": "A bare, weathered pine silhouetted against a sunset sky"
+  },
+  "seo": {
+    "title": "Legacy Ranch — Arizona Alpine Trail Segment 06",
+    "description": "24.5 miles from Forest Lakes to Overgaard. More Difficult/Blue rated, climbing through pine and aspen along the Mogollon Rim."
+  }
+}

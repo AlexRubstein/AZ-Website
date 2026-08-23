@@ -25,7 +25,8 @@ import type { LucideIcon } from "lucide-react";
 import { ProtectedDownloadLink } from "@/components/auth/ProtectedDownloadLink";
 import { Lightbox, PhotoGallery } from "@/components/PhotoGallery";
 import type { SegmentRouteMapProps } from "@/components/SegmentRouteMap";
-import { trailSegmentIndex, type TrailSegmentNeighbor, type TrailSegmentPageData } from "@/lib/trail-segments";
+import { trailSegmentIndex } from "@/lib/trail-segment-index";
+import type { TrailSegmentNeighbor, TrailSegmentPageData } from "@/lib/trail-segments";
 
 const SegmentRouteMap = dynamic<SegmentRouteMapProps>(
   () => import("@/components/SegmentRouteMap").then((module) => module.SegmentRouteMap),

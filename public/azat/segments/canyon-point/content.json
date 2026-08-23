@@ -1,0 +1,36 @@
+{
+  "status": "Open",
+  "lengthMiles": 44.1,
+  "minElevationFeet": 5253,
+  "maxElevationFeet": 7701,
+  "elevationGainFeet": 6019,
+  "elevationLossFeet": 3802,
+  "trailRating": "easier-green",
+  "descriptionBody": [
+    "The Canyon Point segment runs from the junction of FR 288 and FR 200 near Young northward toward the junction of SR 260 and FR 9316 at Forest Lakes in the Apache-Sitgreaves National Forests. This stretch climbs steadily from riparian creek bottoms and forested drainage lines, up into ponderosa pine and mixed conifer stands as elevation increases, with rocky ridgelines and canyon vistas opening toward the Mogollon Rim. Terrain includes graded two-track forest roads, steeper climbs, occasional loose rock, and ridgecrest exposures with expansive views of the high country."
+  ],
+  "amenities": ["Food", "Fuel", "Lodging"],
+  "amenitiesNote": "Food is available intermittently and lodging is available year-round in Forest Lakes. Fuel is available in Young. Camping is available on a significant portion of the Canyon Point Trail.",
+  "safetyNote": "High-clearance 4WD is strongly recommended. Weather can change rapidly, snow or storms possible near the Rim, creek crossings may be slippery or impassable after rain, and water is not guaranteed. Bring extra fuel, navigation aids (maps/GPS/GPX), appropriate gear, and allow for more time in difficult sections.",
+  "lastVerifiedAt": "2026-08-22",
+  "heroAlt": "Aerial view of a red dirt switchback road curving through ponderosa pine forest under storm clouds on the Canyon Point segment",
+  "mapAlt": "AZAT Canyon Point route map with ranger district boundaries and land ownership legend",
+  "galleryAlt": {
+    "01-creek-crossing.jpg": "A rocky, tree-shaded creek crossing along the Canyon Point segment",
+    "02-spillway-crossing.jpg": "A concrete spillway road crossing over a rust-colored creek",
+    "03-creek-reflection.jpg": "A calm creek reflecting the surrounding cottonwoods and grass",
+    "04-juniper-two-track.jpg": "Dirt two-track winding through juniper and pinyon pine",
+    "05-aerial-winding-road.jpg": "Aerial view of a dirt road winding through ponderosa pine forest toward distant mountains",
+    "06-aerial-pine-vista.jpg": "Aerial view of rolling ponderosa pine forest with a dirt trail below",
+    "07-ponderosa-pine-trail.jpg": "Dirt trail through tall ponderosa pine trunks",
+    "08-rocky-rim-outcrop.jpg": "A rocky rim outcrop rising above the pine forest under stormy skies",
+    "09-meadow-campsite.jpg": "A grassy pine forest clearing with a rock fire ring",
+    "10-mare-and-foal.jpg": "A mare and foal walking through open forest along the trail",
+    "11-sheep-herd.jpg": "A herd of sheep being driven down the forest road",
+    "12-highway-260-sign.jpg": "Forest road sign showing distances to State Hwy 260, Haigler Creek, and Ellinwood Ranch"
+  },
+  "seo": {
+    "title": "Canyon Point — Arizona Alpine Trail Segment 05",
+    "description": "44.1 miles from Young to Forest Lakes. Easier/Green rated, climbing through ponderosa pine toward the Mogollon Rim."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "status": "Open",
+  "lengthMiles": 0,
+  "minElevationFeet": 0,
+  "maxElevationFeet": 0,
+  "elevationGainFeet": 0,
+  "elevationLossFeet": 0,
+  "trailRating": "more-difficult-blue",
+  "descriptionBody": [
+    "First paragraph: the route in plain terms — where it starts/ends, what forest/land it crosses, notable landmarks.",
+    "Second paragraph: surface and vehicle guidance — road type, hazards, what clearance/vehicle is recommended."
+  ],
+  "amenities": ["Food", "Fuel", "Lodging"],
+  "amenitiesNote": "Which nearby towns have what — food, fuel, lodging, repair, medical.",
+  "safetyNote": "Segment-specific hazards — weather, water crossings, road conditions, wildlife, cell coverage.",
+  "pointsOfInterest": ["Landmark or viewpoint name"],
+  "lastVerifiedAt": "2026-08-22",
+  "seo": {
+    "title": "Segment Name — Arizona Alpine Trail Segment 00",
+    "description": "One or two sentences: mileage, endpoints, rating, vehicle recommendation."
+  }
+}

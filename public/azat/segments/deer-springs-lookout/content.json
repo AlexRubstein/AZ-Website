@@ -1,0 +1,34 @@
+{
+  "status": "Open",
+  "lengthMiles": 21.7,
+  "minElevationFeet": 6474,
+  "maxElevationFeet": 7218,
+  "elevationGainFeet": 1956,
+  "elevationLossFeet": 1800,
+  "trailRating": "more-difficult-blue",
+  "descriptionBody": [
+    "The Deer Springs Lookout segment extends between the junction of FR 166 and FR 124 and the intersection of FR 300 and FR 9847 along the Mogollon Rim near Pinedale. The alignment climbs through mixed conifer forest and passes near the Deer Springs Lookout, offering elevated views across deep canyons, forested plateaus, and the edge of the Rim Country.",
+    "This segment consists primarily of forest road travel, with stretches of gravel and rocky surfaces that may be rutted or washboarded depending on the season. High-clearance 4WD is recommended due to steep grades, uneven terrain, and possible downed timber or erosion in wet months."
+  ],
+  "amenitiesNote": "There are no amenities along this section of the Trail. Dispersed camping opportunities exist along FR 300 and nearby forest roads, with established campgrounds accessible a short distance away near Overgaard.",
+  "safetyNote": "Riders should be prepared for rapidly changing weather conditions along the Mogollon Rim, including heavy summer monsoons, muddy stretches, and winter snow or ice. Cell service is unreliable; carry navigation tools and emergency supplies.",
+  "pointsOfInterest": ["Deer Springs Lookout"],
+  "lastVerifiedAt": "2026-08-22",
+  "heroAlt": "Deer Springs Lookout fire tower rising above the pine canopy under a heavy cloudy sky",
+  "mapAlt": "AZAT Deer Springs Lookout route map with ranger district boundaries and land ownership legend",
+  "galleryAlt": {
+    "01-aerial-dirt-road.jpg": "Aerial view of a dirt forest road running straight through pine forest under a big sky",
+    "02-two-track-through-pines.jpg": "A winding dirt two-track through green grass and ponderosa pine forest",
+    "03-forest-road-cloudy-sky.jpg": "Rocky dirt forest road descending into pine-covered hills under a cloudy sky",
+    "04-tall-pines-blue-sky.jpg": "Tall ponderosa pines viewed from below against a blue sky with scattered clouds",
+    "05-lookout-tower-distant.jpg": "Deer Springs Lookout fire tower seen above the treeline against a blue sky",
+    "06-fort-apache-boundary-sign.jpg": "Fort Apache Indian Reservation boundary sign on a chain-link gate marking closed land",
+    "07-mule-deer-buck.jpg": "A mule deer buck with velvet antlers standing among ponderosa pines",
+    "08-wild-horse-portrait.jpg": "Close-up portrait of a wild horse with a black mane standing in the forest",
+    "09-horses-in-pasture.jpg": "Two wild horses in a pasture, one yawning"
+  },
+  "seo": {
+    "title": "Deer Springs Lookout — Arizona Alpine Trail Segment 07",
+    "description": "21.7 miles along the Mogollon Rim near Pinedale. More Difficult/Blue rated, passing near the Deer Springs Lookout fire tower."
+  }
+}

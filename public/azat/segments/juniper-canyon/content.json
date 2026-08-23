@@ -1,0 +1,40 @@
+{
+  "status": "Open",
+  "lengthMiles": 30.5,
+  "minElevationFeet": 2303,
+  "maxElevationFeet": 6418,
+  "elevationGainFeet": 7223,
+  "elevationLossFeet": 3243,
+  "trailRating": "more-difficult-blue",
+  "descriptionBody": [
+    "The Juniper Canyon segment extends between the junction of SR 188 and FR 71 (A-Cross/Greenback Valley Road) and the junction of FR 609 and FR 288 (Desert Saguaro to Tall Pines/Young Highway) in the Tonto National Forest. The alignment climbs from the Tonto Basin's Sonoran desert into the Sierra Ancha foothills, transitioning from saguaro-studded flats to juniper piñon and ponderosa pine, with views toward Roosevelt Lake, Tonto Creek, and the rugged Cherry Creek country.",
+    "This segment consists primarily of unpaved forest roads. FR 71 is generally easy graded dirt with occasional ruts/washboards; east of the divide, connectors to FR 609/FR 288 include rocky two-track and short steeper pitches. Conditions change quickly after storms; high-clearance 4WD/OHV is recommended, especially near drainages and canyon rims."
+  ],
+  "amenities": ["Food", "Fuel", "Lodging"],
+  "amenitiesNote": "Nearest full services on the west end are in Tonto Basin along SR 188; on the east end, lodging, restaurants and fuel are available in Young (Pleasant Valley). Additional marina/camping services lie around Roosevelt Lake.",
+  "safetyNote": "Expect summer monsoon washouts, winter snow/ice at higher elevations, limited cell coverage, and open-range livestock. Carry maps/GPS, extra water, and recovery gear.",
+  "lastVerifiedAt": "2026-08-22",
+  "heroAlt": "Aerial view of a dirt road switchbacking through the canyon walls of Juniper Canyon",
+  "mapAlt": "AZAT Juniper Canyon route map with ranger district boundaries and land ownership legend",
+  "galleryAlt": {
+    "01-saguaro-desert-hillside.jpg": "Saguaro-studded desert hillside at the segment's low, western end",
+    "02-tonto-creek-bridge.jpg": "Tonto Creek bridge on SR 188, near the Tonto Basin community",
+    "03-desert-two-track.jpg": "Dirt two-track winding through desert hills toward distant mountains",
+    "04-canyon-rim-cliffs.jpg": "Layered rock cliffs along the canyon rim, with distant mountain views",
+    "05-layered-rock-cliff.jpg": "Vertically fractured red rock cliff face above the canyon",
+    "06-aerial-canyon-switchbacks.jpg": "Aerial view of the dirt road switchbacking through steep canyon walls",
+    "07-oak-scrub-climb.jpg": "Dirt two-track climbing through oak scrub and weathered dead branches",
+    "08-forested-descent.jpg": "Dirt two-track descending a forested hillside toward a distant peak",
+    "09-utv-on-rocky-two-track.jpg": "A UTV navigating a rocky two-track through the canyon",
+    "10-alligator-juniper-tree.jpg": "A gnarled old alligator juniper tree along the route",
+    "11-ponderosa-pine-forest.jpg": "Tall ponderosa pines lining the dirt road",
+    "12-dense-pine-forest.jpg": "Dense ponderosa pine forest along the trail",
+    "13-forested-two-track.jpg": "Aerial view of a dirt two-track curving through mixed pine and oak forest",
+    "14-sierra-ancha-ohv-sign.jpg": "Sierra Ancha OHV Trails information sign along the route",
+    "15-mountain-vista.jpg": "Wide mountain and forest vista near the segment's high point"
+  },
+  "seo": {
+    "title": "Juniper Canyon — Arizona Alpine Trail Segment 03",
+    "description": "30.5 miles between Tonto Basin and Young. More Difficult/Blue rated, high-clearance 4WD/OHV recommended."
+  }
+}

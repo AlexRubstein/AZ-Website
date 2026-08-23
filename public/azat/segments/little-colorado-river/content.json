@@ -1,0 +1,41 @@
+{
+  "status": "Open",
+  "lengthMiles": 17.2,
+  "minElevationFeet": 9016,
+  "maxElevationFeet": 9410,
+  "elevationGainFeet": 1805,
+  "elevationLossFeet": 1776,
+  "trailRating": "more-difficult-blue",
+  "descriptionBody": [
+    "The Little Colorado River segment is used for west to east and east to west travel when completing the full Alpine Trail loop. The segment extends between the junction of FR 117 and FR 117A and the junction of SR 273 and FR 8037 near the Big Lake-Greer plateau. The alignment traverses high meadows and mixed conifer forest with aspen, skirting the headwaters country of the Little Colorado River and trending toward the Greens Peak foothills. Notable points of interest include spur access toward Greens Peak from the FR 117 area, the Greer Lakes complex (Bunch, Tunnel, River Reservoirs), and nearby trailheads along the West Fork of the Little Colorado near Greer.",
+    "This segment consists primarily of unpaved forest roads and designated OHV connectors with surfaces ranging from graded cinder/dirt to rocky two-track, with seasonal ruts and washboards—conditions can change quickly after summer storms or spring melt. High-clearance 4WD/OHV is recommended, though portions of FR 117 are typically maintained cinder when dry."
+  ],
+  "amenities": ["Food", "Fuel", "Lodging"],
+  "amenitiesNote": "The closest amenities are in Greer (lodging, dining; Rolfe C. Hoyer Campground across from the Greer Lakes), with full services in Eagar/Springerville along SR 260. To the south, the Big Lake Recreation Area offers multiple campgrounds and seasonal concessions. Dispersed camping is common along nearby forest roads where permitted.",
+  "safetyNote": "This high-elevation corridor sees rapid weather shifts. Summer monsoons can create mud and washouts; winter brings snow and ice. Check current Springerville Ranger District alerts/closures (including any Greer-area orders).",
+  "pointsOfInterest": [
+    "Greens Peak spur access (FR 117 area)",
+    "Greer Lakes complex (Bunch, Tunnel, River Reservoirs)",
+    "West Fork of the Little Colorado River trailheads near Greer"
+  ],
+  "lastVerifiedAt": "2026-08-22",
+  "heroAlt": "Aerial view of the Greer Lakes reservoirs dusted with snow near the Little Colorado River headwaters",
+  "mapAlt": "AZAT Little Colorado River route map with ranger district boundaries and land ownership legend",
+  "galleryAlt": {
+    "01-forest-gravel-road.jpg": "Graded gravel forest road lined with tall ponderosa pines",
+    "02-pine-forest-two-track.jpg": "Dirt two-track winding between ponderosa pine trunks",
+    "03-paved-road-deer-crossing.jpg": "Paved segment road curving through forest past a deer crossing sign",
+    "04-paved-road-through-meadow.jpg": "Paved road winding along a fenced meadow bordered by conifer forest",
+    "05-meadow-trail-rock-cairn.jpg": "Open meadow with a dirt trail and rock cairn near a campsite clearing",
+    "06-aerial-meadow-and-road.jpg": "Aerial view of a dirt road crossing a broad meadow toward distant hills",
+    "07-utv-convoy-dusty-trail.jpg": "Line of side-by-sides raising dust on a forested dirt road",
+    "08-multi-use-trail-junction-sign.jpg": "Trail junction with signage for hiking, horse, snowmobile, and bike use",
+    "09-mount-baldy-wilderness-welcome-sign.jpg": "Welcome sign and trail map for the Mount Baldy Wilderness",
+    "10-mount-baldy-wilderness-notice-sign.jpg": "Wooden notice sign listing Mount Baldy Wilderness camping and group-size rules",
+    "11-storm-clouds-over-ski-slopes.jpg": "Storm clouds building over snow-dusted ski slopes above Greer"
+  },
+  "seo": {
+    "title": "Little Colorado River — Arizona Alpine Trail Segment 11",
+    "description": "17.2 miles through high meadows and conifer forest near Greer and the Big Lake-Greer plateau. More Difficult/Blue rated, high-clearance 4WD/OHV recommended."
+  }
+}

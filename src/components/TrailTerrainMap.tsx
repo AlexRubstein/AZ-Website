@@ -11,6 +11,9 @@ import {
   routeSegmentSummaries,
   routeWaypoints,
 } from "@/lib/route-preview-data";
+import { trailSegmentIndex } from "@/lib/trail-segment-index";
+
+const segmentByGpxId = new Map(trailSegmentIndex.map((entry) => [entry.gpxId, entry]));
 
 type MapStatus = "loading" | "ready" | "missing-token" | "error";
 
@@ -104,10 +107,16 @@ function segmentPopupHtml(properties: GeoJSON.GeoJsonProperties) {
         ).toLocaleString()} ft`
       : "Elevation unavailable";
 
+  // The GPX-derived name/id are the raw track name from the source file (typos and all) — the
+  // segment index is the corrected, editorial name/slug, so prefer it when the id matches.
+  const segment = segmentByGpxId.get(String(properties?.id ?? ""));
+  const name = segment?.name ?? properties?.name;
+
   return `
     <div class="az-terrain-popup">
-      <strong>${escapeHtml(properties?.name)}</strong>
+      <strong>${escapeHtml(name)}</strong>
       <span>${escapeHtml(properties?.distanceMiles)} mi · ${escapeHtml(elevation)}</span>
+      ${segment ? `<a class="az-terrain-popup-link" href="/trail/${escapeHtml(segment.slug)}">View segment →</a>` : ""}
     </div>
   `;
 }

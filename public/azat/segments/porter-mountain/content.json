@@ -1,0 +1,38 @@
+{
+  "status": "Open",
+  "lengthMiles": 8.9,
+  "minElevationFeet": 6526,
+  "maxElevationFeet": 7002,
+  "elevationGainFeet": 644,
+  "elevationLossFeet": 1012,
+  "trailRating": "more-difficult-blue",
+  "descriptionBody": [
+    "The Porter Mountain segment is used for west-to-east and east-to-west travel when completing the full Alpine Trail loop. The segment extends between the junction of FR 9724X and FR 206E and the junction of FR 22 and FR 9712C near the Maverick Motorized Trail System near Pinetop-Lakeside. The alignment crosses cinder flats and mixed piñon-juniper/ponderosa forest toward the Porter Mountain and Timber Mesa uplands, with spur access to scenic overlooks and local trailheads.",
+    "This segment consists primarily of unpaved forest roads and designated OHV connectors, ranging from maintained cinder/dirt to rocky two-track with seasonal ruts, washboards, and short steep pitches — conditions that change quickly after storms. High-clearance 4WD/OHV is recommended, especially where side spurs leave the main roads."
+  ],
+  "amenities": ["Food", "Fuel", "Lodging", "Parking/Staging"],
+  "amenitiesNote": "Amenities are concentrated in Pinetop-Lakeside and Show Low. Designated Maverick trailheads (Timber Mesa, Sky-Hi, Panorama, Burton, Clay Springs) provide staging.",
+  "pointsOfInterest": [
+    "Porter Mountain Loop (Maverick Motorized Trail System)",
+    "Timber Mesa and Sky-Hi trailheads",
+    "Ice Cave trails off Porter Mountain Road"
+  ],
+  "lastVerifiedAt": "2026-08-22",
+  "heroAlt": "Dirt two-track winding through tall ponderosa pines on the Porter Mountain segment",
+  "mapAlt": "AZAT Porter Mountain route map with ranger district boundaries and land ownership legend",
+  "galleryAlt": {
+    "01-maverick-trail-sign.jpg": "Maverick Motorized Trail marker post along the route",
+    "02-oak-overhang-trail.jpg": "Dirt trail passing beneath an arching oak branch",
+    "03-culvert-crossing.jpg": "Concrete culvert drainage crossing beneath the forest road",
+    "04-cattle-guard-gate.jpg": "Cattle guard and gate at a trailhead entrance",
+    "05-forest-campsite.jpg": "A forested campsite with a stone fire ring",
+    "06-lake-dock-geese.jpg": "A dock with chairs and a boat, geese swimming on a nearby lake",
+    "07-lake-kayaker.jpg": "A kayaker paddling a lake near Porter Mountain, radio towers on the hill beyond",
+    "08-driftwood-lake-shore.jpg": "Weathered driftwood along the lake shore at sunset",
+    "09-forest-sunset.jpg": "Sunset over forested hills near Porter Mountain"
+  },
+  "seo": {
+    "title": "Porter Mountain — Arizona Alpine Trail Segment 09",
+    "description": "8.9 miles near Pinetop-Lakeside, part of the Maverick Motorized Trail System. More Difficult/Blue rated, high-clearance 4WD/OHV recommended."
+  }
+}

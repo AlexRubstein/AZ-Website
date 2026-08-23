@@ -386,6 +386,19 @@ body {
   font-weight: 800;
 }
 
+.az-terrain-popup-link {
+  color: #1a7a4c;
+  font-size: 0.76rem;
+  font-weight: 900;
+  margin-top: 0.15rem;
+  text-decoration: none;
+}
+
+.az-terrain-popup-link:hover,
+.az-terrain-popup-link:focus-visible {
+  text-decoration: underline;
+}
+
 .mapboxgl-ctrl-bottom-left,
 .mapboxgl-ctrl-bottom-right {
   z-index: 5;

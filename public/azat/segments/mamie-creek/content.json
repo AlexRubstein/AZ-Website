@@ -1,0 +1,36 @@
+{
+  "status": "Open",
+  "lengthMiles": 14.9,
+  "minElevationFeet": 7759,
+  "maxElevationFeet": 8913,
+  "elevationGainFeet": 2113,
+  "elevationLossFeet": 1375,
+  "trailRating": "easier-green",
+  "descriptionBody": [
+    "The Mamie Creek segment extends between the junction of SR 191 and SR 180 in Alpine and the junction of FR 851 and 275 on the east slopes of Escudilla Mountain. The alignment follows forest roads through ponderosa, aspen, and mixed-conifer stands, skirting the Mamie Creek drainage toward the Escudilla high country with broad views of the White Mountains and the Escudilla massif.",
+    "This segment consists primarily of paved road in the town of Alpine and unpaved forest roads and OHV connectors with hard-packed dirt, embedded rock, seasonal ruts, and occasional washboards. Grades increase as the route approaches the Escudilla foothills; conditions can change quickly after summer storms or spring melt. High-clearance 4WD/OHV is recommended."
+  ],
+  "amenities": ["Food", "Fuel", "Lodging", "Medical", "Repair"],
+  "amenitiesNote": "Fuel, food, lodging, and very limited medical and OHV services are available in Alpine at the western terminus. Nearby camping options include Luna Lake Campground east of Alpine and Alpine Divide Campground north of town along US 191; fuller services are found farther north in Eagar/Springerville.",
+  "safetyNote": "This corridor sits at high elevation where weather shifts rapidly — expect afternoon monsoon downpours, slick clay, and winter snow/ice. Portions of the Escudilla area were heavily affected by the 2011 Wallow Fire; watch for snag hazards, downed timber, and changing surface conditions. Cell coverage is limited; carry maps/GPS and be self-sufficient.",
+  "lastVerifiedAt": "2026-08-22",
+  "heroAlt": "Aerial view of a dirt road winding through pine forest below a golden aspen hillside on the Mamie Creek segment",
+  "mapAlt": "AZAT Mamie Creek route map with ranger district boundaries and land ownership legend",
+  "galleryAlt": {
+    "01-golden-aspen-sunset.jpg": "Aerial view of golden aspen hillside at sunset with mountains beyond",
+    "02-golden-aspen-mesa-edge.jpg": "Aerial view of golden aspen forest along a cliff-edge mesa",
+    "03-green-meadow-clouds.jpg": "Aerial view of a green meadow and mountain beneath scattered clouds",
+    "04-fr275-trailhead-sign.jpg": "A trailhead sign marking the start of FR 275 at the edge of the forest",
+    "05-elc-flat-road-sign.jpg": "A gravel road through tall ponderosa pines, with an ELC Flat directional sign",
+    "06-dirt-road-junction-dusk.jpg": "A dirt road junction in the pines at dusk",
+    "07-eroded-gully.jpg": "A small eroded gully cutting through a pine-forested hillside",
+    "08-sunbeams-misty-meadow.jpg": "Sunbeams filtering through pine trees in a misty meadow",
+    "09-aspen-canopy-upward.jpg": "Looking up through a golden aspen canopy against a blue sky",
+    "10-rainbow-over-hills.jpg": "A rainbow arcing over forested hills beneath a stormy sky",
+    "11-young-bull-elk.jpg": "A young bull elk with velvet antlers standing on the dirt road"
+  },
+  "seo": {
+    "title": "Mamie Creek — Arizona Alpine Trail Segment 16",
+    "description": "14.9 miles from Alpine toward Escudilla Mountain. Easier/Green rated, mostly unpaved forest roads."
+  }
+}

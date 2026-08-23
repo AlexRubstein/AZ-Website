@@ -1,0 +1,40 @@
+{
+  "status": "Open",
+  "lengthMiles": 24.0,
+  "minElevationFeet": 6880,
+  "maxElevationFeet": 7777,
+  "elevationGainFeet": 1476,
+  "elevationLossFeet": 2371,
+  "trailRating": "more-difficult-blue",
+  "descriptionBody": [
+    "The Land of the Pioneers segment extends between the junction of FR 61 and FR 2 on the Greens Peak–Carnero Plateau and the junction of FR 22 and FR 9712C near the Vernon area of the White Mountains. The alignment trends west across cinder flats, piñon-juniper and ponderosa pine, linking the historic FR 61 corridor toward Vernon and the Land of the Pioneers trail complex with views across the Springerville Volcanic Field. Notable points of interest include spur access to the Land of the Pioneers (#651) loop—featuring a box canyon, pioneer cabin ruins, and overlooks from Ecks Mountain.",
+    "This segment consists primarily of unpaved forest roads and designated connectors with surfaces ranging from maintained cinder/dirt to rocky two-track, with intermittent ruts and washboards that worsen after summer storms. High-clearance 4WD/OHV is recommended, especially in wet periods or after snowmelt; the Land of the Pioneers trailhead itself is primitive."
+  ],
+  "amenities": ["Food", "Fuel", "Lodging"],
+  "amenitiesNote": "Full services available in Pinetop-Lakeside to the west. (The Land of the Pioneers trailhead has no water or restrooms.) Dispersed camping is common on adjacent forest roads where permitted.",
+  "safetyNote": "Expect rapid weather changes at 6,800–8,500 feet. Summer monsoons can create slick cinder/mud and localized washouts; winter brings snow/ice and occasional closures. Cell coverage is inconsistent; carry maps/GPS and travel self-sufficient. Check current Apache-Sitgreaves notices before travel.",
+  "pointsOfInterest": [
+    "Land of the Pioneers (#651) loop",
+    "Box canyon",
+    "Pioneer cabin ruins",
+    "Ecks Mountain overlooks"
+  ],
+  "lastVerifiedAt": "2026-08-22",
+  "heroAlt": "Dirt two-track winding through a sunlit ponderosa pine forest on the Land of the Pioneers segment",
+  "mapAlt": "AZAT Land of the Pioneers route map with ranger district boundaries and land ownership legend",
+  "galleryAlt": {
+    "01-dirt-two-track-through-pines.jpg": "Dirt two-track curving through a shaded ponderosa pine forest",
+    "02-dappled-shade-forest-trail.jpg": "Forest trail dappled with long tree shadows through tall pines",
+    "03-ponderosa-pine-plantation-rows.jpg": "Rows of tall ponderosa pines in an evenly spaced stand under a partly cloudy sky",
+    "04-oak-pine-canopy-view.jpg": "Upward view through a canopy of oak and pine branches against a blue sky",
+    "05-pine-canopy-sky-view.jpg": "Looking straight up through crossing pine trunks and branches to the sky",
+    "06-pine-branch-framing-forest.jpg": "A low pine branch framing a view of distant pine trees and clouds",
+    "07-wild-horses-mare-foal.jpg": "A gray mare and her foal standing together in the pine forest",
+    "08-old-corral-loading-chute-ruins.jpg": "Weathered wooden corral and loading chute ruins in a forest clearing",
+    "09-cattail-pond-forest-edge.jpg": "Cattails and reeds lining a still pond at the edge of the pine forest"
+  },
+  "seo": {
+    "title": "Land of the Pioneers — Arizona Alpine Trail Segment 21",
+    "description": "24.0 miles across the Greens Peak–Carnero Plateau near Vernon and Pinetop-Lakeside. More Difficult/Blue rated, high-clearance 4WD/OHV recommended."
+  }
+}

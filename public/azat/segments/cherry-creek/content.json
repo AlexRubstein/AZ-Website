@@ -1,0 +1,40 @@
+{
+  "status": "Open",
+  "lengthMiles": 38.5,
+  "minElevationFeet": 4547,
+  "maxElevationFeet": 6442,
+  "elevationGainFeet": 4717,
+  "elevationLossFeet": 5721,
+  "trailRating": "more-difficult-blue",
+  "descriptionBody": [
+    "The Cherry Creek segment extends between the junction of FR 609 and SR 288 and the junction of FR 288 and FR 200 near Young in Gila County. The alignment follows the rugged Cherry Creek drainage, with the trail alternating between rocky canyon bottoms, narrow two-track climbs, and occasional creek crossings. Vegetation transitions from juniper and piñon pine on the uplands to cottonwood, sycamore, and riparian growth along the creek corridors, with expansive views of the Sierra Ancha highlands to the east.",
+    "The creek supported indigenous Salado and Apache settlements, with cliff dwellings and cultural sites still visible in nearby canyons. Today, the route blends rugged scenery with a sense of living history, connecting riders to both natural beauty and Arizona's frontier past."
+  ],
+  "amenities": ["Food", "Fuel", "Lodging"],
+  "amenitiesNote": "Limited along the alignment itself, but services including food, fuel, lodging, and camping are available in the nearby community of Young, accessible via FR 288. Additional dispersed camping opportunities exist throughout the surrounding Tonto National Forest.",
+  "safetyNote": "This is a remote and rugged segment that requires high-clearance 4WD. Seasonal rains can make the Cherry Creek crossings hazardous or impassable, and summer heat in lower elevations can be extreme. If Cherry Creek is impassable, riders can travel between trail segments by following FR 288 through Young. Riders should carry extra water, fuel, and navigation tools before attempting this section.",
+  "pointsOfInterest": [
+    "Scenic pullouts along FR 288 (Desert to Tall Pines Scenic Road)",
+    "Salado and Apache cliff dwellings and cultural sites in nearby canyons"
+  ],
+  "lastVerifiedAt": "2026-08-22",
+  "heroAlt": "Dirt two-track winding through the canyon at dusk on the Cherry Creek segment",
+  "mapAlt": "AZAT Cherry Creek route map with ranger district boundaries and land ownership legend",
+  "galleryAlt": {
+    "01-canyon-panorama.jpg": "Wide panorama of layered rock cliffs above the Cherry Creek canyon",
+    "02-creek-pool.jpg": "A calm, reflective pool along Cherry Creek beneath overhanging trees",
+    "03-creek-rocky-canyon.jpg": "Cherry Creek winding through a rocky, tree-lined canyon",
+    "04-creek-rock-ledge.jpg": "Cherry Creek along a mossy rock ledge, shaded by sycamores",
+    "05-creek-fallen-log.jpg": "A fallen log arching over Cherry Creek among rounded river stones",
+    "06-riparian-sycamore-forest.jpg": "Dirt two-track winding through riparian sycamore forest along the creek",
+    "07-rocky-two-track-climb.jpg": "A rocky two-track climb studded with large pale boulders",
+    "08-dry-wash-crossing.jpg": "A rocky dry wash crossing along the trail, framed by dense forest",
+    "09-open-range-cattle.jpg": "Open-range cattle along the Cherry Creek segment",
+    "10-descent-toward-valley.jpg": "Two-track descending through oak and juniper toward a distant valley",
+    "11-canyon-sunset.jpg": "Sunset over the Cherry Creek canyon and surrounding mountains"
+  },
+  "seo": {
+    "title": "Cherry Creek — Arizona Alpine Trail Segment 04",
+    "description": "38.5 miles along the Cherry Creek drainage near Young. More Difficult/Blue rated, high-clearance 4WD required."
+  }
+}

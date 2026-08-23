@@ -1,0 +1,42 @@
+{
+  "status": "Open",
+  "lengthMiles": 27.0,
+  "minElevationFeet": 7258,
+  "maxElevationFeet": 7920,
+  "elevationGainFeet": 3327,
+  "elevationLossFeet": 3662,
+  "trailRating": "easier-green",
+  "descriptionBody": [
+    "The View after View segment extends between the junction of FR 115 and FR 300 (Rim Road) and the western terminus of FR 300 at SR 87, tracing the very edge of the Mogollon Rim. The alignment follows high, Rim-top forests and overlooks with far-reaching vistas toward the Mazatzal Mountains and Tonto Basin. Notable points of interest include multiple pullouts along the Rim Road and the spur to Milk Ranch Point, a classic balcony over the escarpment.",
+    "This segment consists primarily of graded dirt/cinder on FR 300 with frequent washboard and occasional embedded rock; in dry conditions, much of it is drivable at low speeds in standard vehicles, though higher clearance improves comfort and control. Expect dust, tight sightlines near curves, and short steeper pitches near overlooks."
+  ],
+  "amenitiesNote": "Off-route; the nearest full services are in Payson to the southwest and Pine/Strawberry along SR 87 at the western end. Dispersed camping is available along numbered forest roads where permitted; developed campgrounds and additional facilities lie east of this segment in the Rim Lakes Recreation Area (e.g., Woods Canyon/Willow Springs) accessed via FR 300.",
+  "safetyNote": "Weather on the Rim changes quickly. Summer monsoons can create slick surfaces and localized washouts, and seasonal gates/closures are common in winter. Cell service is inconsistent; carry maps/GPS and travel self-sufficient. Check Coconino NF for road status of FR 300 and nearby routes before departure.",
+  "pointsOfInterest": [
+    "Multiple pullouts along the Rim Road (FR 300)",
+    "Milk Ranch Point (spur overlook)"
+  ],
+  "lastVerifiedAt": "2026-08-22",
+  "heroAlt": "Aerial view of a dirt road switchbacking along the rocky Mogollon Rim escarpment",
+  "mapAlt": "AZAT View After View route map with ranger district boundaries and land ownership legend",
+  "galleryAlt": {
+    "01-kehl-springs-campground-sign.jpg": "Fee information and welcome signage at Kehl Springs Campground",
+    "02-fern-forest-floor.jpg": "Dense fern groundcover beneath tall ponderosa pines",
+    "03-dirt-road-through-ferns.jpg": "Graded dirt road curving through a fern-lined forest corridor",
+    "04-dirt-road-tunnel-pines.jpg": "Dirt road climbing through a tunnel of dense ponderosa pine",
+    "05-dirt-road-curving-through-forest.jpg": "Dirt road curving downhill past burned tree trunks in the forest",
+    "06-logging-equipment-stacked-timber.jpg": "Forestry skidder parked beside stacked logs in a ponderosa pine timber operation",
+    "07-dead-trees-overlook-valley.jpg": "Standing dead trees framing a view down a forested valley from the Rim",
+    "08-rocky-overlook-framed-by-pines.jpg": "Rocky Rim overlook framed by wind-bent pine branches under a blue sky",
+    "09-rocky-rim-overlook-dead-trees.jpg": "Rocky escarpment overlook with fire-killed trees and a wide valley view",
+    "10-sandstone-ledges-overlook.jpg": "Layered sandstone ledges in the foreground of a sweeping Rim overlook",
+    "11-aerial-canyon-rim-panorama.jpg": "Aerial panorama of the rugged, forested Mogollon Rim escarpment",
+    "12-aerial-canyon-rim-bird-flying.jpg": "Aerial view of the Rim canyon with a raptor flying overhead",
+    "13-aerial-escarpment-overlook.jpg": "Aerial view of the long Rim escarpment stretching toward distant mountains",
+    "14-utv-parked-at-overlook.jpg": "Side-by-side UTV parked at a Rim overlook with layered mountain views"
+  },
+  "seo": {
+    "title": "View After View — Arizona Alpine Trail Segment 28",
+    "description": "27.0 miles along the Mogollon Rim Road (FR 300) from FR 115 to SR 87. Easier/Green rated, with sweeping overlooks toward the Mazatzal Mountains and Tonto Basin."
+  }
+}

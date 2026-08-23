@@ -1,0 +1,42 @@
+{
+  "status": "Open",
+  "lengthMiles": 26.0,
+  "minElevationFeet": 6267,
+  "maxElevationFeet": 7027,
+  "elevationGainFeet": 1600,
+  "elevationLossFeet": 2056,
+  "trailRating": "easier-green",
+  "descriptionBody": [
+    "The Border Line segment extends between the intersection of FR 300 and FR 9847 on the Mogollon Rim and the junction of FR 9724X and FR 206E near the boundary of Apache-Sitgreaves National Forests and Fort Apache Reservation. The alignment runs along the Rim, following Forest roads that trace the historic boundary line and providing broad views across deep canyons and distant mesas. Points of interest include the Mogollon Rim overlooks, primitive trailheads that lead into the backcountry, and the remote forest corridors where elk, deer, and black bear are frequently seen.",
+    "This segment consists primarily of pavement and unpaved forest roads, alternating between well graded stretches and rugged two-track with exposed rock and occasional erosion. Steep grades and washouts may be encountered, particularly after monsoon rains or spring snowmelt. High clearance 4WD is strongly recommended."
+  ],
+  "amenities": ["Food", "Fuel", "Lodging", "Medical", "Repair"],
+  "amenitiesNote": "There are no amenities on the western end of this segment. Food, fuel, lodging, medical, and repair services are available in Show Low. Dispersed camping opportunities are plentiful along FR 300 and side roads, with developed campgrounds available at Fool Hollow Lake Recreation Area and Show Low Lake Campground.",
+  "safetyNote": "Expect rapidly changing conditions along the Rim. Afternoon thunderstorms in summer bring lightning and flash flooding, while winter often leaves snow and ice across shaded stretches. Cellular service is unreliable; carry maps, GPS navigation, and be self-sufficient.",
+  "pointsOfInterest": [
+    "Mogollon Rim overlooks",
+    "Primitive backcountry trailheads"
+  ],
+  "lastVerifiedAt": "2026-08-22",
+  "heroAlt": "Aerial view of a dirt trail winding through ponderosa pine forest along the Mogollon Rim with distant mountains on the horizon",
+  "mapAlt": "AZAT Border Line route map with ranger district boundaries and land ownership legend",
+  "galleryAlt": {
+    "01-pine-tunnel-road.jpg": "Dirt road passing through a tunnel of tall ponderosa pines under a blue sky",
+    "02-oak-tunnel-road-town-view.jpg": "Dirt road lined with oak and pine descending toward a distant town",
+    "03-forest-road-trail-markers.jpg": "Dirt forest road lined with pines and small yellow trail markers",
+    "04-burned-forest-red-dirt-road.jpg": "Red dirt road running through a forest of fire-blackened ponderosa pine trunks",
+    "05-aerial-forest-hilltop-vista.jpg": "Aerial view of forested hilltops and canyons stretching toward distant mountains",
+    "06-aerial-forest-clearing-vista.jpg": "Aerial view of a pine forest clearing with rolling hills and mountains in the distance",
+    "07-aerial-rolling-hills-panorama.jpg": "Aerial panorama of forested rolling hills and canyons along the Rim",
+    "08-cloudy-sky-rolling-hills.jpg": "Wide panorama of cloud-filled sky over forested rolling hills and distant mountains",
+    "09-pines-against-clouds.jpg": "Ponderosa pines silhouetted against a bright cloud-filled sky",
+    "10-tall-pines-cloudy-sky.jpg": "Tall pines viewed from below against dramatic storm clouds",
+    "11-lone-pine-wispy-clouds.jpg": "A tall solitary pine standing above a grove under wispy clouds",
+    "12-lone-pine-mountain-vista.jpg": "A single pine tree framing a wide view of forested hills and blue mountains",
+    "13-mule-deer-in-brush.jpg": "A mule deer peering through brush and oak branches in the forest"
+  },
+  "seo": {
+    "title": "Border Line — Arizona Alpine Trail Segment 08",
+    "description": "26.0 miles along the Mogollon Rim to Show Low. Easiest/Green rated, following forest roads that trace the historic boundary line."
+  }
+}

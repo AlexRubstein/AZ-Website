@@ -4,10 +4,10 @@ import { notFound } from "next/navigation";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { TrailSegmentExperience } from "@/components/TrailSegmentExperience";
-import { getTrailSegmentNeighbors, getTrailSegmentPageData, publishedSlugs } from "@/lib/trail-segments";
+import { getPublishedSlugs, getTrailSegmentNeighbors, getTrailSegmentPageData } from "@/lib/trail-segments";
 
 export function generateStaticParams() {
-  return publishedSlugs.map((slug) => ({ slug }));
+  return getPublishedSlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {

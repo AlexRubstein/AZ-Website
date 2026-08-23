@@ -1,0 +1,37 @@
+{
+  "status": "Open",
+  "lengthMiles": 15.5,
+  "minElevationFeet": 7422,
+  "maxElevationFeet": 8962,
+  "elevationGainFeet": 3527,
+  "elevationLossFeet": 4571,
+  "trailRating": "easier-green",
+  "descriptionBody": [
+    "The Balke Cabin segment extends between the junction of FR 24 and FR 576 and a point (N 33.77244, W 109.30562) in Johns Canyon in the high country of the Apache-Sitgreaves National Forest. The alignment traverses cool alpine meadows and mixed-conifer forest along the Mogollon Rim, skirting the Blue Range country with broad views toward deep canyons and volcanic highlands. Notable points of interest include the historic Balke Cabin area (near Hannagan Meadow) and the nearby Blue Vista Overlook on the Coronado Trail, a day use viewpoint with sweeping vistas of the Blue Range.",
+    "This segment consists primarily of unpaved forest roads and OHV connectors—generally hard packed dirt with embedded rock, intermittent ruts and washboards, and occasional steep grades. Conditions can shift quickly after monsoon storms or spring snowmelt; high clearance 4WD/OHV is recommended."
+  ],
+  "amenities": ["Food", "Lodging"],
+  "amenitiesNote": "Available at Hannagan Meadow Lodge (lodging, meals) at the southern terminus. The Johns Canyon end is remote with no services. Dispersed camping is common on adjacent forest roads where permitted; Blue Vista is day use only (no overnight camping).",
+  "pointsOfInterest": [
+    "Historic Balke Cabin area (near Hannagan Meadow)",
+    "Blue Vista Overlook on the Coronado Trail (day-use viewpoint)"
+  ],
+  "lastVerifiedAt": "2026-08-22",
+  "heroAlt": "Overlook of a deep forested canyon with a creek winding below sunlit cliffs",
+  "mapAlt": "AZAT Balke Cabin route map with ranger district boundaries and land ownership legend",
+  "galleryAlt": {
+    "01-pine-forest-dirt-road.jpg": "Dirt road curving through a stand of tall ponderosa pines",
+    "02-dirt-road-blazed-pines.jpg": "Straight dirt forest road lined with orange-blazed ponderosa pines",
+    "03-campsite-utvs-and-trailers.jpg": "Side-by-sides and travel trailers parked at a forested campsite",
+    "04-mule-deer-in-grass.jpg": "Mule deer standing alert in golden grass beneath a pine tree",
+    "05-bighorn-sheep-portrait.jpg": "Close-up portrait of a bighorn ram with full curl horns in the forest",
+    "06-aerial-forested-creek-drainage.jpg": "Aerial view of a small creek winding through a forested drainage",
+    "07-creek-valley-daisies-storm-clouds.jpg": "Creek lined with wildflowers through a green valley under storm clouds",
+    "08-calm-river-with-boulders.jpg": "Calm river reflecting the forest with scattered boulders in the shallows",
+    "09-daisies-along-waters-edge.jpg": "Wild daisies and grasses growing along a still, green riverbank"
+  },
+  "seo": {
+    "title": "Balke Cabin — Arizona Alpine Trail Segment 14",
+    "description": "15.5 miles across alpine meadows and mixed-conifer forest along the Mogollon Rim toward Johns Canyon. Easier/Green rated, high-clearance 4WD/OHV recommended."
+  }
+}
