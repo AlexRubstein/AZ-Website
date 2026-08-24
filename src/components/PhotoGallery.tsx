@@ -110,7 +110,15 @@ export function PhotoGallery({ photos, title }: { photos: GalleryPhoto[]; title:
     (index: number, behavior: ScrollBehavior = "smooth") => {
       if (!photos.length) return;
       const wrapped = (index + photos.length) % photos.length;
-      itemRefs.current[wrapped]?.scrollIntoView({ behavior, inline: "start", block: "nearest" });
+      const container = scrollRef.current;
+      const item = itemRefs.current[wrapped];
+      // Scroll only the gallery's own strip via scrollTo — scrollIntoView() walks every
+      // scrollable ancestor (including the page itself) and can yank the whole page back
+      // to the top when the strip auto-advances.
+      if (container && item) {
+        const left = item.getBoundingClientRect().left - container.getBoundingClientRect().left + container.scrollLeft;
+        container.scrollTo({ left, behavior });
+      }
       setActiveIndex(wrapped);
     },
     [photos.length],

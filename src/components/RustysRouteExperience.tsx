@@ -45,14 +45,20 @@ const quietReveal = {
 function DownloadButton({
   cta = fallbackRustysRoutePage.downloadCta,
   className = "",
+  colorClassName = "bg-[#e11f3f] text-white hover:bg-[#13221a] focus-visible:outline-[#e11f3f]",
 }: {
   cta?: RustysRoutePageData["downloadCta"];
   className?: string;
+  colorClassName?: string;
 }) {
   return (
     <ProtectedDownloadLink
       href={cta?.href || "/downloads/arizona-alpine-trail-gpx"}
-      className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#e11f3f] px-5 text-sm font-black uppercase tracking-[0.1em] text-white transition hover:bg-[#13221a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e11f3f] ${className}`}
+      // colorClassName is a single prop (not merged with structural classes below) so a caller
+      // overriding color always fully replaces bg/text/hover — two classes for the same property
+      // concatenated via string interpolation don't reliably override each other, since Tailwind's
+      // cascade order depends on generation order, not where the class appears in the string.
+      className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-5 text-sm font-black uppercase tracking-[0.1em] transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${colorClassName} ${className}`}
     >
       <Download size={17} aria-hidden="true" />
       {cta?.label || "Download GPX"}
@@ -314,7 +320,10 @@ export function RustysRouteExperience({ data = fallbackRustysRoutePage }: { data
               {data.finalCtaTitle}
             </h2>
           </div>
-          <DownloadButton cta={data.downloadCta} className="bg-white text-[#13221a] hover:bg-[#f0c477] hover:text-[#13221a] focus-visible:outline-white" />
+          <DownloadButton
+            cta={data.downloadCta}
+            colorClassName="bg-white text-[#13221a] hover:bg-[#f0c477] hover:text-[#13221a] focus-visible:outline-white"
+          />
         </div>
       </motion.section>
     </main>

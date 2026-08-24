@@ -268,55 +268,6 @@ body {
   border-radius: 2px;
 }
 
-.az-terrain-marker {
-  align-items: flex-end;
-  background: transparent;
-  border: 0;
-  color: #fffdf7;
-  cursor: pointer;
-  display: flex;
-  filter: drop-shadow(0 4px 7px rgba(0, 0, 0, 0.72));
-  gap: 0.35rem;
-  padding: 0;
-}
-
-.az-terrain-marker-dot {
-  background: #76f0b0;
-  border: 2px solid #fffdf7;
-  border-radius: 999px;
-  box-shadow: 0 0 0 4px rgba(118, 240, 176, 0.18);
-  display: block;
-  height: 0.78rem;
-  margin-bottom: 0.1rem;
-  width: 0.78rem;
-}
-
-.az-terrain-marker-label {
-  display: grid;
-  gap: 0.08rem;
-  line-height: 1;
-  text-align: left;
-  text-shadow:
-    0 1px 0 rgba(0, 0, 0, 0.82),
-    0 2px 8px rgba(0, 0, 0, 0.74);
-}
-
-.az-terrain-marker-label strong {
-  color: #fffdf7;
-  font-size: 0.78rem;
-  font-weight: 900;
-  white-space: nowrap;
-}
-
-.az-terrain-marker-label small {
-  color: #76f0b0;
-  font-size: 0.58rem;
-  font-weight: 900;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
 .az-terrain-control,
 .az-terrain-icon-control {
   align-items: center;

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
-import { Download, MapPinned } from "lucide-react";
+import { Download, Layers, MapPinned } from "lucide-react";
 
 import { ProtectedDownloadLink } from "@/components/auth/ProtectedDownloadLink";
 import { resolveDownloadHref } from "@/lib/download-links";
@@ -20,7 +20,6 @@ type ScrollHeroProps = {
   copy?: string;
   image?: string;
   imageAlt?: string;
-  primaryCta?: HomeCta;
   secondaryCta?: HomeCta;
   stats?: HeroStat[];
 };
@@ -30,7 +29,6 @@ export function ScrollHero({
   copy,
   image,
   imageAlt,
-  primaryCta,
   secondaryCta,
 }: ScrollHeroProps) {
   const sectionRef = useRef<HTMLElement>(null);
@@ -89,13 +87,20 @@ export function ScrollHero({
                 {title}
               </h1>
               {copy ? <p className="mt-6 max-w-2xl text-lg leading-8 text-white/82 sm:text-xl">{copy}</p> : null}
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-9 flex flex-col flex-wrap gap-3 sm:flex-row">
                 <Link
-                  href={primaryCta?.href || "#trail-map"}
+                  href="/trail"
                   className="inline-flex min-h-13 items-center justify-center gap-2 rounded-full bg-white px-6 text-sm font-black uppercase tracking-[0.1em] text-[#13221a] transition hover:bg-[#f0c477] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                 >
                   <MapPinned size={18} aria-hidden="true" />
-                  {primaryCta?.label || "View Map"}
+                  View Trail
+                </Link>
+                <Link
+                  href="/trail#segments"
+                  className="inline-flex min-h-13 items-center justify-center gap-2 rounded-full border-2 border-white px-6 text-sm font-black uppercase tracking-[0.1em] text-white transition hover:bg-white hover:text-[#13221a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                >
+                  <Layers size={18} aria-hidden="true" />
+                  View Segments
                 </Link>
                 <ProtectedDownloadLink
                   href={resolveDownloadHref(secondaryCta?.href, "/downloads/arizona-alpine-trail-gpx")}

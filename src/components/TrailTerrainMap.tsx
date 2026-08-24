@@ -6,7 +6,6 @@ import mapboxgl from "mapbox-gl";
 
 import {
   routePreviewBounds,
-  routePreviewPins,
   routePreviewSegments,
   routeSegmentSummaries,
   routeWaypoints,
@@ -27,10 +26,6 @@ const routeHitLayerId = "azat-route-hit-area";
 const waypointCircleLayerId = "azat-waypoints-circle";
 const waypointLabelLayerId = "azat-waypoints-label";
 const emptySegmentFilter: mapboxgl.FilterSpecification = ["==", ["get", "id"], ""];
-
-const hubMarkers = routePreviewPins.filter((pin) =>
-  ["Alpine", "Greer", "Show Low", "Pine", "Young"].includes(pin.label),
-);
 
 const routeGeoJson: GeoJSON.FeatureCollection<GeoJSON.LineString> = {
   type: "FeatureCollection",
@@ -74,21 +69,6 @@ type NearestRouteSegment = {
   properties: (typeof routeSegmentSummaries)[number];
   distance: number;
 };
-
-function makeMarkerElement(pin: (typeof routePreviewPins)[number]) {
-  const marker = document.createElement("button");
-  marker.type = "button";
-  marker.className = "az-terrain-marker";
-  marker.setAttribute("aria-label", `${pin.label} ${pin.type}`);
-  marker.innerHTML = `
-    <span class="az-terrain-marker-dot"></span>
-    <span class="az-terrain-marker-label">
-      <strong>${pin.label}</strong>
-      <small>${pin.type}</small>
-    </span>
-  `;
-  return marker;
-}
 
 function escapeHtml(value: string | number | null | undefined) {
   return String(value ?? "")
@@ -202,28 +182,17 @@ export type TrailTerrainMapProps = {
 export function TrailTerrainMap({ embedded = false, activeSegmentId, onSegmentSelect }: TrailTerrainMapProps = {}) {
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
-  const markersRef = useRef<mapboxgl.Marker[]>([]);
   const popupRef = useRef<mapboxgl.Popup | null>(null);
   const activeSegmentIdRef = useRef("");
   const hasFlownToControlledSegmentRef = useRef(false);
   const onSegmentSelectRef = useRef(onSegmentSelect);
-  onSegmentSelectRef.current = onSegmentSelect;
   const activeSegmentIdPropRef = useRef(activeSegmentId);
-  activeSegmentIdPropRef.current = activeSegmentId;
+  useEffect(() => {
+    onSegmentSelectRef.current = onSegmentSelect;
+    activeSegmentIdPropRef.current = activeSegmentId;
+  });
   const token = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
   const [status, setStatus] = useState<MapStatus>(() => (token ? "loading" : "missing-token"));
-
-  const flyToPin = useCallback((pin: (typeof routePreviewPins)[number]) => {
-    const map = mapRef.current;
-    map?.flyTo({
-      center: [pin.lng, pin.lat],
-      zoom: 10.2,
-      pitch: 72,
-      bearing: -34,
-      duration: 1200,
-      essential: true,
-    });
-  }, []);
 
   const fitRoute = useCallback(() => {
     mapRef.current?.fitBounds(fullBounds, {
@@ -440,14 +409,6 @@ export function TrailTerrainMap({ embedded = false, activeSegmentId, onSegmentSe
         if (!activeSegmentIdRef.current) map.getCanvas().style.cursor = "";
       });
 
-      markersRef.current = hubMarkers.map((pin) => {
-        const element = makeMarkerElement(pin);
-        element.addEventListener("click", () => flyToPin(pin));
-        return new mapboxgl.Marker({ element, anchor: "bottom", offset: [0, -6] })
-          .setLngLat([pin.lng, pin.lat])
-          .addTo(map);
-      });
-
       const initialSegmentId = activeSegmentIdPropRef.current;
       const initialSummary = initialSegmentId
         ? routeSegmentSummaries.find((summary) => summary.id === initialSegmentId)
@@ -483,13 +444,11 @@ export function TrailTerrainMap({ embedded = false, activeSegmentId, onSegmentSe
 
     return () => {
       popupRef.current?.remove();
-      markersRef.current.forEach((marker) => marker.remove());
-      markersRef.current = [];
       map.remove();
       mapRef.current = null;
       popupRef.current = null;
     };
-  }, [flyToPin, token]);
+  }, [token]);
 
   useEffect(() => {
     const map = mapRef.current;

@@ -119,7 +119,7 @@ export function TrailHubExperience({ segments }: { segments: TrailHubSegment[] }
         </div>
       </section>
 
-      <section className="bg-[#f8f4e8] px-5 pb-16 sm:px-8 lg:pb-20">
+      <section id="segments" className="bg-[#f8f4e8] px-5 pb-16 sm:px-8 lg:pb-20 scroll-mt-24">
         <div className="mx-auto max-w-[1320px]">
           <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_380px] lg:items-stretch">
             <motion.div

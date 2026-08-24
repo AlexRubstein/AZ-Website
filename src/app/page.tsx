@@ -21,14 +21,12 @@ export default async function Home() {
           copy={homePage.heroCopy}
           image={homePage.heroImage}
           imageAlt={homePage.heroImageAlt}
-          primaryCta={homePage.primaryCta}
           secondaryCta={homePage.secondaryCta}
         />
 
         <TrailMap
           title={homePage.mapTitle}
           copy={homePage.mapCopy}
-          highlights={homePage.trailHighlights}
           downloads={downloads}
         />
 
