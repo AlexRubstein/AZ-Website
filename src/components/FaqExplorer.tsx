@@ -34,6 +34,26 @@ function highlightText(text: string, tokens: string[]): ReactNode {
   );
 }
 
+function renderAnswerText(text: string, tokens: string[]): ReactNode {
+  return text.split("\n\n").map((paragraph, paragraphIndex) => {
+    const parts = paragraph.split(/(1-800-VANDALS|911)/g);
+
+    return (
+      <p key={paragraphIndex} className={paragraphIndex > 0 ? "mt-3" : undefined}>
+        {parts.map((part, partIndex) =>
+          part === "1-800-VANDALS" || part === "911" ? (
+            <strong key={partIndex} className="font-semibold text-[#13221a]">
+              {highlightText(part, tokens)}
+            </strong>
+          ) : (
+            <span key={partIndex}>{highlightText(part, tokens)}</span>
+          ),
+        )}
+      </p>
+    );
+  });
+}
+
 function ContactEscapeHatch() {
   return (
     <p className="max-w-sm text-sm leading-relaxed text-[#5f6c63]">
@@ -91,7 +111,7 @@ function QuestionRow({
         />
       </summary>
       <div className="max-w-[65ch] pb-5 text-[15px] leading-relaxed text-[#5f6c63]">
-        <p>{highlightText(item.a, tokens)}</p>
+        {renderAnswerText(item.a, tokens)}
         {item.link ? <FaqLink link={item.link} /> : null}
       </div>
     </details>

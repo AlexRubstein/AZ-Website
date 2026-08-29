@@ -1,8 +1,10 @@
 name: Fire check
 
 on:
-  schedule:
-    - cron: "*/20 * * * *"
+  # Fire advisory feature disabled for now (WFIGS false-positive rate, missing FIRMS_MAP_KEY).
+  # Re-enable by uncommenting the schedule below — the API route and cron logic are untouched.
+  # schedule:
+  #   - cron: "*/20 * * * *"
   workflow_dispatch: {}
 
 jobs:

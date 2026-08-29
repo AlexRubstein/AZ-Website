@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { CheckCircle, Download, FileDown } from "lucide-react";
@@ -7,6 +8,15 @@ import { getActiveDownloadBySlug } from "@/lib/downloads";
 import { createSupabaseServerClient } from "@/supabase/server";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "Download Ready",
+  description: "Your Arizona Alpine Trail protected route file is ready.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default async function DownloadThanksPage({
   params,

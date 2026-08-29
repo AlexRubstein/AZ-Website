@@ -8,6 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "routes:generate": "node scripts/generate-route-preview.mjs",
+    "downloads:segments": "node scripts/generate-segment-downloads.mjs",
+    "downloads:upload": "node scripts/upload-protected-downloads.mjs",
     "sanity:schema:deploy": "sanity schema deploy",
     "sanity:seed": "node scripts/seed-sanity.mjs",
     "sanity:seed:segments": "node scripts/seed-segments.mjs"

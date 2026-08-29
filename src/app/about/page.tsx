@@ -1,4 +1,18 @@
+import type { Metadata } from "next";
 import { PageShell } from "@/components/PageShell";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Learn about Arizona Alpine Trail, Inc., the nonprofit developing and documenting a responsible OHV route system across Eastern Arizona.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About Arizona Alpine Trail",
+    description:
+      "Arizona Alpine Trail, Inc. promotes responsible OHV travel, stewardship, and rural trail tourism across Eastern Arizona.",
+    url: "/about",
+  },
+};
 
 export default function AboutPage() {
   return (

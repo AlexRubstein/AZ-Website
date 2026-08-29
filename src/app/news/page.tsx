@@ -1,17 +1,40 @@
-import Link from "next/link";
+import type { Metadata } from "next";
+import { NewsCard } from "@/components/NewsCard";
 import { PageShell } from "@/components/PageShell";
-import { news } from "@/lib/content";
+import { formatNewsDate, getNewsPosts } from "@/lib/news";
 
-export default function NewsPage() {
+export const revalidate = 30;
+
+export const metadata: Metadata = {
+  title: "News",
+  description:
+    "Read Arizona Alpine Trail news, event updates, trail-planning announcements, and community stories.",
+  alternates: { canonical: "/news" },
+  openGraph: {
+    title: "Arizona Alpine Trail News",
+    description:
+      "News, event updates, trail-planning announcements, and community stories from Arizona Alpine Trail.",
+    url: "/news",
+  },
+};
+
+export default async function NewsPage() {
+  const posts = await getNewsPosts();
+
   return (
-    <PageShell title="News" description="WordPress posts become structured Sanity news entries with clean metadata, media, SEO, and archive routes.">
+    <PageShell title="News">
       <div className="grid gap-4 md:grid-cols-3">
-        {news.map((post) => (
-          <Link key={post.slug} href={`/news/${post.slug}`} className="rounded-sm border border-[#d8ded4] bg-[#fffdf7] p-5">
-            <p className="font-mono text-sm text-[#b74f32]">{post.date}</p>
-            <h2 className="mt-8 text-2xl font-semibold">{post.title}</h2>
-            <p className="mt-2 text-[#5f6c63]">{post.excerpt}</p>
-          </Link>
+        {posts.map((post) => (
+          <NewsCard
+            key={post.slug}
+            href={`/news/${post.slug}`}
+            title={post.title}
+            dateLabel={formatNewsDate(post.date)}
+            excerpt={post.excerpt}
+            image={post.heroImage}
+            imageAlt={post.heroImageAlt}
+            imageFit={post.heroImageContain ? "contain" : "cover"}
+          />
         ))}
       </div>
     </PageShell>

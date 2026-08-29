@@ -20,7 +20,6 @@ import {
 import {
   cta,
   externalImage,
-  featuredNewsCard,
   hero,
   homeStoryBlock,
   iconCard,
@@ -51,7 +50,6 @@ export const schemaTypes = [
   homeStoryBlock,
   rideChapter,
   iconCard,
-  featuredNewsCard,
   mapCoordinates,
   routeStats,
   rustysRoutePlanningNote,

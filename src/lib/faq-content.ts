@@ -312,7 +312,7 @@ export const faqCategories: FaqCategory[] = [
       },
       {
         q: "How do I report a problem?",
-        a: "Use the official TrailWatch reporting form once it's published on azalpinetrail.org. Emergency or dangerous activity in progress should be reported to the appropriate authority, not through TrailWatch.",
+        a: "Report trail conditions, signage problems, route conflicts, damage, or maintenance concerns to AZAT through TrailWatch when you are safely able to do so. Include photos, GPS coordinates or an OnX/Google/Apple Maps location, the trail segment or Forest Road number if known, the date and time observed, and a brief description.\n\nFor OHV habitat damage, vandalism, illegal dumping, or resource violations, call the Arizona Game and Fish Department OHV reporting line at 1-800-VANDALS. Rusty flagged this as the key 24/7 number for most OHV habitat vandalism issues.\n\nTrailWatch is not an emergency service. For medical emergencies, active wildfires, crimes in progress, serious accidents, or immediate threats to life, call 911 first.",
       },
       {
         q: "What does responsible travel mean on the AZAT?",

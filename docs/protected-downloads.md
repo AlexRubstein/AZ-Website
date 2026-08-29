@@ -44,7 +44,21 @@ SUPABASE_SERVICE_ROLE_KEY=
 5. To replace a file version, upload the new object and update the existing row's `storage_path`, `version`, `filename`, and `content_type`.
 6. To remove a download from the site, set `active` to `false`.
 
-The current seed files were moved out of public web access and are stored in `protected-download-seed/current/`. Upload those files into the matching paths in the private bucket before testing real downloads.
+The full-route seed files are stored in `protected-download-seed/current/`. Individual segment GPX files are generated from `protected-download-seed/current/arizona-alpine-trail.gpx` into `protected-download-seed/segments/`.
+
+Regenerate segment GPX files and metadata SQL after replacing the full trail GPX:
+
+```bash
+npm run downloads:segments
+```
+
+Upload or replace all protected download files and metadata rows:
+
+```bash
+npm run downloads:upload
+```
+
+As of 2026-08-29, the configured Supabase project has 31 active protected download records: 3 full-route downloads and 28 individual segment GPX downloads.
 
 ## Database Objects
 

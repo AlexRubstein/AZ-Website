@@ -11,14 +11,39 @@ export const metadata: Metadata = {
     template: "%s | Arizona Alpine Trail",
   },
   description:
-    "Arizona Alpine Trail route map, GPX download, and itinerary options.",
+    "Plan the Arizona Alpine Trail with official route maps, segment guides, GPX downloads, safety resources, and trail updates.",
+  alternates: {
+    canonical: "/",
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
   openGraph: {
     title: "Arizona Alpine Trail",
     description:
-      "View the Arizona Alpine Trail route map, download the GPX, and plan itinerary options.",
+      "Official route maps, segment guides, GPX downloads, safety resources, and trail updates for the Arizona Alpine Trail.",
     url: "https://azalpinetrail.org",
     siteName: "Arizona Alpine Trail",
     type: "website",
+    images: [
+      {
+        url: "/azat/images/trail-hero.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Arizona Alpine Trail high-country route landscape",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Arizona Alpine Trail",
+    description:
+      "Official route maps, segment guides, GPX downloads, safety resources, and trail updates for the Arizona Alpine Trail.",
+    images: ["/azat/images/trail-hero.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

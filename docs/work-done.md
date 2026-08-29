@@ -119,12 +119,22 @@ Built a custom Arizona Alpine Trail website prototype as a modern Next.js applic
 - The project is a prototype/custom app foundation, not just a static website.
 - Production ownership should be transferred or configured under AZAT-controlled accounts before public launch.
 - Sanity, Supabase, Vercel, and Stripe environment variables must be configured in production.
-- Protected download seed files still need to be uploaded to the private Supabase Storage bucket before real downloads can be tested.
+- Protected download files have been uploaded to the configured private Supabase Storage bucket: 3 full-route files plus 28 individual segment GPX files.
 - The current workspace did not include invoice documents when this file was created.
 
 ## Ongoing Work Log
 
 Add future work below in reverse chronological order.
+
+### August 29, 2026 - Protected download upload and segment GPX split
+
+- Scope: Supabase protected download readiness and per-segment GPX downloads.
+- Work completed: Generated 28 individual segment GPX files from the full AZAT GPX, generated matching `download_files` SQL, added reusable generation/upload scripts, uploaded all 31 protected files to Supabase Storage, and upserted all 31 metadata rows.
+- Files or areas touched: `protected-download-seed/segments/`, `protected-download-seed/segment-download-files.sql`, `scripts/generate-segment-downloads.mjs`, `scripts/upload-protected-downloads.mjs`, `src/lib/segment-content.mjs`, `package.json`, and protected-download docs.
+- Client-visible result: Segment pages now point at segment-specific GPX slugs, and the protected download metadata exists in Supabase for all full-route and segment files.
+- Verification performed: XML validation for all 28 generated GPX files; upload script verified 31 rows by service role and 31 rows through the public active-metadata policy.
+- Follow-up needed: Browser-test an authenticated end-to-end download once a test rider account is available.
+- Invoice status: Not invoiced in this repository record.
 
 ### July 29, 2026 - Work record created
 

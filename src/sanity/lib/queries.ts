@@ -84,14 +84,6 @@ export const homePageQuery = groq`*[_type == "homePage"][0]{
   safetyTitle,
   safetyCards,
   featuredNewsTitle,
-  featuredNews[]{
-    title,
-    slug,
-    date,
-    excerpt,
-    "image": coalesce(image.externalUrl, image.image.asset->url),
-    "imageAlt": image.alt
-  },
   footerCtaTitle,
   footerCtaCopy,
   seo
@@ -135,13 +127,26 @@ export const rustysRoutePageQuery = groq`*[_type == "rustysRoutePage"][0]{
   seo
 }`;
 
-export const newsPostQuery = groq`*[_type == "newsPost" && slug.current == $slug][0]{
+const newsPostFields = groq`
   title,
-  slug,
+  "slug": slug.current,
+  category,
   excerpt,
   publishedAt,
-  heroImage,
-  body
+  "heroImage": coalesce(heroImage.externalUrl, heroImage.image.asset->url),
+  "heroImageAlt": heroImage.alt,
+  heroImageContain,
+  body,
+  source
+`;
+
+export const newsPostsQuery = groq`*[_type == "newsPost" && defined(slug.current) && publishedAt <= now()] | order(publishedAt desc){
+  ${newsPostFields}
+}`;
+
+export const newsPostBySlugQuery = groq`*[_type == "newsPost" && slug.current == $slug][0]{
+  ${newsPostFields},
+  seo
 }`;
 
 export const townQuery = groq`*[_type == "town" && slug.current == $slug][0]{

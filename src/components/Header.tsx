@@ -6,13 +6,32 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Mountain } from "lucide-react";
 import { AuthHeaderControls } from "@/components/auth/AuthHeaderControls";
-import { FireAlertBanner } from "@/components/FireAlertBanner";
+// Fire advisory disabled for now — see note near <FireAlertBanner> below.
+// import { FireAlertBanner } from "@/components/FireAlertBanner";
 
 export function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const useSolidHeader = pathname !== "/" || scrolled;
   const on3DPage = pathname?.startsWith("/trail/3d");
+  const navItems = [
+    {
+      label: "Trail",
+      href: "/trail",
+      current: pathname === "/trail" || (pathname?.startsWith("/trail/") && !on3DPage),
+    },
+    {
+      label: "FAQ",
+      href: "/faq",
+      current: pathname === "/faq",
+      className: "hidden min-[420px]:inline-flex",
+    },
+    {
+      label: "Shop",
+      href: "/shop",
+      current: pathname === "/shop",
+    },
+  ];
 
   useEffect(() => {
     const updateHeaderState = () => {
@@ -61,20 +80,18 @@ export function Header() {
           </span>
         </Link>
         <div className="flex items-center gap-1 sm:gap-3">
-          <Link
-            href="/trail"
-            aria-current={pathname === "/trail" || (pathname?.startsWith("/trail/") && !on3DPage) ? "page" : undefined}
-            className="inline-flex min-h-11 items-center whitespace-nowrap rounded-full px-1 text-sm font-semibold text-white/78 transition hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:px-3"
-          >
-            Trail
-          </Link>
-          <Link
-            href="/faq"
-            aria-current={pathname === "/faq" ? "page" : undefined}
-            className="inline-flex min-h-11 items-center whitespace-nowrap rounded-full px-1 text-sm font-semibold text-white/78 transition hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:px-3"
-          >
-            FAQ
-          </Link>
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              aria-current={item.current ? "page" : undefined}
+              className={`${item.className ?? "inline-flex"} min-h-11 items-center whitespace-nowrap rounded-full px-1 text-sm font-semibold transition hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:px-3 ${
+                item.current ? "text-white" : "text-white/78"
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
           <Link
             href="/trail/3d"
             aria-current={on3DPage ? "page" : undefined}
@@ -93,8 +110,10 @@ export function Header() {
         </div>
       </div>
     </header>
-    {/* TEMP-DEMO: concept preview (thin strip), revert after screenshot */}
-    <FireAlertBanner variant="thinStrip" />
+    {/* Fire advisory disabled for now (WFIGS "active" heuristic produces too many false positives,
+        FIRMS satellite feed still lacks FIRMS_MAP_KEY). Re-enable by restoring this line —
+        the API route, cron, and data pipeline are untouched. */}
+    {/* <FireAlertBanner variant="thinStrip" /> */}
     </>
   );
 }

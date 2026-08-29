@@ -63,8 +63,12 @@ export const homePage = defineType({
     defineField({ name: "communityStats", type: "array", of: [{ type: "labeledItem" }], hidden: true }),
     defineField({ name: "safetyTitle", type: "string", hidden: true }),
     defineField({ name: "safetyCards", type: "array", of: [{ type: "iconCard" }], hidden: true }),
-    defineField({ name: "featuredNewsTitle", type: "string", hidden: true }),
-    defineField({ name: "featuredNews", type: "array", of: [{ type: "featuredNewsCard" }], hidden: true }),
+    defineField({
+      name: "featuredNewsTitle",
+      title: "News Section Title",
+      description: "Heading above the homepage news strip. The 3 most recent News Posts show automatically — nothing else to configure here.",
+      type: "string",
+    }),
     defineField({ name: "footerCtaTitle", type: "string", hidden: true }),
     defineField({ name: "footerCtaCopy", type: "text", rows: 3, hidden: true }),
     defineField({ name: "seo", type: "seo" }),
@@ -78,12 +82,68 @@ export const newsPost = defineType({
   fields: [
     defineField({ name: "title", type: "string", validation: (Rule) => Rule.required() }),
     slug,
-    defineField({ name: "excerpt", type: "text", rows: 3 }),
-    defineField({ name: "publishedAt", type: "datetime", validation: (Rule) => Rule.required() }),
-    defineField({ name: "heroImage", type: "image", options: { hotspot: true } }),
-    defineField({ name: "body", type: "richText" }),
+    defineField({
+      name: "category",
+      type: "string",
+      options: {
+        list: [
+          "Trip Reports",
+          "Trail Updates",
+          "Community & Events",
+          "Safety & Stewardship",
+          "Partner & Agency News",
+          "In the Press",
+        ],
+      },
+    }),
+    defineField({
+      name: "excerpt",
+      title: "Excerpt",
+      description: "Shows on the news list and homepage cards. 1-2 sentences.",
+      type: "text",
+      rows: 3,
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: "publishedAt",
+      title: "Published Date",
+      description: "Posts with a future date won't appear on the site until that date.",
+      type: "datetime",
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({ name: "heroImage", title: "Hero Photo", type: "externalImage" }),
+    defineField({
+      name: "heroImageContain",
+      title: "Don't crop hero image",
+      description: "Turn on for a logo or graphic that shouldn't be cropped to fill the frame.",
+      type: "boolean",
+      initialValue: false,
+    }),
+    defineField({ name: "body", title: "Body", type: "richText", validation: (Rule) => Rule.required() }),
+    defineField({
+      name: "source",
+      title: "Press / Attribution",
+      description: "Fill this in only when reprinting or citing outside coverage (a newspaper or magazine feature).",
+      type: "object",
+      fields: [
+        defineField({ name: "label", title: "Publication", type: "string" }),
+        defineField({ name: "url", title: "Link to full story", type: "url" }),
+        defineField({ name: "reporter", title: "Reporter", type: "string" }),
+        defineField({ name: "photoCredit", title: "Photo Credit", type: "string" }),
+      ],
+    }),
     defineField({ name: "seo", type: "seo" }),
   ],
+  orderings: [
+    {
+      title: "Publish date, new to old",
+      name: "publishedAtDesc",
+      by: [{ field: "publishedAt", direction: "desc" }],
+    },
+  ],
+  preview: {
+    select: { title: "title", subtitle: "category", media: "heroImage.image" },
+  },
 });
 
 export const town = defineType({

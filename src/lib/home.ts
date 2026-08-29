@@ -89,15 +89,6 @@ export type HomeRideChapter = {
   cta?: HomeCta;
 };
 
-export type HomeNewsCard = {
-  title: string;
-  slug: string;
-  date?: string;
-  excerpt?: string;
-  image?: string;
-  imageAlt?: string;
-};
-
 export type HomePageData = {
   title?: string;
   heroTitle: string;
@@ -136,7 +127,6 @@ export type HomePageData = {
   safetyTitle?: string;
   safetyCards?: HomeIconCard[];
   featuredNewsTitle?: string;
-  featuredNews?: HomeNewsCard[];
   footerCtaTitle?: string;
   footerCtaCopy?: string;
 };
@@ -317,7 +307,7 @@ export const fallbackHomePage: HomePageData = {
         "Fuel, food, lodging, repairs, and resupply stops become part of the story instead of buried logistics.",
       image: "/azat/ride/ride-town.jpg",
       imageAlt: "Arizona Alpine Trail landscape near route communities and services",
-      cta: { label: "Browse towns", href: "/towns", variant: "text" },
+      cta: { label: "Read resources", href: "/resources", variant: "text" },
     },
     {
       type: "stewardship",
@@ -358,7 +348,7 @@ export const fallbackHomePage: HomePageData = {
       text: "Fuel, food, lodging, repair, and resupply stops become part of the ride story instead of being buried in separate pages.",
       image: "/azat/images/trail-riders.jpg",
       imageAlt: "Riders gathered near the Arizona Alpine Trail route",
-      cta: { label: "Browse towns", href: "/towns", variant: "text" },
+      cta: { label: "Read resources", href: "/resources", variant: "text" },
     },
     {
       eyebrow: "Protect",
@@ -395,32 +385,6 @@ export const fallbackHomePage: HomePageData = {
     { icon: "tools", title: "Plan Services", text: "Fuel, lodging, repairs, and town stops become practical ride planning data." },
   ],
   featuredNewsTitle: "Latest News",
-  featuredNews: [
-    {
-      title: "AZ Game & Fish Outdoor Expo",
-      slug: "az-game-fish-outdoor-expo",
-      date: "2025-03-28",
-      excerpt: "AZAT shares the trail project with riders, families, and agency partners.",
-      image: "https://azalpinetrail.org/wp-content/uploads/2026/06/731588927_1314291207585598_618352519641471366_n.jpg",
-      imageAlt: "Sunset over an Arizona alpine ranch fence",
-    },
-    {
-      title: "AZAT Goals and Objectives Workshop",
-      slug: "azat-goals-and-objectives-workshop",
-      date: "2024-01-12",
-      excerpt: "Community input helps align the trail system with town and county goals.",
-      image: "https://azalpinetrail.org/wp-content/uploads/2021/11/alpine_forest_aboutus-2500x1215.jpg",
-      imageAlt: "High-country forest landscape in Arizona",
-    },
-    {
-      title: "Alpine Open House Meeting",
-      slug: "alpine-open-house-meeting",
-      date: "2023-08-30",
-      excerpt: "Feedback from Alpine residents shaped master-plan conversations.",
-      image: "https://azalpinetrail.org/wp-content/uploads/2026/06/732464060_1314291140918938_8655586887586886350_n.jpg",
-      imageAlt: "Mountain trail landscape near Alpine Arizona",
-    },
-  ],
   footerCtaTitle: "Plan the Ride. Protect the Route.",
   footerCtaCopy:
     "A Sanity-backed platform gives AZAT room to grow from launch content into maps, donations, products, memberships, and future rider services.",
@@ -528,7 +492,7 @@ export async function getHomePageData(): Promise<HomePageData> {
       communityImageAlt: legacyRouteContent ? fallbackHomePage.communityImageAlt : data.communityImageAlt || fallbackHomePage.communityImageAlt,
       communityStats: data.communityStats?.length ? data.communityStats : fallbackHomePage.communityStats,
       safetyCards: data.safetyCards?.length ? data.safetyCards : fallbackHomePage.safetyCards,
-      featuredNews: data.featuredNews?.length ? data.featuredNews : fallbackHomePage.featuredNews,
+      featuredNewsTitle: data.featuredNewsTitle || fallbackHomePage.featuredNewsTitle,
     };
   } catch {
     return fallbackHomePage;

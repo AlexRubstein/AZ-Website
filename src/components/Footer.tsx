@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ExternalLink, Mail, UsersRound } from "lucide-react";
 
 const footerLinks = [
   { label: "Trail", href: "/trail" },
@@ -6,22 +7,68 @@ const footerLinks = [
   { label: "Downloads", href: "/#downloads" },
   { label: "Itineraries", href: "/#itineraries" },
   { label: "FAQ", href: "/faq" },
+  { label: "Shop", href: "/shop" },
+];
+
+const socialLinks = [
+  { label: "Facebook", href: "https://www.facebook.com/azalpinetrail" },
+  {
+    label: "Facebook group",
+    href: "https://www.facebook.com/groups/search/groups/?q=Arizona%20Alpine%20Trail",
+  },
 ];
 
 export function Footer() {
   return (
-    <footer className="bg-[#08130d] text-white">
-      <div className="mx-auto grid max-w-[1220px] gap-8 px-5 py-10 sm:px-8 lg:grid-cols-[1.2fr_1fr]">
-        <div>
-          <p className="font-serif text-3xl font-semibold leading-none">Arizona Alpine Trail</p>
+    <footer className="mt-auto bg-[#08130d] text-white">
+      <div className="mx-auto grid max-w-[1220px] gap-8 px-5 py-8 sm:px-8 sm:py-10 lg:grid-cols-[minmax(0,1fr)_minmax(220px,360px)_minmax(220px,300px)] lg:items-start lg:gap-12">
+        <div className="min-w-0">
+          <p className="max-w-[18rem] text-wrap font-serif text-3xl font-semibold leading-none sm:max-w-none sm:text-4xl">
+            Arizona Alpine Trail
+          </p>
+          <p className="mt-4 max-w-sm text-sm leading-6 text-white/58">
+            Arizona Alpine Trail, Inc. is a 501(c)(3) nonprofit supporting responsible OHV travel and trail stewardship.
+          </p>
         </div>
-        <div>
+        <nav aria-label="Footer">
           <p className="font-mono text-xs font-bold uppercase tracking-[0.18em] text-[#e5b96f]">Explore</p>
-          <div className="mt-4 grid gap-2 sm:grid-cols-4 lg:grid-cols-2">
+          <div className="mt-4 grid grid-cols-2 gap-x-6 gap-y-3">
             {footerLinks.map((item) => (
-              <Link key={item.href} href={item.href} className="text-white/72 hover:text-white">
+              <Link
+                key={item.href}
+                href={item.href}
+                className="inline-flex min-h-10 items-center text-white/72 transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+              >
                 {item.label}
               </Link>
+            ))}
+          </div>
+        </nav>
+        <div>
+          <p className="font-mono text-xs font-bold uppercase tracking-[0.18em] text-[#e5b96f]">Connect</p>
+          <div className="mt-4 grid gap-3">
+            <Link
+              href="/contact"
+              className="inline-flex min-h-10 items-center gap-2 text-white/72 transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+            >
+              <Mail size={16} aria-hidden="true" />
+              Contact
+            </Link>
+            {socialLinks.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-10 items-center gap-2 text-white/72 transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+              >
+                {item.label === "Facebook group" ? (
+                  <UsersRound size={16} aria-hidden="true" />
+                ) : (
+                  <ExternalLink size={16} aria-hidden="true" />
+                )}
+                {item.label}
+              </a>
             ))}
           </div>
         </div>

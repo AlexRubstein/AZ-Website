@@ -95,7 +95,7 @@ export function buildSegmentPageData(indexEntry, { publicDir }) {
       title: `${name} GPX`,
       slug: { current: `${slug}-gpx` },
       fileType: "GPX",
-      notes: json.downloadNotes ?? `Falls back to the full-trail GPX until the ${name}-only extract is uploaded to Supabase Storage.`,
+      notes: json.downloadNotes ?? `Individual GPX download for the ${name} segment.`,
     },
   ];
 

@@ -211,19 +211,6 @@ export const iconCard = defineType({
   ],
 });
 
-export const featuredNewsCard = defineType({
-  name: "featuredNewsCard",
-  title: "Featured News Card",
-  type: "object",
-  fields: [
-    defineField({ name: "title", type: "string", validation: (Rule) => Rule.required() }),
-    defineField({ name: "slug", type: "string", validation: (Rule) => Rule.required() }),
-    defineField({ name: "date", type: "date" }),
-    defineField({ name: "excerpt", type: "text", rows: 3 }),
-    defineField({ name: "image", type: "externalImage" }),
-  ],
-});
-
 export const homeStoryBlock = defineType({
   name: "homeStoryBlock",
   title: "Homepage Story Block",

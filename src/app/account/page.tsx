@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { Mail, MapPin, UserRound } from "lucide-react";
 import { Footer } from "@/components/Footer";
@@ -5,6 +6,15 @@ import { Header } from "@/components/Header";
 import { createSupabaseServerClient } from "@/supabase/server";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "Account",
+  description: "Manage your Arizona Alpine Trail account and protected download access.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default async function AccountPage() {
   const supabase = await createSupabaseServerClient();

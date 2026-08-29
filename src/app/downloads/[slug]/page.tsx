@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { Download, FileCheck2, ShieldCheck } from "lucide-react";
@@ -12,6 +13,15 @@ import { createSupabaseServerClient } from "@/supabase/server";
 import { agreeToDownloadTerms } from "@/app/downloads/actions";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "Download Trail File",
+  description: "Review Arizona Alpine Trail terms before downloading a protected route file.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default async function DownloadTermsPage({
   params,
